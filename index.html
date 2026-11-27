@@ -5,571 +5,371 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#14283f">
-<meta name="description" content="The World Without Words — a global educational and research initiative exploring human communication, awareness, consent and human dignity.">
-<title>The World Without Words | Global Initiative</title>
-
+<meta name="description" content="The World Without Words is an educational and research initiative exploring human communication, manipulation awareness, consent and human dignity.">
+<title>The World Without Words | Understanding Beyond Words</title>
 <style>
-:root {
-  --navy: #14283f;
-  --navy-light: #203b55;
-  --teal: #318c89;
-  --gold: #b99a60;
-  --ivory: #f7f5ef;
-  --white: #ffffff;
-  --ink: #253648;
-  --muted: #667786;
-  --line: #e4e7e5;
+:root{
+  --navy:#14283f;--navy2:#203d55;--ivory:#f5f2ea;
+  --white:#fffefa;--teal:#318c89;--gold:#b99a60;
+  --ink:#243747;--muted:#687985;--line:#e5e3dc;
+  --shadow:0 16px 45px rgba(20,40,63,.09);
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--ivory);
-  color: var(--ink);
-  line-height: 1.7;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{margin:0;background:var(--white);color:var(--ink);
+font-family:Arial,Helvetica,sans-serif;line-height:1.7}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}
+button{cursor:pointer}
+.container{width:min(1160px,90%);margin:auto}
+header{background:rgba(20,40,63,.97);color:white;position:sticky;top:0;z-index:10;
+box-shadow:0 3px 18px rgba(0,0,0,.12)}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-family:Georgia,serif;
+font-size:17px;letter-spacing:.5px;font-weight:bold}
+.logo{width:48px;height:48px;flex-shrink:0}
+nav{display:flex;align-items:center;gap:22px}
+nav a{font-size:13px;color:#e6edf1;transition:.2s}
+nav a:hover{color:#d9bd83}
+.menu-btn{display:none;background:transparent;border:1px solid #718293;
+color:white;padding:7px 11px;border-radius:7px}
+.hero{background:linear-gradient(120deg,#14283f 0%,#203d55 68%,#285b64 100%);
+color:white;padding:105px 0 100px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:430px;height:430px;border:1px solid #ffffff19;
+border-radius:50%;right:-110px;top:-160px;box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff06}
+.hero-content{position:relative;z-index:1;max-width:780px}
+.eyebrow{color:#d8bd85;text-transform:uppercase;letter-spacing:3px;
+font-size:11px;font-weight:bold}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:normal;line-height:1.2}
+h1{font-size:clamp(42px,6vw,70px);margin:22px 0}
+.hero p{font-size:18px;color:#e0e8eb;max-width:660px}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-block;padding:13px 22px;border-radius:5px;font-weight:bold;
+font-size:13px;border:1px solid transparent;transition:.2s}
+.btn-primary{background:var(--gold);color:#172b3e}
+.btn-primary:hover{background:#d2b77e;transform:translateY(-2px)}
+.btn-outline{border-color:#b7c7ce;color:white}
+.btn-outline:hover{background:#ffffff17}
+.section{padding:85px 0}
+.section-alt{background:var(--ivory)}
+.section-heading{max-width:720px;margin-bottom:38px}
+.section-heading h2{font-size:clamp(30px,4vw,43px);color:var(--navy);margin:10px 0 15px}
+.section-heading p{color:var(--muted)}
+.kicker{color:var(--teal);font-size:11px;font-weight:bold;
+letter-spacing:2px;text-transform:uppercase}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:55px;align-items:center}
+.about-panel{background:var(--navy);color:white;padding:34px;border-radius:9px;box-shadow:var(--shadow)}
+.about-panel h3{font-size:25px;margin-top:0;color:#e1c58e}
+.about-panel p{color:#e0e7eb}
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+.value{border-top:2px solid var(--gold);padding-top:14px}
+.value strong{display:block;color:var(--navy);font-family:Georgia,serif;font-size:19px}
+.value span{font-size:13px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}
+.card{background:white;border:1px solid var(--line);padding:25px;border-radius:8px;
+transition:.2s;box-shadow:0 5px 20px #14283f08}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.card-number{color:var(--teal);font-size:12px;letter-spacing:2px;font-weight:bold}
+.card h3{color:var(--navy);font-size:21px;margin:12px 0}
+.card p{color:var(--muted);font-size:14px}
+.card .tag{display:inline-block;color:#287b78;background:#eaf4f1;
+font-size:11px;padding:5px 9px;border-radius:3px;margin-top:8px}
+.decoder{background:var(--navy);color:white;border-radius:12px;padding:clamp(22px,5vw,48px);
+box-shadow:var(--shadow)}
+.decoder h2{font-size:36px;margin:10px 0}
+.decoder>p{color:#d3dfe5;max-width:700px}
+.decoder-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:28px}
+.decoder label{display:block;font-size:13px;color:#e3eaf0;margin:0 0 8px}
+.decoder select,.decoder input{width:100%;padding:13px;border:1px solid #6e8292;
+border-radius:5px;background:#fffefa;color:var(--ink);margin-bottom:18px}
+.decoder button{background:var(--gold);color:var(--navy);border:0;
+border-radius:5px;padding:12px 19px;font-weight:bold}
+.decoder button:hover{background:#d7bd87}
+.result{background:#ffffff12;border:1px solid #ffffff25;padding:20px;
+border-radius:7px;min-height:145px;color:#e6edf0}
+.result strong{display:block;color:#e1c58e;margin-bottom:8px}
+.method{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:28px}
+.method div{border-top:1px solid #82939d;padding-top:13px}
+.method strong{color:#e1c58e;display:block}
+.method span{font-size:13px;color:#d3dfe5}
+.scenario{background:white;border:1px solid var(--line);border-radius:9px;
+padding:30px;max-width:820px}
+.quote{font-family:Georgia,serif;font-size:25px;color:var(--navy);
+border-left:3px solid var(--gold);padding-left:20px;margin:20px 0}
+.answers{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}
+.answers button{background:#eaf1f1;border:1px solid #d7e4e2;color:var(--navy);
+padding:11px 16px;border-radius:5px}
+.answers button:hover{background:#d7e9e6}
+.scenario-result{padding:15px;background:var(--ivory);border-radius:5px;
+color:var(--ink);min-height:55px}
+.library-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.library-item{padding:21px;background:white;border:1px solid var(--line);border-radius:7px}
+.library-item h3{font-size:19px;color:var(--navy);margin:0 0 8px}
+.library-item p{font-size:13px;color:var(--muted);margin:0}
+.principles{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}
+.principle{padding:17px;background:white;border-left:3px solid var(--teal);
+border-radius:4px;font-size:14px}
+.contact-panel{background:var(--navy);color:white;padding:40px;border-radius:9px}
+.contact-panel h2{font-size:34px;margin-top:0}
+.contact-panel p{color:#d4e0e5;max-width:680px}
+footer{background:#0d1e30;color:#d4dfe5;padding:35px 0}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer p{font-size:12px;color:#aebdc7}
+footer a{color:#e0c58d}
+@media(max-width:850px){
+ nav{gap:12px}nav a{font-size:12px}
+ .cards{grid-template-columns:repeat(2,1fr)}
 }
-a { color: inherit; text-decoration: none; }
-button, input, select { font: inherit; }
-.container { width: min(1120px, 90%); margin: auto; }
-header {
-  background: var(--navy);
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 3px 16px #091a2b33;
-}
-.navbar {
-  min-height: 78px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-family: Georgia, serif;
-  font-size: 17px;
-  font-weight: bold;
-  letter-spacing: .3px;
-}
-.logo { width: 43px; height: 43px; flex-shrink: 0; }
-.nav-links {
-  display: flex;
-  gap: 22px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.nav-links a {
-  color: #edf1f4;
-  font-size: 13px;
-  transition: color .2s;
-}
-.nav-links a:hover { color: #e1c58f; }
-.menu-button {
-  display: none;
-  background: transparent;
-  color: white;
-  border: 1px solid #ffffff66;
-  border-radius: 7px;
-  padding: 7px 11px;
-  cursor: pointer;
-}
-.hero {
-  background:
-    radial-gradient(ellipse at 80% 20%, #318c8940, transparent 40%),
-    linear-gradient(120deg, #14283f, #203d55);
-  color: white;
-  padding: 105px 0 100px;
-  position: relative;
-  overflow: hidden;
-}
-.hero::after {
-  content: "WORLD • HUMANITY • UNDERSTANDING";
-  position: absolute;
-  right: -30px;
-  bottom: 24px;
-  color: #ffffff0c;
-  font-size: clamp(22px, 5vw, 60px);
-  font-weight: bold;
-  white-space: nowrap;
-}
-.hero-content { max-width: 760px; position: relative; z-index: 1; }
-.eyebrow {
-  color: #d8bd89;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 11px;
-  font-weight: bold;
-  margin-bottom: 22px;
-}
-.hero h1 {
-  font-family: Georgia, serif;
-  font-weight: normal;
-  font-size: clamp(40px, 6vw, 70px);
-  line-height: 1.13;
-  margin-bottom: 24px;
-}
-.hero h1 span { color: #d9bd89; }
-.hero p { color: #e0e8ee; font-size: 17px; max-width: 650px; }
-.hero-buttons { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 34px; }
-.btn {
-  display: inline-block;
-  border: 0;
-  border-radius: 5px;
-  padding: 13px 22px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: .2s;
-}
-.btn-primary { background: var(--teal); color: white; }
-.btn-primary:hover { background: #26716f; transform: translateY(-2px); }
-.btn-outline { border: 1px solid #ffffff99; color: white; }
-.btn-outline:hover { background: #ffffff18; }
-section { padding: 78px 0; scroll-margin-top: 85px; }
-.section-heading { max-width: 720px; margin-bottom: 35px; }
-.section-heading .eyebrow { color: var(--teal); margin-bottom: 10px; }
-.section-heading h2 {
-  font: normal clamp(30px, 4vw, 43px) Georgia, serif;
-  color: var(--navy);
-  line-height: 1.2;
-  margin-bottom: 14px;
-}
-.section-heading p { color: var(--muted); }
-.about-grid {
-  display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 45px;
-  align-items: center;
-}
-.about-panel {
-  background: var(--navy);
-  color: white;
-  padding: 35px;
-  border-radius: 12px;
-}
-.about-panel h3 { font: normal 25px Georgia, serif; margin-bottom: 15px; color: #e2c58e; }
-.about-panel p { color: #e0e8ee; }
-.principles {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-  margin-top: 25px;
-}
-.principle { border-left: 3px solid var(--gold); padding-left: 14px; }
-.principle strong { display: block; color: var(--navy); }
-.principle span { color: var(--muted); font-size: 13px; }
-.alt { background: #eeece5; }
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-.card {
-  background: white;
-  padding: 26px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  transition: .25s;
-}
-.card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px #14283f12; }
-.card-number { color: var(--teal); font-weight: bold; letter-spacing: 2px; font-size: 12px; }
-.card h3 { font: normal 21px Georgia, serif; color: var(--navy); margin: 12px 0; }
-.card p { color: var(--muted); font-size: 14px; }
-.card a { display: inline-block; margin-top: 17px; color: var(--teal); font-size: 13px; font-weight: bold; }
-.feature {
-  background: var(--navy);
-  color: white;
-}
-.feature .section-heading h2 { color: white; }
-.feature .section-heading p { color: #d0dbe3; }
-.feature .eyebrow { color: #d8bd89; }
-.decoder-box {
-  background: white;
-  color: var(--ink);
-  border-radius: 12px;
-  padding: 30px;
-  max-width: 850px;
-}
-.decoder-box label { display: block; font-weight: bold; margin-bottom: 8px; color: var(--navy); }
-.decoder-box select, .decoder-box input {
-  width: 100%;
-  padding: 13px;
-  border: 1px solid #ccd5d9;
-  border-radius: 6px;
-  background: white;
-  margin-bottom: 20px;
-}
-.decoder-box input:focus, .decoder-box select:focus { outline: 2px solid var(--teal); }
-.result {
-  margin-top: 22px;
-  padding: 20px;
-  background: #eef5f3;
-  border-left: 4px solid var(--teal);
-  border-radius: 5px;
-  display: none;
-}
-.result h3 { color: var(--navy); margin-bottom: 8px; }
-.result p { color: #465968; font-size: 14px; }
-.method {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 30px;
-}
-.method div { border: 1px solid #ffffff3b; padding: 20px; border-radius: 8px; }
-.method strong { display: block; color: #e1c58f; font: 23px Georgia, serif; margin-bottom: 6px; }
-.method span { color: #d5dfe6; font-size: 13px; }
-.scenario {
-  background: white;
-  padding: 28px;
-  border-radius: 10px;
-  border: 1px solid var(--line);
-  max-width: 800px;
-}
-.quote {
-  font: italic 22px Georgia, serif;
-  color: var(--navy);
-  margin: 12px 0 22px;
-}
-.answer-buttons { display: flex; flex-wrap: wrap; gap: 10px; }
-.answer-buttons button {
-  padding: 11px 16px;
-  border: 1px solid var(--teal);
-  color: var(--teal);
-  background: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.answer-buttons button:hover { background: #eef5f3; }
-#scenario-result { margin-top: 18px; color: var(--ink); }
-.notice {
-  background: #f5f0e5;
-  border-left: 4px solid var(--gold);
-  padding: 18px 22px;
-  border-radius: 5px;
-  color: #53606b;
-  font-size: 14px;
-}
-.library-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.library-item {
-  padding: 23px;
-  background: white;
-  border-radius: 9px;
-  border: 1px solid var(--line);
-}
-.library-item h3 { font: normal 19px Georgia, serif; color: var(--navy); margin-bottom: 8px; }
-.library-item p { font-size: 13px; color: var(--muted); }
-footer { background: #0e2032; color: #d9e1e7; padding: 45px 0 25px; }
-.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 35px; }
-footer h3 { color: #e1c58f; font: normal 21px Georgia, serif; margin-bottom: 12px; }
-footer p, footer a { font-size: 13px; color: #c3d0d9; }
-footer a { display: block; margin: 7px 0; }
-.footer-bottom { border-top: 1px solid #ffffff25; margin-top: 30px; padding-top: 18px; font-size: 12px; color: #aab9c5; }
-@media(max-width:850px) {
-  .menu-button { display: block; }
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 78px;
-    left: 0;
-    width: 100%;
-    background: var(--navy);
-    padding: 20px 5%;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .nav-links.open { display: flex; }
-  .cards, .library-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media(max-width:650px) {
-  .hero { padding: 75px 0; }
-  section { padding: 58px 0; }
-  .about-grid, .cards, .library-grid, .footer-grid { grid-template-columns: 1fr; }
-  .principles, .method { grid-template-columns: 1fr; }
-  .decoder-box { padding: 20px; }
-  .brand { font-size: 14px; }
+@media(max-width:650px){
+ .nav{min-height:70px;flex-wrap:wrap;padding:10px 0}
+ .brand{font-size:14px}.logo{width:40px;height:40px}
+ .menu-btn{display:block}
+ nav{display:none;width:100%;flex-direction:column;align-items:flex-start;
+ padding:8px 0 15px;gap:13px}
+ nav.open{display:flex}
+ .hero{padding:75px 0}
+ .hero p{font-size:16px}
+ .section{padding:62px 0}
+ .about-grid,.decoder-grid{grid-template-columns:1fr;gap:22px}
+ .cards,.library-grid{grid-template-columns:1fr}
+ .values{grid-template-columns:1fr}
+ .method{grid-template-columns:1fr}
+ .principles{grid-template-columns:1fr}
+ .contact-panel{padding:25px}
+ .quote{font-size:21px}
 }
 </style>
 </head>
-
 <body>
 
 <header>
-  <div class="container navbar">
-    <a class="brand" href="#home">
-      <svg class="logo" viewBox="0 0 100 100" role="img" aria-label="Human connection and global awareness logo">
-        <circle cx="50" cy="50" r="44" fill="none" stroke="#b99a60" stroke-width="2"/>
-        <path d="M17 45 Q20 20 48 22 Q72 20 79 42" fill="none" stroke="#318c89" stroke-width="5" stroke-linecap="round"/>
-        <path d="M20 54 Q35 78 50 78 Q67 77 80 54" fill="none" stroke="#b99a60" stroke-width="4" stroke-linecap="round"/>
-        <circle cx="34" cy="43" r="9" fill="#318c89"/>
-        <circle cx="66" cy="43" r="9" fill="#b99a60"/>
-        <path d="M40 58 Q50 49 60 58" fill="none" stroke="white" stroke-width="4" stroke-linecap="round"/>
-        <path d="M50 8 V17 M50 83 V92" stroke="#b99a60" stroke-width="2"/>
-      </svg>
-      <span>THE WORLD WITHOUT WORDS</span>
-    </a>
-    <button class="menu-button" onclick="toggleMenu()" aria-label="Toggle navigation">MENU ☰</button>
-    <nav class="nav-links" id="navLinks">
-      <a href="#home" onclick="closeMenu()">Home</a>
-      <a href="#about" onclick="closeMenu()">About</a>
-      <a href="#research" onclick="closeMenu()">Research</a>
-      <a href="#decoder" onclick="closeMenu()">Decoder</a>
-      <a href="#learning" onclick="closeMenu()">Learning</a>
-      <a href="#library" onclick="closeMenu()">Library</a>
-    </nav>
-  </div>
+ <div class="container nav">
+  <a class="brand" href="#home" aria-label="The World Without Words home">
+   <svg class="logo" viewBox="0 0 100 100" role="img" aria-label="Human connection globe emblem">
+    <circle cx="50" cy="50" r="44" fill="none" stroke="#b99a60" stroke-width="2"/>
+    <path d="M12 50h76M50 7c-22 20-22 66 0 86M50 7c22 20 22 66 0 86"
+    fill="none" stroke="#75b9b1" stroke-width="1.5"/>
+    <path d="M26 37c0-9 7-16 16-16s16 7 16 16-7 16-16 16-16-7-16-16z"
+    fill="#f5f2ea"/>
+    <path d="M42 53c-13 0-22 8-22 19h42c0-11-8-19-20-19z" fill="#318c89"/>
+    <path d="M56 32h19a7 7 0 0 1 7 7v8a7 7 0 0 1-7 7h-5l-7 7v-7h-7"
+    fill="none" stroke="#f5f2ea" stroke-width="3" stroke-linejoin="round"/>
+    <circle cx="64" cy="43" r="2" fill="#b99a60"/>
+    <circle cx="70" cy="43" r="2" fill="#b99a60"/>
+    <circle cx="76" cy="43" r="2" fill="#b99a60"/>
+   </svg>
+   <span>THE WORLD WITHOUT WORDS</span>
+  </a>
+  <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation">☰ Menu</button>
+  <nav id="mainNav">
+   <a href="#home" onclick="closeMenu()">Home</a>
+   <a href="#about" onclick="closeMenu()">About</a>
+   <a href="#research" onclick="closeMenu()">Research</a>
+   <a href="#decoder" onclick="closeMenu()">Decoder</a>
+   <a href="#learning" onclick="closeMenu()">Learning</a>
+   <a href="#library" onclick="closeMenu()">Library</a>
+   <a href="#contact" onclick="closeMenu()">Contact</a>
+  </nav>
+ </div>
 </header>
 
 <main>
 <section class="hero" id="home">
-  <div class="container hero-content">
-    <div class="eyebrow">A Global Initiative for Research, Education and Human Protection</div>
-    <h1>Understanding What <span>Words Cannot</span> Always Say.</h1>
-    <p>Exploring human communication, behaviour, manipulation, consent and human dignity through research, education and awareness.</p>
-    <div class="hero-buttons">
-      <a class="btn btn-primary" href="#research">Explore Our Research</a>
-      <a class="btn btn-outline" href="#decoder">Explore the Decoder</a>
-    </div>
+ <div class="container hero-content">
+  <div class="eyebrow">A Global Initiative for Research, Education and Human Protection</div>
+  <h1>Understanding What Words Cannot Always Say.</h1>
+  <p>Exploring human communication, recognising manipulation, understanding boundaries and promoting human dignity through research and education.</p>
+  <div class="hero-actions">
+   <a class="btn btn-primary" href="#research">Explore Our Research</a>
+   <a class="btn btn-outline" href="#decoder">Discover the Decoder</a>
   </div>
+ </div>
 </section>
 
-<section id="about">
-  <div class="container about-grid">
+<section class="section" id="about">
+ <div class="container about-grid">
+  <div>
+   <div class="kicker">Who We Are</div>
+   <div class="section-heading">
+    <h2>Knowledge that supports human understanding.</h2>
+    <p>The World Without Words is an educational and research initiative dedicated to making knowledge about human communication, behaviour, influence and protection accessible to everyone.</p>
+   </div>
+   <p>We bring together ideas from communication studies, linguistics, psychology, sociology and human rights to help people understand interactions with greater awareness and care.</p>
+  </div>
+  <div class="about-panel">
+   <h3>Our Vision</h3>
+   <p>A world where individuals can recognise harmful communication, understand their rights, respect one another's boundaries and make informed decisions without fear, coercion or exploitation.</p>
+   <h3>Our Mission</h3>
+   <p>To make reliable knowledge about communication, manipulation, human behaviour, consent and human dignity accessible to all.</p>
+  </div>
+ </div>
+ <div class="container values">
+  <div class="value"><strong>Research</strong><span>Evidence-informed knowledge and critical inquiry.</span></div>
+  <div class="value"><strong>Education</strong><span>Accessible learning for informed decisions.</span></div>
+  <div class="value"><strong>Protection</strong><span>Awareness of dignity, rights and boundaries.</span></div>
+ </div>
+</section>
+
+<section class="section section-alt" id="research">
+ <div class="container">
+  <div class="section-heading">
+   <div class="kicker">Research Centre</div>
+   <h2>Five fields of human understanding.</h2>
+   <p>Our interdisciplinary framework explores how people communicate, influence one another and navigate social relationships.</p>
+  </div>
+  <div class="cards">
+   <article class="card"><div class="card-number">DIVISION 01</div><h3>The Language of Manipulation</h3><p>Explore persuasive language, emotional pressure, gaslighting, intimidation, blame-shifting and patterns of harmful influence.</p><span class="tag">Language & Influence</span></article>
+   <article class="card"><div class="card-number">DIVISION 02</div><h3>Beyond Words</h3><p>Study gestures, facial expressions, posture, personal space, silence, voice and cultural differences in nonverbal communication.</p><span class="tag">Nonverbal Communication</span></article>
+   <article class="card"><div class="card-number">DIVISION 03</div><h3>Psychology of Control</h3><p>Understand power, emotional dependency, coercive control, social isolation, decision-making and personal autonomy.</p><span class="tag">Psychology & Behaviour</span></article>
+   <article class="card"><div class="card-number">DIVISION 04</div><h3>Power, Language and Society</h3><p>Examine how language, identity, institutions, media and social structures shape influence and human experience.</p><span class="tag">Society & Discourse</span></article>
+   <article class="card"><div class="card-number">DIVISION 05</div><h3>Human Dignity, Consent and Protection</h3><p>Learn about consent, boundaries, autonomy, digital safety, harassment awareness, rights and help-seeking.</p><span class="tag">Rights & Human Protection</span></article>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="decoder">
+ <div class="container">
+  <div class="decoder">
+   <div class="eyebrow">Our Signature Learning Feature</div>
+   <h2>The Human Communication Decoder</h2>
+   <p>Explore how words, behaviour and nonverbal signals may contribute to communication. This educational tool encourages careful thinking rather than automatic judgments.</p>
+   <div class="decoder-grid">
     <div>
-      <div class="section-heading">
-        <div class="eyebrow">Who We Are</div>
-        <h2>Knowledge in the service of humanity.</h2>
-        <p>The World Without Words is an educational and research initiative dedicated to making knowledge about human communication and behaviour accessible to everyone.</p>
-      </div>
-      <p>We explore what people communicate through words, silence, expressions and actions. We aim to help individuals recognise harmful patterns, understand personal boundaries and make informed decisions.</p>
+     <label for="decodeType">Choose a subject</label>
+     <select id="decodeType">
+      <option value="word">Words and language</option>
+      <option value="body">Body language</option>
+      <option value="expression">Facial expressions</option>
+      <option value="silence">Silence</option>
+      <option value="behaviour">Behaviour patterns</option>
+     </select>
+     <label for="decodeInput">Enter a phrase or describe what you observed</label>
+     <input id="decodeInput" type="text" placeholder="Write a phrase or observation...">
+     <button onclick="decodeCommunication()">Explore this communication</button>
     </div>
-    <div class="about-panel">
-      <h3>Our Vision</h3>
-      <p>A world where individuals can recognise harmful communication, understand their rights, respect one another's boundaries and make informed decisions without fear, coercion or exploitation.</p>
-      <br>
-      <h3>Our Mission</h3>
-      <p>To make reliable knowledge about communication, manipulation, human behaviour, consent and human rights accessible to everyone.</p>
+    <div class="result" id="decodeResult" aria-live="polite">
+     <strong>Your learning guide will appear here.</strong>
+     Choose a subject and enter an observation to begin.
     </div>
+   </div>
+   <div class="method">
+    <div><strong>01 — Observe</strong><span>Describe what actually happened without adding assumptions.</span></div>
+    <div><strong>02 — Interpret</strong><span>Consider different explanations and the surrounding context.</span></div>
+    <div><strong>03 — Verify</strong><span>Look for patterns, ask respectfully when safe, and avoid jumping to conclusions.</span></div>
+   </div>
   </div>
-  <div class="container principles">
-    <div class="principle"><strong>Evidence over assumptions</strong><span>Responsible, research-informed education.</span></div>
-    <div class="principle"><strong>Human dignity</strong><span>Respect, autonomy and protection.</span></div>
-    <div class="principle"><strong>Context matters</strong><span>Communication must be understood in context.</span></div>
-    <div class="principle"><strong>Learning for everyone</strong><span>Accessible knowledge and awareness.</span></div>
-  </div>
+ </div>
 </section>
 
-<section class="alt" id="research">
-  <div class="container">
-    <div class="section-heading">
-      <div class="eyebrow">Research Centre</div>
-      <h2>Five dimensions of human understanding.</h2>
-      <p>Our interdisciplinary research framework brings together communication studies, psychology, sociology and human rights.</p>
-    </div>
-    <div class="cards">
-      <article class="card">
-        <div class="card-number">DIVISION 01</div>
-        <h3>The Language of Manipulation</h3>
-        <p>Explore persuasive language, emotional pressure, gaslighting, guilt, intimidation and patterns of harmful communication.</p>
-        <a href="#learning">Explore learning →</a>
-      </article>
-      <article class="card">
-        <div class="card-number">DIVISION 02</div>
-        <h3>Beyond Words</h3>
-        <p>Study gestures, expressions, posture, silence, personal space, eye contact and cultural differences in communication.</p>
-        <a href="#decoder">Explore decoder →</a>
-      </article>
-      <article class="card">
-        <div class="card-number">DIVISION 03</div>
-        <h3>Psychology of Control</h3>
-        <p>Understand power, emotional dependency, coercive control, fear, autonomy and decision-making.</p>
-        <a href="#learning">Explore learning →</a>
-      </article>
-      <article class="card">
-        <div class="card-number">DIVISION 04</div>
-        <h3>Power, Language and Society</h3>
-        <p>Examine language, identity, social influence, stereotypes, media, institutions and inequality.</p>
-        <a href="#library">Explore library →</a>
-      </article>
-      <article class="card">
-        <div class="card-number">DIVISION 05</div>
-        <h3>Human Dignity, Consent and Protection</h3>
-        <p>Learn about consent, boundaries, personal autonomy, digital safety, human rights and help-seeking.</p>
-        <a href="#learning">Explore learning →</a>
-      </article>
-    </div>
+<section class="section section-alt" id="learning">
+ <div class="container">
+  <div class="section-heading">
+   <div class="kicker">Scenario-Based Learning</div>
+   <h2>Think critically. Understand context.</h2>
+   <p>Explore a fictional situation and consider the communication pattern involved.</p>
   </div>
+  <div class="scenario">
+   <div class="kicker">Learning Scenario 01</div>
+   <div class="quote">“If you really cared about me, you would do what I asked.”</div>
+   <p>What might this statement communicate?</p>
+   <div class="answers">
+    <button onclick="showScenario('pressure')">It may create emotional pressure</button>
+    <button onclick="showScenario('request')">It may be an ordinary request</button>
+    <button onclick="showScenario('context')">More context is needed</button>
+   </div>
+   <div class="scenario-result" id="scenarioResult" aria-live="polite">Choose an answer to explore the situation.</div>
+  </div>
+ </div>
 </section>
 
-<section class="feature" id="decoder">
-  <div class="container">
-    <div class="section-heading">
-      <div class="eyebrow">Our Signature Learning Feature</div>
-      <h2>The Human Communication Decoder</h2>
-      <p>Explore how communication can carry meaning beyond literal words. Learn to distinguish what you observe from what you interpret.</p>
-    </div>
-    <div class="decoder-box">
-      <label for="decoderType">Choose a communication topic</label>
-      <select id="decoderType">
-        <option value="word">Word Decoder</option>
-        <option value="body">Body Language Decoder</option>
-        <option value="expression">Expression Decoder</option>
-        <option value="silence">Silence Decoder</option>
-        <option value="behaviour">Behaviour Decoder</option>
-      </select>
-      <label for="decoderInput">Enter a word, phrase or observation</label>
-      <input id="decoderInput" type="text" placeholder="Enter an example to explore..." maxlength="250">
-      <button class="btn btn-primary" onclick="decodeCommunication()">Explore Meaning</button>
-      <div class="result" id="decoderResult" aria-live="polite">
-        <h3 id="resultTitle">Learning insight</h3>
-        <p id="resultText"></p>
-      </div>
-      <div class="notice" style="margin-top:20px">
-        Educational note: No single gesture, expression, phrase or behaviour proves someone's intentions. Meaning depends on context, individual differences and patterns over time.
-      </div>
-    </div>
-    <div class="method">
-      <div><strong>01 — Observe</strong><span>Identify what was actually said or done without adding assumptions.</span></div>
-      <div><strong>02 — Interpret</strong><span>Consider different possible meanings and relevant context.</span></div>
-      <div><strong>03 — Verify</strong><span>Seek clarification and consider patterns rather than isolated signs.</span></div>
-    </div>
+<section class="section" id="library">
+ <div class="container">
+  <div class="section-heading">
+   <div class="kicker">Knowledge Library</div>
+   <h2>Foundations for informed understanding.</h2>
+   <p>Our developing library will bring together accessible educational material and research-informed learning resources.</p>
   </div>
+  <div class="library-grid">
+   <div class="library-item"><h3>Communication Studies</h3><p>Language, meaning, context and interpersonal communication.</p></div>
+   <div class="library-item"><h3>Psychology and Behaviour</h3><p>Decision-making, emotional influence and human behaviour.</p></div>
+   <div class="library-item"><h3>Nonverbal Communication</h3><p>Gestures, facial expressions, voice and personal space.</p></div>
+   <div class="library-item"><h3>Consent and Boundaries</h3><p>Autonomy, respectful relationships and personal boundaries.</p></div>
+   <div class="library-item"><h3>Language and Power</h3><p>Discourse, social influence, identity and institutions.</p></div>
+   <div class="library-item"><h3>Digital Awareness</h3><p>Privacy, online communication and digital safety.</p></div>
+  </div>
+ </div>
 </section>
 
-<section id="learning">
-  <div class="container">
-    <div class="section-heading">
-      <div class="eyebrow">Interactive Learning</div>
-      <h2>Learn through real-world scenarios.</h2>
-      <p>Explore fictional situations to practise recognising communication patterns and thinking critically.</p>
-    </div>
-    <div class="scenario">
-      <div class="card-number">SCENARIO 01 · EMOTIONAL PRESSURE</div>
-      <p class="quote">"If you really cared about me, you would do what I asked."</p>
-      <p>What might this statement communicate?</p>
-      <div class="answer-buttons">
-        <button onclick="showScenario('a')">A. A request without pressure</button>
-        <button onclick="showScenario('b')">B. Possible emotional pressure</button>
-        <button onclick="showScenario('c')">C. More context is needed</button>
-      </div>
-      <div id="scenario-result" aria-live="polite"></div>
-    </div>
+<section class="section section-alt" id="principles">
+ <div class="container">
+  <div class="section-heading">
+   <div class="kicker">Our Commitments</div>
+   <h2>Responsible knowledge. Human dignity.</h2>
+   <p>We believe awareness must be grounded in evidence, context and respect for every individual.</p>
   </div>
+  <div class="principles">
+   <div class="principle">Evidence over assumptions and unsupported claims.</div>
+   <div class="principle">Context and patterns over isolated gestures or phrases.</div>
+   <div class="principle">Respect for cultural differences in communication.</div>
+   <div class="principle">No victim-blaming; responsibility belongs to the person causing harm.</div>
+   <div class="principle">Safety, privacy and dignity in educational work.</div>
+   <div class="principle">Learning tools are not diagnostic tests or lie detectors.</div>
+  </div>
+ </div>
 </section>
 
-<section class="alt" id="library">
-  <div class="container">
-    <div class="section-heading">
-      <div class="eyebrow">Knowledge Library</div>
-      <h2>A foundation for informed understanding.</h2>
-      <p>Explore the subjects that shape our research and educational programme.</p>
-    </div>
-    <div class="library-grid">
-      <article class="library-item"><h3>Human Communication</h3><p>Verbal and nonverbal communication, meaning, context and interaction.</p></article>
-      <article class="library-item"><h3>Psychology and Behaviour</h3><p>Emotions, decision-making, social influence and human behaviour.</p></article>
-      <article class="library-item"><h3>Manipulation Awareness</h3><p>Patterns of pressure, coercion, persuasion and control.</p></article>
-      <article class="library-item"><h3>Consent and Boundaries</h3><p>Autonomy, personal boundaries, respect and informed choices.</p></article>
-      <article class="library-item"><h3>Language and Society</h3><p>Power, identity, social norms, institutions and representation.</p></article>
-      <article class="library-item"><h3>Digital Safety</h3><p>Privacy, online boundaries, exploitation awareness and safer practices.</p></article>
-    </div>
+<section class="section" id="contact">
+ <div class="container">
+  <div class="contact-panel">
+   <div class="eyebrow">Connect With the Initiative</div>
+   <h2>Understanding begins with awareness.</h2>
+   <p>The World Without Words is being developed as an educational and research initiative. We welcome thoughtful ideas, constructive feedback and interest in its future development.</p>
+   <p><strong>Contact:</strong> A dedicated contact channel will be added after the project's communication and privacy arrangements are established.</p>
   </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="section-heading">
-      <div class="eyebrow">Our Commitment</div>
-      <h2>Knowledge must protect human dignity.</h2>
-      <p>Our educational approach is grounded in respect, evidence, context and responsible communication.</p>
-    </div>
-    <div class="notice">
-      The World Without Words is an educational initiative. Its learning activities are not diagnostic tests, lie detectors, psychological assessments or substitutes for professional psychological, medical or legal advice. Anyone facing immediate danger should seek appropriate local emergency assistance.
-    </div>
-  </div>
+ </div>
 </section>
 </main>
 
 <footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <h3>The World Without Words</h3>
-        <p>Understanding What Words Cannot Always Say.</p>
-        <p style="margin-top:12px">A Global Initiative for Research, Education and Human Protection.</p>
-      </div>
-      <div>
-        <h3>Explore</h3>
-        <a href="#about">About Us</a>
-        <a href="#research">Research Centre</a>
-        <a href="#decoder">Communication Decoder</a>
-        <a href="#library">Knowledge Library</a>
-      </div>
-      <div>
-        <h3>Our Focus</h3>
-        <a href="#research">Communication</a>
-        <a href="#research">Human Behaviour</a>
-        <a href="#research">Consent and Protection</a>
-        <a href="#learning">Interactive Learning</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      © 2026 The World Without Words. Educational initiative. All rights reserved.
-    </div>
-  </div>
+ <div class="container footer-inner">
+  <div><strong>THE WORLD WITHOUT WORDS</strong><p>Understanding What Words Cannot Always Say.</p></div>
+  <div><p>Research · Education · Human Protection</p><p>© 2026 The World Without Words. Educational initiative.</p></div>
+ </div>
 </footer>
 
 <script>
-function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("open");
+function toggleMenu(){
+ document.getElementById("mainNav").classList.toggle("open");
 }
-function closeMenu() {
-  document.getElementById("navLinks").classList.remove("open");
+function closeMenu(){
+ document.getElementById("mainNav").classList.remove("open");
 }
-
-function decodeCommunication() {
-  const type = document.getElementById("decoderType").value;
-  const input = document.getElementById("decoderInput").value.trim();
-  const result = document.getElementById("decoderResult");
-  const title = document.getElementById("resultTitle");
-  const text = document.getElementById("resultText");
-
-  if (!input) {
-    alert("Please enter a word, phrase or observation first.");
-    return;
-  }
-
-  const lessons = {
-    word: ["Word Decoder",
-      "Words can communicate information, emotion, requests or pressure. Consider the exact wording, tone, relationship, situation and whether the speaker respects your response."],
-    body: ["Body Language Decoder",
-      "Posture, gestures and movement may contribute to communication, but they do not have universal meanings. Consider the person's usual behaviour, cultural context and the situation."],
-    expression: ["Expression Decoder",
-      "Facial expressions may provide information about emotion, but they cannot reliably reveal a person's complete thoughts or intentions. Avoid making conclusions from one expression."],
-    silence: ["Silence Decoder",
-      "Silence can have many meanings: reflection, discomfort, privacy, disagreement, fatigue or a need for space. Context and respectful clarification matter."],
-    behaviour: ["Behaviour Decoder",
-      "A behaviour should be considered in its context and over time. Look at repeated patterns, boundaries, impact and whether communication remains respectful."]
-  };
-
-  title.textContent = lessons[type][0];
-  text.textContent = "Your entry: " + input + "\n\n" + lessons[type][1] +
-    "\n\nRemember: observe first, consider possible explanations, and verify rather than assuming.";
-  result.style.display = "block";
-  result.scrollIntoView({ behavior: "smooth", block: "nearest" });
+function decodeCommunication(){
+ const type=document.getElementById("decodeType").value;
+ const input=document.getElementById("decodeInput").value.trim();
+ const result=document.getElementById("decodeResult");
+ if(!input){
+  result.innerHTML="<strong>Please enter an observation first.</strong> Describe a phrase, action or situation you want to explore.";
+  return;
+ }
+ const guides={
+  word:"Words can communicate requests, expectations, emotions or pressure. Consider the exact wording, tone, relationship, circumstances and whether the person respects a refusal.",
+  body:"A posture or gesture can have many explanations, including comfort, habit, culture or the situation. One body-language cue cannot reliably establish someone's feelings or intentions.",
+  expression:"Facial expressions can offer clues about emotion, but they do not reveal a person's thoughts with certainty. Consider context and the person's own explanation.",
+  silence:"Silence can mean reflection, uncertainty, discomfort, concentration or many other things. It is not proof of agreement, rejection or manipulation.",
+  behaviour:"Look for repeated actions and their effects over time. Consider boundaries, power differences, pressure and whether the person respects your choices."
+ };
+ result.innerHTML="<strong>Learning perspective</strong>"+guides[type]+
+ "<br><br><strong>Your next step:</strong> Separate what you observed from what you think it might mean. Consider other explanations and seek clarification when it is safe.";
 }
-
-function showScenario(answer) {
-  const result = document.getElementById("scenario-result");
-  if (answer === "a") {
-    result.textContent = "Consider the wording carefully. The statement links care to compliance, which may create pressure rather than simply express a request.";
-  } else if (answer === "b") {
-    result.textContent = "Good observation. This statement may use guilt or emotional pressure. Look at whether the person respects the other individual's freedom to say no.";
-  } else {
-    result.textContent = "Context is important. The wording suggests possible emotional pressure, but the wider conversation and repeated behaviour help clarify what is happening.";
-  }
+function showScenario(answer){
+ const result=document.getElementById("scenarioResult");
+ const messages={
+  pressure:"This statement may create emotional pressure by connecting affection with compliance. Notice whether the person is making room for a free choice or using guilt to influence a decision.",
+  request:"It could be part of a request, but the wording links caring with doing what someone wants. Consider the tone, circumstances and whether saying no is genuinely respected.",
+  context:"Good critical thinking. One sentence is not enough to establish someone's intentions. Consider the wider interaction, any repeated pattern and whether boundaries are respected."
+ };
+ result.textContent=messages[answer];
 }
 </script>
 </body>
