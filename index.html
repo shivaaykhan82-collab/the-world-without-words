@@ -4,830 +4,529 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="The World Without Words is an educational and research initiative exploring human communication, behaviour, consent, human rights and human dignity.">
-<meta name="theme-color" content="#101d32">
-<title>The World Without Words | Understanding Beyond Words</title>
-
+<meta name="theme-color" content="#102b35">
+<meta name="description" content="The World Without Words helps people recognise mistreatment, understand harmful behaviour, know their rights and find safer ways to respond.">
+<title>The World Without Words | You Deserve to Be Heard</title>
 <style>
 :root {
-  --navy:#101d32;
-  --navy2:#192c46;
-  --teal:#1d827e;
-  --teal-light:#e7f3f1;
-  --gold:#c5a66a;
-  --ivory:#f8f7f2;
+  --navy:#102b35;
+  --navy2:#193d47;
+  --teal:#287c78;
+  --teal-light:#e5f1ed;
+  --gold:#c39b59;
+  --cream:#faf8f2;
   --white:#ffffff;
-  --ink:#263348;
-  --muted:#667386;
-  --line:#e5e8eb;
-  --shadow:0 15px 40px rgba(16,29,50,.09);
-  --radius:18px;
+  --ink:#26383d;
+  --muted:#647579;
+  --line:#e5e9e4;
+  --soft:#f1f5f1;
+  --shadow:0 12px 35px rgba(16,43,53,.08);
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:85px}
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  color:var(--ink);
-  background:var(--ivory);
-  line-height:1.7;
-}
-a{color:var(--teal);text-decoration:none}
-a:hover{text-decoration:underline}
-button,select,input,textarea{font:inherit}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.7}
+a{color:inherit}
+button,input{font:inherit}
 button{cursor:pointer}
-.container{width:min(1140px,91%);margin:auto}
-.section{padding:85px 0}
-.section-white{background:var(--white)}
-.section-dark{background:var(--navy);color:white}
-.eyebrow{
-  color:var(--teal);
-  font-size:.77rem;
-  font-weight:800;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  margin-bottom:12px;
+.container{width:min(1120px,90%);margin:auto}
+header{background:rgba(250,248,242,.97);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;backdrop-filter:blur(12px)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy);font-weight:800;letter-spacing:-.4px}
+.brand-mark{width:43px;height:43px;border-radius:14px;background:var(--navy);display:grid;place-items:center;color:#fff}
+.brand-mark svg{width:27px;height:27px}
+.brand small{display:block;color:var(--teal);font-size:9px;letter-spacing:2px;font-weight:700;margin-top:1px}
+.navlinks{display:flex;gap:23px;align-items:center}
+.navlinks a{text-decoration:none;color:#41545a;font-size:13px;font-weight:700}
+.navlinks a:hover{color:var(--teal)}
+.nav-cta,.primary-btn{background:var(--teal);color:#fff!important;border:0;border-radius:9px;padding:12px 18px;text-decoration:none;font-weight:700}
+.menu-btn{display:none;background:transparent;border:1px solid var(--line);border-radius:8px;padding:8px 12px;color:var(--navy)}
+.hero{background:var(--navy);color:#fff;overflow:hidden;position:relative}
+.hero:after{content:"";position:absolute;width:460px;height:460px;border:1px solid rgba(255,255,255,.1);border-radius:50%;right:-130px;top:-180px;box-shadow:0 0 0 55px rgba(255,255,255,.025),0 0 0 110px rgba(255,255,255,.02)}
+.hero-inner{padding:86px 0 78px;display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center;position:relative;z-index:1}
+.eyebrow{color:#c6d9d1;text-transform:uppercase;letter-spacing:2.4px;font-size:11px;font-weight:800}
+.hero h1{font-family:Georgia,serif;font-size:clamp(38px,5vw,62px);line-height:1.1;letter-spacing:-1.5px;margin:17px 0 20px;max-width:650px}
+.hero h1 span{color:#b9d9cf}
+.hero p{color:#d3dfdc;font-size:17px;max-width:590px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-actions a{display:inline-block;padding:14px 19px;border-radius:9px;text-decoration:none;font-weight:700;font-size:14px}
+.hero-actions .light{background:#fff;color:var(--navy)}
+.hero-actions .outline{border:1px solid rgba(255,255,255,.35);color:#fff}
+.hero-art{max-width:450px;width:100%;margin:auto}
+.hero-note{margin-top:25px;color:#b9d0ca;font-size:12px}
+section{padding:76px 0}
+.section-head{max-width:720px;margin-bottom:32px}
+.kicker{color:var(--teal);font-weight:800;font-size:11px;letter-spacing:2px;text-transform:uppercase}
+h2{font-family:Georgia,serif;color:var(--navy);font-size:clamp(29px,4vw,42px);line-height:1.18;margin:10px 0 14px;letter-spacing:-.7px}
+.section-head p{color:var(--muted);margin:0;font-size:16px}
+.situations{background:#fff}
+.situation-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.situation{background:var(--cream);border:1px solid var(--line);border-radius:13px;padding:21px;text-decoration:none;display:flex;align-items:center;gap:14px;min-height:100px;transition:.2s}
+.situation:hover{transform:translateY(-3px);border-color:#9abeb3;box-shadow:var(--shadow)}
+.situation-icon{width:43px;height:43px;border-radius:12px;background:var(--teal-light);display:grid;place-items:center;font-size:21px;flex-shrink:0}
+.situation strong{display:block;color:var(--navy);font-size:14px}
+.situation small{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+.search-wrap{margin:0 0 24px;max-width:560px}
+.search-wrap label{display:block;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.search-box{display:flex;align-items:center;background:#fff;border:1px solid #dce5df;border-radius:10px;padding:0 14px}
+.search-box span{font-size:18px;color:var(--teal)}
+.search-box input{width:100%;border:0;outline:0;padding:15px 10px;background:transparent;color:var(--ink)}
+.guides{background:var(--soft)}
+.guide-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.guide{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden;box-shadow:0 4px 16px rgba(16,43,53,.035)}
+.guide-top{padding:22px 23px 15px}
+.guide-tag{display:inline-block;color:var(--teal);background:var(--teal-light);padding:5px 9px;border-radius:20px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.8px}
+.guide h3{font-family:Georgia,serif;color:var(--navy);font-size:22px;line-height:1.25;margin:13px 0 8px}
+.guide-top p{color:var(--muted);font-size:14px;margin:0}
+.guide-visual{height:120px;background:linear-gradient(110deg,#edf4ef,#f7f3e8);display:flex;align-items:center;justify-content:center;gap:22px}
+.guide-visual .bubble{background:#fff;border:1px solid #dce8df;border-radius:14px;padding:12px 15px;color:var(--navy);font-size:12px;box-shadow:0 5px 15px rgba(16,43,53,.06)}
+.guide-visual .bubble.teal{background:var(--teal);color:#fff;border-color:var(--teal)}
+.guide-body{padding:20px 23px 23px}
+.guide-body h4{font-size:13px;color:var(--navy);margin:17px 0 5px}
+.guide-body p,.guide-body li{font-size:13px;color:#596b6e}
+.guide-body ul{padding-left:19px;margin:7px 0}
+.guide-body .script{background:#f3f6f1;border-left:3px solid var(--gold);padding:13px 15px;border-radius:0 8px 8px 0;color:var(--navy);font-weight:700;font-size:13px}
+.guide details{border-top:1px solid var(--line)}
+.guide summary{list-style:none;padding:14px 23px;color:var(--teal);font-weight:800;font-size:13px;cursor:pointer}
+.guide summary::-webkit-details-marker{display:none}
+.guide summary:after{content:"＋";float:right}
+.guide details[open] summary:after{content:"−"}
+.guide[hidden]{display:none}
+.empty{display:none;padding:22px;background:#fff;border-radius:10px;color:var(--muted)}
+.rights{background:#fff}
+.rights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.right-card{padding:24px;border-radius:14px;background:var(--cream);border:1px solid var(--line)}
+.right-icon{font-size:25px}
+.right-card h3{color:var(--navy);font-size:17px;margin:12px 0 7px}
+.right-card p{color:var(--muted);font-size:13px;margin:0}
+.response{background:#edf3ee}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px}
+.step{background:#fff;border-radius:13px;padding:20px;border:1px solid #e1e9e2}
+.step-number{width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800;font-size:13px}
+.step h3{color:var(--navy);font-size:16px;margin:14px 0 5px}
+.step p{color:var(--muted);font-size:12px;margin:0}
+.safety{background:var(--navy);color:#fff}
+.safety h2{color:#fff}
+.safety .section-head p{color:#c6d6d1}
+.safety-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.safety-card{padding:25px;border:1px solid rgba(255,255,255,.16);border-radius:14px;background:rgba(255,255,255,.055)}
+.safety-card h3{margin:0 0 10px;font-size:18px;color:#d7ebe2}
+.safety-card p,.safety-card li{color:#d1ddda;font-size:13px}
+.safety-card ul{padding-left:19px}
+.safety-alert{background:#f6edda;color:#473b28;padding:17px 19px;border-radius:10px;margin-top:20px;font-size:13px}
+.help{background:#fff}
+.help-inner{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px;align-items:center}
+.help-art{background:var(--teal-light);border-radius:18px;padding:22px}
+.help-list{display:grid;gap:13px}
+.help-item{display:flex;gap:13px;align-items:flex-start}
+.help-item b{color:var(--navy);font-size:14px}
+.help-item p{color:var(--muted);font-size:13px;margin:3px 0 0}
+.evidence{background:var(--cream)}
+.resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.resource{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px}
+.resource h3{font-size:15px;color:var(--navy);margin:0 0 7px}
+.resource p{font-size:12px;color:var(--muted);margin:0 0 12px}
+.resource a{font-size:12px;color:var(--teal);font-weight:800;text-decoration:none}
+.disclaimer{background:#f1f4ef;border-top:1px solid var(--line);padding:24px 0}
+.disclaimer p{font-size:12px;color:#647579;margin:0}
+footer{background:#0b2028;color:#c6d4d0;padding:35px 0}
+.footer-inner{display:flex;justify-content:space-between;gap:25px;align-items:center;flex-wrap:wrap}
+.footer-brand{font-family:Georgia,serif;color:#fff;font-size:20px}
+footer p{font-size:11px;color:#a9bcb6;margin:5px 0}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap}
+.footer-links a{font-size:12px;color:#d3e0da;text-decoration:none}
+.back-top{position:fixed;right:18px;bottom:18px;background:var(--teal);color:#fff;text-decoration:none;padding:11px 14px;border-radius:50%;box-shadow:var(--shadow);font-weight:800}
+@media(max-width:800px){
+ .hero-inner{grid-template-columns:1fr;padding:65px 0 55px;gap:25px}
+ .hero-art{max-width:330px}
+ .situation-grid{grid-template-columns:repeat(2,1fr)}
+ .rights-grid,.resource-grid{grid-template-columns:repeat(2,1fr)}
+ .steps{grid-template-columns:repeat(2,1fr)}
+ .help-inner{grid-template-columns:1fr}
+ .help-art{max-width:480px}
 }
-.section-dark .eyebrow{color:#83c7bd}
-.section-heading{
-  font-family:Georgia,serif;
-  font-size:clamp(2rem,4vw,2.8rem);
-  line-height:1.2;
-  color:var(--navy);
-  margin-bottom:17px;
-}
-.section-dark .section-heading{color:white}
-.section-intro{max-width:760px;color:var(--muted);margin-bottom:38px}
-.section-dark .section-intro{color:#c4cfda}
-.topbar{
-  background:#0b1627;color:#dce5ec;
-  text-align:center;padding:8px 15px;font-size:.78rem;
-}
-header{
-  background:rgba(255,255,255,.97);
-  border-bottom:1px solid var(--line);
-  position:sticky;top:0;z-index:100;
-}
-.nav{
-  min-height:76px;display:flex;align-items:center;
-  justify-content:space-between;gap:20px;
-}
-.brand{display:flex;align-items:center;gap:12px;color:var(--navy)}
-.logo{
-  width:45px;height:45px;border-radius:50%;
-  background:var(--navy);display:grid;place-items:center;
-  color:var(--gold);font-size:24px;border:2px solid var(--gold);
-}
-.brand strong{display:block;font-family:Georgia,serif;font-size:1rem}
-.brand small{display:block;font-size:.65rem;color:var(--muted);letter-spacing:.8px}
-.nav-links{display:flex;align-items:center;gap:20px}
-.nav-links a{font-size:.82rem;color:var(--navy);font-weight:700}
-.nav-links a:hover{color:var(--teal)}
-.menu-btn{
-  display:none;background:var(--navy);color:white;border:0;
-  padding:9px 13px;border-radius:8px;
-}
-.hero{
-  background:
-   radial-gradient(circle at 80% 20%,rgba(29,130,126,.28),transparent 32%),
-   linear-gradient(125deg,#101d32,#1a354e 70%,#174d51);
-  color:white;padding:100px 0 95px;overflow:hidden;
-}
-.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center}
-.hero h1{
-  font-family:Georgia,serif;
-  font-size:clamp(2.8rem,6vw,4.8rem);
-  line-height:1.08;max-width:780px;margin:16px 0 24px;
-}
-.hero h1 span{color:#dfc38c}
-.hero p{color:#d7e0e9;max-width:650px;font-size:1.06rem}
-.hero-label{
-  color:#a9d9d2;font-size:.78rem;font-weight:bold;
-  letter-spacing:2px;text-transform:uppercase;
-}
-.hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}
-.btn{
-  display:inline-block;padding:13px 21px;border-radius:8px;
-  border:1px solid transparent;font-weight:700;font-size:.9rem;
-  transition:.2s;
-}
-.btn-primary{background:var(--gold);color:#17243a}
-.btn-primary:hover{background:#e0c995;text-decoration:none}
-.btn-outline{border-color:#a9c2ce;color:white}
-.btn-outline:hover{background:rgba(255,255,255,.1);text-decoration:none}
-.hero-art{
-  min-height:330px;border:1px solid rgba(255,255,255,.2);
-  border-radius:50% 50% 45% 45%;
-  display:flex;align-items:center;justify-content:center;
-  position:relative;background:rgba(255,255,255,.04);
-}
-.hero-art .symbol{
-  font-family:Georgia,serif;font-size:7rem;color:var(--gold);
-  border:1px solid rgba(197,166,106,.6);border-radius:50%;
-  width:210px;height:210px;display:grid;place-items:center;
-}
-.hero-art:before,.hero-art:after{
-  content:"";position:absolute;border:1px solid rgba(255,255,255,.15);
-  border-radius:50%;width:270px;height:270px;
-}
-.hero-art:after{width:320px;height:320px}
-.hero-caption{
-  position:absolute;bottom:25px;background:#102238;
-  border:1px solid rgba(255,255,255,.2);padding:9px 16px;
-  border-radius:30px;font-size:.76rem;color:#d8e5e8;
-}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:45px}
-.stat{border-left:2px solid var(--gold);padding-left:14px}
-.stat strong{display:block;color:#e2c991;font-family:Georgia,serif;font-size:1.35rem}
-.stat span{font-size:.75rem;color:#c7d2dc}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{
-  background:white;border:1px solid var(--line);border-radius:var(--radius);
-  padding:25px;box-shadow:0 5px 20px rgba(16,29,50,.035);
-}
-.card h3{font-family:Georgia,serif;color:var(--navy);font-size:1.25rem;margin:12px 0 9px}
-.card p{font-size:.9rem;color:var(--muted)}
-.card-icon{
-  width:47px;height:47px;border-radius:12px;background:var(--teal-light);
-  display:grid;place-items:center;font-size:1.35rem;
-}
-.card .learn{display:inline-block;margin-top:15px;font-weight:700;font-size:.84rem}
-.pill{
-  display:inline-block;background:var(--teal-light);color:#176a67;
-  padding:5px 10px;border-radius:20px;font-size:.7rem;font-weight:800;
-}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:start}
-.about-panel{
-  background:var(--navy);color:white;border-radius:var(--radius);padding:32px;
-}
-.about-panel h3{font-family:Georgia,serif;font-size:1.6rem;margin-bottom:14px}
-.about-panel p{color:#d1dce5}
-.principles{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:20px}
-.principle{padding:17px;background:#ffffff0d;border:1px solid #ffffff20;border-radius:12px}
-.principle strong{display:block;color:#e1c58e;margin-bottom:4px}
-.principle span{font-size:.82rem;color:#d1dce5}
-.decoder-wrap{
-  background:white;border:1px solid var(--line);border-radius:22px;
-  overflow:hidden;box-shadow:var(--shadow);
-}
-.decoder-top{
-  padding:28px;background:var(--navy);color:white;
-}
-.decoder-top h3{font-family:Georgia,serif;font-size:1.7rem;margin:8px 0}
-.decoder-top p{color:#cbd7e1;font-size:.9rem}
-.decoder-body{padding:28px}
-.decoder-controls{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.field label{display:block;font-weight:700;font-size:.85rem;margin-bottom:7px}
-.field select,.field textarea,.field input{
-  width:100%;padding:12px 13px;border:1px solid #d9dfe4;
-  border-radius:9px;background:white;color:var(--ink);
-}
-.field textarea{min-height:125px;resize:vertical}
-.field select:focus,.field textarea:focus,.field input:focus{
-  outline:2px solid #8bc5c0;border-color:var(--teal)
-}
-.field-full{grid-column:1/-1}
-.example-row{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 20px}
-.example{
-  border:1px solid #d5e4e2;background:#f2f8f7;color:#246c68;
-  padding:7px 11px;border-radius:20px;font-size:.75rem;
-}
-.example:hover{background:#dcefeb}
-.decoder-result{
-  margin-top:23px;background:#f5f8f8;border:1px solid #dce9e7;
-  border-radius:14px;padding:22px;display:none;
-}
-.decoder-result h4{font-family:Georgia,serif;color:var(--navy);font-size:1.25rem}
-.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:15px}
-.result-item{background:white;border:1px solid var(--line);border-radius:10px;padding:15px}
-.result-item strong{display:block;color:var(--teal);font-size:.82rem;margin-bottom:5px}
-.result-item p{font-size:.85rem;color:var(--muted)}
-.notice{
-  margin-top:18px;padding:14px 16px;border-left:3px solid var(--gold);
-  background:#fbf7ed;color:#6e5a32;font-size:.82rem;border-radius:5px;
-}
-.method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.method-step{background:#ffffff0d;border:1px solid #ffffff20;padding:20px;border-radius:13px}
-.method-step b{font-family:Georgia,serif;color:var(--gold);font-size:1.45rem}
-.method-step h3{color:white;margin:8px 0}
-.method-step p{font-size:.82rem;color:#cbd7e1}
-.scenario-box{
-  background:var(--navy);color:white;padding:32px;border-radius:18px;
-}
-.scenario-box p{color:#d1dce5}
-.scenario-question{font-family:Georgia,serif;font-size:1.35rem;margin:17px 0}
-.answer-list{display:grid;gap:10px;margin-top:20px}
-.answer{
-  text-align:left;background:#ffffff0c;color:white;border:1px solid #ffffff35;
-  border-radius:9px;padding:13px 15px;
-}
-.answer:hover{background:#ffffff20}
-.answer.correct{border-color:#76c5a0;background:#1d614c}
-.answer.incorrect{border-color:#d6a17c;background:#64422e}
-.feedback{margin-top:15px;font-weight:700;min-height:28px}
-.resource-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.resource{
-  background:white;border:1px solid var(--line);border-radius:12px;padding:19px;
-}
-.resource small{color:var(--teal);font-weight:800;text-transform:uppercase;letter-spacing:1px}
-.resource h3{font-family:Georgia,serif;color:var(--navy);margin:7px 0}
-.resource p{font-size:.85rem;color:var(--muted);margin-bottom:9px}
-.resource a{font-size:.85rem;font-weight:700}
-.ethics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
-.ethics-card{padding:22px;border:1px solid #ffffff24;border-radius:13px;background:#ffffff09}
-.ethics-card h3{color:#e2c991;margin-bottom:8px}
-.ethics-card p{font-size:.85rem;color:#cbd7e1}
-.contact-panel{
-  background:linear-gradient(120deg,#e7f3f1,#f8f7f2);
-  border:1px solid #d9e9e5;border-radius:18px;padding:35px;
-}
-footer{background:#0b1627;color:#c4cfda;padding:40px 0 20px}
-.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:30px}
-footer h3{font-family:Georgia,serif;color:white;margin-bottom:12px}
-footer a{display:block;color:#c4cfda;font-size:.85rem;margin:7px 0}
-footer p{font-size:.85rem}
-.copyright{
-  border-top:1px solid #ffffff20;margin-top:30px;padding-top:17px;
-  font-size:.76rem;color:#9eabb9;
-}
-.small-note{font-size:.78rem;color:var(--muted)}
-@media(max-width:900px){
- .nav-links{gap:11px}.nav-links a{font-size:.73rem}
- .hero-grid{grid-template-columns:1fr}.hero-art{display:none}
- .grid{grid-template-columns:repeat(2,1fr)}
- .method-grid{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:680px){
- .section{padding:62px 0}
- .nav{min-height:68px}
+@media(max-width:620px){
+ .nav{height:67px}
  .menu-btn{display:block}
- .nav-links{
-  display:none;position:absolute;top:68px;left:0;right:0;
-  background:white;padding:18px 5%;border-bottom:1px solid var(--line);
-  flex-direction:column;align-items:flex-start;gap:15px;
- }
- .nav-links.open{display:flex}
- .hero{padding:72px 0}
- .stats{grid-template-columns:1fr}
- .grid,.about-grid,.decoder-controls,.result-grid,
- .resource-list,.ethics-grid,.footer-grid{grid-template-columns:1fr}
- .principles{grid-template-columns:1fr}
- .method-grid{grid-template-columns:1fr 1fr}
- .decoder-body{padding:18px}
- .decoder-top{padding:22px}
- .contact-panel{padding:24px}
+ .navlinks{display:none;position:absolute;top:67px;left:0;right:0;background:var(--cream);padding:18px 5%;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:16px}
+ .navlinks.open{display:flex}
+ .navlinks a{padding:5px}
+ .brand{font-size:13px}
+ .brand-mark{width:38px;height:38px}
+ section{padding:57px 0}
+ .hero-inner{padding:55px 0 48px}
+ .hero h1{font-size:42px}
+ .hero p{font-size:15px}
+ .situation-grid,.guide-grid,.rights-grid,.resource-grid,.safety-grid{grid-template-columns:1fr}
+ .situation{min-height:83px;padding:15px}
+ .steps{grid-template-columns:1fr 1fr}
+ .step{padding:15px}
+ .guide-top,.guide-body{padding-left:18px;padding-right:18px}
+ .footer-inner{align-items:flex-start;flex-direction:column}
 }
-@media(max-width:390px){
- .method-grid{grid-template-columns:1fr}
-}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 </style>
 </head>
-
 <body>
-<div class="topbar">A global educational initiative for communication, awareness and human dignity</div>
-
 <header>
-  <div class="container nav">
-    <a class="brand" href="#home" aria-label="The World Without Words home">
-      <span class="logo" aria-hidden="true">◉</span>
-      <span>
-        <strong>The World Without Words</strong>
-        <small>RESEARCH · EDUCATION · HUMAN PROTECTION</small>
-      </span>
-    </a>
-    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-label="Open navigation">Menu ☰</button>
-    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#decoder">Decoder</a>
-      <a href="#learning">Learning</a>
-      <a href="#library">Library</a>
-      <a href="#rights">Human Rights</a>
-    </nav>
-  </div>
+ <div class="container nav">
+  <a class="brand" href="#home" aria-label="The World Without Words home">
+   <span class="brand-mark">
+    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M7 10.5C7 7.5 9.5 5 12.5 5h15C30.5 5 33 7.5 33 10.5v11C33 24.5 30.5 27 27.5 27H19l-8 7v-7h-1.5C6.5 27 4 24.5 4 21.5v-11" stroke="#B9D9CF" stroke-width="2.4" stroke-linejoin="round"/><path d="M13 14h14M13 19h9" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
+   </span>
+   <span>The World Without Words<small>UNDERSTANDING WHAT WORDS CANNOT ALWAYS SAY</small></span>
+  </a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navlinks">Menu ☰</button>
+  <nav class="navlinks" id="navlinks">
+   <a href="#situations">Find Your Situation</a>
+   <a href="#guides">Practical Guides</a>
+   <a href="#rights">Your Rights</a>
+   <a href="#safety">Safety & Support</a>
+   <a href="#knowledge">Knowledge</a>
+  </nav>
+ </div>
 </header>
 
-<main>
-<section class="hero" id="home">
- <div class="container hero-grid">
+<main id="home">
+<section class="hero">
+ <div class="container hero-inner">
   <div>
-   <div class="hero-label">A global initiative for understanding human communication</div>
-   <h1>Understanding What <span>Words</span> Cannot Always Say.</h1>
-   <p>
-    Exploring the language of human behaviour, nonverbal communication,
-    psychological influence, consent and human dignity through education,
-    interdisciplinary research and public awareness.
-   </p>
+   <div class="eyebrow">A human-centred educational initiative</div>
+   <h1>You deserve to be heard. <span>You deserve respect.</span></h1>
+   <p>If someone is mistreating you, pressuring you, bullying you or making you feel unsafe, you deserve clear information and support. You are not invisible. Your experience matters.</p>
    <div class="hero-actions">
-    <a class="btn btn-primary" href="#decoder">Explore the Communication Decoder</a>
-    <a class="btn btn-outline" href="#research">Discover Our Research</a>
+    <a class="light" href="#situations">Understand My Situation</a>
+    <a class="outline" href="#safety">I Need Safety Guidance</a>
    </div>
-   <div class="stats">
-    <div class="stat"><strong>Research</strong><span>Evidence-informed knowledge</span></div>
-    <div class="stat"><strong>Education</strong><span>Accessible public learning</span></div>
-    <div class="stat"><strong>Protection</strong><span>Dignity, consent and awareness</span></div>
-   </div>
+   <div class="hero-note">Understand what may be happening. Recognise the signs. Know your rights. Explore safer ways to respond.</div>
   </div>
-  <div class="hero-art" aria-hidden="true">
-   <div class="symbol">◉</div>
-   <div class="hero-caption">Beyond words. Towards understanding.</div>
+  <div class="hero-art">
+   <svg viewBox="0 0 480 350" role="img" aria-label="Illustration of a person being listened to and supported">
+    <circle cx="250" cy="168" r="145" fill="#244650"/>
+    <circle cx="250" cy="168" r="112" fill="#315862"/>
+    <path d="M123 283c13-64 53-96 111-96s98 32 111 96" fill="#B8D8CD"/>
+    <circle cx="234" cy="129" r="43" fill="#E7BFA1"/>
+    <path d="M193 126c-4-37 17-60 48-60 31 0 49 21 43 55-10-9-19-22-23-31-13 17-38 28-68 30" fill="#263B40"/>
+    <path d="M201 146c10 10 22 15 34 15 13 0 25-5 34-15" stroke="#8A594A" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M287 105c0-25 20-43 44-43h47c23 0 41 18 41 41v12c0 23-18 41-41 41h-17l-23 20v-20h-7c-24 0-44-18-44-41z" fill="#F8F5EA"/>
+    <path d="M314 103h73M314 121h49" stroke="#287C78" stroke-width="5" stroke-linecap="round"/>
+    <path d="M53 118c0-21 17-38 38-38h35c21 0 38 17 38 38v9c0 21-17 38-38 38h-9l-20 18v-18h-6c-21 0-38-17-38-38z" fill="#D5B777"/>
+    <path d="M78 119h59M78 136h38" stroke="#102B35" stroke-width="4" stroke-linecap="round"/>
+    <path d="M75 280c-4-23 7-42 27-49" stroke="#D5B777" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="102" cy="227" r="12" fill="#D5B777"/>
+    <path d="M355 260l18 18 37-42" stroke="#B8D8CD" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <circle cx="375" cy="254" r="35" stroke="#B8D8CD" stroke-width="3" fill="none"/>
+   </svg>
   </div>
  </div>
 </section>
 
-<section class="section section-white" id="about">
- <div class="container about-grid">
+<section class="situations" id="situations">
+ <div class="container">
+  <div class="section-head">
+   <div class="kicker">Start with what you are experiencing</div>
+   <h2>You do not have to know the right words to find guidance.</h2>
+   <p>Choose the situation that feels closest to yours. Every experience is different. These guides can help you explore what may be happening without jumping to conclusions.</p>
+  </div>
+  <div class="situation-grid">
+   <a class="situation" href="#guide-manipulation"><span class="situation-icon">🧩</span><span><strong>Someone is manipulating me</strong><small>Pressure, guilt, confusion or control</small></span></a>
+   <a class="situation" href="#guide-bullying"><span class="situation-icon">🛡️</span><span><strong>I am being bullied</strong><small>Repeated humiliation or intimidation</small></span></a>
+   <a class="situation" href="#guide-boundaries"><span class="situation-icon">✋</span><span><strong>My boundaries are ignored</strong><small>Someone will not respect my no</small></span></a>
+   <a class="situation" href="#guide-control"><span class="situation-icon">🔒</span><span><strong>Someone is controlling me</strong><small>Restrictions, monitoring or isolation</small></span></a>
+   <a class="situation" href="#guide-threats"><span class="situation-icon">⚠️</span><span><strong>I am being threatened</strong><small>Fear, blackmail or intimidation</small></span></a>
+   <a class="situation" href="#guide-online"><span class="situation-icon">📱</span><span><strong>I feel unsafe online</strong><small>Harassment, pressure or private images</small></span></a>
+   <a class="situation" href="#guide-exclusion"><span class="situation-icon">💬</span><span><strong>I feel excluded or ignored</strong><small>Silence, rejection or isolation</small></span></a>
+   <a class="situation" href="#guide-relationship"><span class="situation-icon">🤝</span><span><strong>I feel uncomfortable in a relationship</strong><small>Pressure, disrespect or fear</small></span></a>
+   <a class="situation" href="#guide-support"><span class="situation-icon">❤️</span><span><strong>I want to help someone</strong><small>Support someone experiencing harm</small></span></a>
+  </div>
+ </div>
+</section>
+
+<section class="guides" id="guides">
+ <div class="container">
+  <div class="section-head">
+   <div class="kicker">Practical guidance</div>
+   <h2>Understand the behaviour. Decide what is safe for you.</h2>
+   <p>Clear explanations, recognisable examples and practical steps. A single incident may have different explanations; repeated patterns, context and impact matter.</p>
+  </div>
+  <div class="search-wrap">
+   <label for="guideSearch">Find a topic or situation</label>
+   <div class="search-box"><span>⌕</span><input id="guideSearch" type="search" placeholder="Try: guilt, bullying, threats, boundaries..." aria-label="Search practical guides"></div>
+  </div>
+  <div class="guide-grid" id="guideGrid">
+
+   <article class="guide" id="guide-manipulation" data-search="manipulation guilt emotional pressure gaslighting blame control">
+    <div class="guide-top"><span class="guide-tag">Manipulation & pressure</span><h3>When someone makes you feel guilty for saying no</h3><p>Pressure can be difficult to recognise when it comes from someone you care about.</p></div>
+    <div class="guide-visual"><div class="bubble">“If you cared, you would…”</div><div class="bubble teal">“I still have a choice.”</div></div>
+    <div class="guide-body">
+     <h4>What might be happening?</h4><p>Someone may be using guilt to influence your decision instead of respecting your choice. Disappointment is normal; repeatedly using guilt to control another person's choices is concerning.</p>
+     <h4>What might you notice?</h4><ul><li>“After everything I have done for you…”</li><li>“You never do anything for me.”</li><li>They keep pressuring you after you have clearly refused.</li></ul>
+     <h4>What else could explain it?</h4><p>A person may genuinely feel disappointed or may communicate poorly. Look at whether they accept your decision or repeatedly punish and pressure you for it.</p>
+     <h4>What can you do?</h4><ul><li>Give yourself time before agreeing.</li><li>Remember that you are allowed to refuse.</li><li>You do not have to keep defending your decision endlessly.</li><li>If pressure becomes threatening, prioritise safety and seek support.</li></ul>
+     <h4>Words you can use</h4><div class="script">“I understand that you are disappointed, but my decision remains the same.”</div>
+     <h4>Remember</h4><p>Caring about someone does not mean surrendering your choices.</p>
+    </div>
+    <details><summary>When should I seek help?</summary><div class="guide-body"><p>Seek support if pressure becomes persistent, affects your freedom, isolates you from others, involves threats, or makes you afraid to make ordinary decisions.</p></div></details>
+   </article>
+
+   <article class="guide" id="guide-bullying" data-search="bullying harassment humiliation school workplace intimidation">
+    <div class="guide-top"><span class="guide-tag">Bullying & harassment</span><h3>When someone repeatedly humiliates or targets you</h3><p>Bullying can happen at school, at work, in relationships, in public or online.</p></div>
+    <div class="guide-visual"><div class="bubble">“It was only a joke.”</div><div class="bubble teal">“I asked you to stop.”</div></div>
+    <div class="guide-body">
+     <h4>What might be happening?</h4><p>Repeated insults, humiliation, intimidation, exclusion or targeting can become bullying. A joke is not harmless simply because someone calls it a joke.</p>
+     <h4>What might you notice?</h4><ul><li>Repeated comments about your appearance, identity or abilities.</li><li>Someone deliberately embarrassing you in front of others.</li><li>Threats, unwanted messages or attempts to isolate you.</li></ul>
+     <h4>What else could explain it?</h4><p>One insensitive remark may be a mistake. Notice whether the behaviour continues after the person understands its impact, and whether there is a pattern of targeting or intimidation.</p>
+     <h4>What can you do?</h4><ul><li>If safe, clearly state that the behaviour is unwelcome.</li><li>Keep a record of repeated incidents, dates and witnesses.</li><li>Consider a trusted teacher, manager, family member or appropriate support service.</li><li>Avoid confronting someone alone if you fear retaliation.</li></ul>
+     <h4>Words you can use</h4><div class="script">“Those comments are not acceptable to me. Please stop.”</div>
+     <h4>Remember</h4><p>You do not have to accept humiliation to keep the peace.</p>
+    </div>
+    <details><summary>What if nobody believes me?</summary><div class="guide-body"><p>Try speaking with another trusted person or an appropriate reporting service. A clear written record may help explain what has happened. Your safety matters more than persuading someone who refuses to listen.</p></div></details>
+   </article>
+
+   <article class="guide" id="guide-boundaries" data-search="boundaries consent personal space no refusal privacy">
+    <div class="guide-top"><span class="guide-tag">Boundaries & consent</span><h3>When someone does not respect your boundaries</h3><p>Your personal space, choices, privacy and consent deserve respect.</p></div>
+    <div class="guide-visual"><div class="bubble">“I said no.”</div><div class="bubble teal">“Your answer matters.”</div></div>
+    <div class="guide-body">
+     <h4>What might be happening?</h4><p>A boundary communicates what you are comfortable with and what you do not accept. Repeatedly ignoring a clear boundary is a warning sign.</p>
+     <h4>What might you notice?</h4><ul><li>Someone continues touching you after you ask them to stop.</li><li>Someone reads your private messages without permission.</li><li>Someone keeps asking after you have refused.</li><li>Your personal space or time is repeatedly disregarded.</li></ul>
+     <h4>What else could explain it?</h4><p>People may misunderstand an unspoken expectation. Communicating a boundary can clarify it, but you are not required to keep explaining a refusal to someone who is deliberately ignoring it.</p>
+     <h4>What can you do?</h4><ul><li>State your boundary clearly if it is safe.</li><li>Move away from unwanted contact where possible.</li><li>Limit access to private information and personal accounts.</li><li>Seek trusted support if your boundary is repeatedly violated.</li></ul>
+     <h4>Words you can use</h4><div class="script">“I am not comfortable with this. Please respect my boundary.”</div>
+     <h4>Remember</h4><p>Consent must be freely given. Silence, fear or pressure should not be treated as agreement.</p>
+    </div>
+    <details><summary>Do I need to explain why I said no?</summary><div class="guide-body"><p>You may choose to explain, but you do not need to prove that your boundary is reasonable before it deserves respect.</p></div></details>
+   </article>
+
+   <article class="guide" id="guide-control" data-search="controlling behaviour isolation monitoring jealousy coercive control">
+    <div class="guide-top"><span class="guide-tag">Control & autonomy</span><h3>When someone tries to control your everyday life</h3><p>Control may develop gradually and affect your freedom to make ordinary choices.</p></div>
+    <div class="guide-visual"><div class="bubble">“You cannot meet them.”</div><div class="bubble teal">“I have a right to relationships.”</div></div>
+    <div class="guide-body">
+     <h4>What might be happening?</h4><p>Controlling behaviour can involve restricting who you see, where you go, what you wear, how you spend money or how you communicate.</p>
+     <h4>What might you notice?</h4><ul><li>Someone demands constant updates or access to your phone.</li><li>They discourage or prevent contact with friends and family.</li><li>They monitor your movements or finances.</li><li>You feel afraid of their reaction to ordinary decisions.</li></ul>
+     <h4>What else could explain it?</h4><p>Concern, insecurity or disagreement alone does not prove coercive control. Repeated restrictions, monitoring, intimidation and loss of freedom are more concerning.</p>
+     <h4>What can you do?</h4><ul><li>Notice whether your freedom and independence are shrinking.</li><li>Speak privately with someone you trust if it is safe.</li><li>Consider a safety plan before making major changes.</li><li>Do not announce plans to leave or confront someone if doing so could put you at risk.</li></ul>
+     <h4>Words you can use</h4><div class="script">“I value our relationship, but I also have the right to make my own decisions.”</div>
+     <h4>Remember</h4><p>Care and love should not require you to give up your freedom or live in fear.</p>
+    </div>
+    <details><summary>What if I depend on this person?</summary><div class="guide-body"><p>You are not at fault for needing practical support. Consider confidential advice and gradual safety planning with a trusted person or specialist service. Do not take steps that could increase danger without considering your circumstances.</p></div></details>
+   </article>
+
+   <article class="guide" id="guide-threats" data-search="threats blackmail intimidation extortion private photos safety">
+    <div class="guide-top"><span class="guide-tag">Threats & intimidation</span><h3>When someone threatens or blackmails you</h3><p>Threats should be taken seriously, even when the person says they are joking.</p></div>
+    <div class="guide-visual"><div class="bubble">“Do what I say or else.”</div><div class="bubble teal">“I deserve safety.”</div></div>
+    <div class="guide-body">
+     <h4>What might be happening?</h4><p>Threats use fear to pressure someone into doing something. Blackmail may involve threatening to reveal private information, images or messages unless demands are met.</p>
+     <h4>What might you notice?</h4><ul><li>Threats of physical harm or retaliation.</li><li>Demands for money, access, images or contact.</li><li>Threats to expose private information.</li><li>Someone says they will harm you or another person if you refuse.</li></ul>
+     <h4>What can you do?</h4><ul><li>If danger is immediate, move to a safer place and contact local emergency services.</li><li>Do not meet the person alone or escalate the situation.</li><li>Preserve messages and other evidence if it is safe to do so.</li><li>Seek help from a trusted person and appropriate local authorities or specialist services.</li><li>If your device or account may be monitored, use a safer device to seek help.</li></ul>
+     <h4>Words you can use</h4><div class="script">You do not have to respond directly to a threat. Your priority is safety and support, not winning an argument.</div>
+     <h4>Remember</h4><p>Being threatened or blackmailed is not your fault. You deserve help without judgement.</p>
+    </div>
+    <details><summary>Should I delete the messages?</summary><div class="guide-body"><p>If safe, preserve the original messages, account details, dates and screenshots. Do not put yourself at risk to collect evidence. A qualified local service can advise on safe reporting and evidence preservation.</p></div></details>
+   </article>
+
+   <article class="guide" id="guide-online" data-search="online harassment cyberbullying privacy blackmail digital safety">
+    <div class="guide-top"><span class="guide-tag">Online protection</span><h3>When someone pressures or harasses you online</h3><p>Digital harassment can affect your privacy, confidence and sense of safety.</p></div>
+    <div class="guide-visual"><div class="bubble">Repeated unwanted messages</div><div class="bubble teal">Privacy. Safety. Support.</div></div>
+    <div class="guide-body">
+     <h4>What might be happening?</h4><p>Online harassment can include repeated unwanted contact, threats, impersonation, stalking, blackmail or sharing private material without consent.</p>
+     <h4>What might you notice?</h4><ul><li>Someone creates new accounts to contact you after being blocked.</li><li>Threats to publish private images or conversations.</li><li>Attempts to obtain passwords or personal details.</li><li>Someone shares your information without permission.</li></ul>
+     <h4>What can you do?</h4><ul><li>Do not share passwords or verification codes.</li><li>Review account privacy and security settings from a safe device.</li><li>Save relevant evidence if safe, then report and block the account where appropriate.</li><li>Tell a trusted person. Seek specialist or official help for threats and image-based abuse.</li></ul>
+     <h4>Words you can use</h4><div class="script">“Do not contact me again.” Only send a message like this if doing so is safe and will not increase the risk.</div>
+     <h4>Remember</h4><p>You are not responsible for another person's decision to harass, threaten or exploit you.</p>
+    </div>
+    <details><summary>What if private images are involved?</summary><div class="guide-body"><p>Do not blame yourself. Avoid forwarding or reposting the material. Preserve evidence safely and seek confidential support and appropriate local reporting options. If you are under 18, involve a safe, trusted adult or specialist child-protection service.</p></div></details>
+   </article>
+
+   <article class="guide" id="guide-exclusion" data-search="ignored excluded silence friendship rejection social isolation">
+    <div class="guide-top"><span class="guide-tag">Silence & exclusion</span><h3>When you feel ignored, excluded or unheard</h3><p>Being left out can hurt. Understanding the context can help you decide what it means.</p></div>
+    <div class="guide-visual"><div class="bubble">No reply yet…</div><div class="bubble teal">There may be more than one reason.</div></div>
+    <div class="guide-body">
+     <h4>What might be happening?</h4><p>Someone may be unavailable, distracted, avoiding a difficult conversation or deliberately excluding you. Silence alone does not tell you which explanation is correct.</p>
+     <h4>What should you notice?</h4><ul><li>Is it a one-time event or a repeated pattern?</li><li>Are you consistently excluded while others are included?</li><li>Does the person explain or discuss the issue when asked?</li><li>Is silence being used to punish, frighten or control you?</li></ul>
+     <h4>What else could explain it?</h4><p>People may be busy, overwhelmed or need space. A delayed reply or a quiet expression does not prove rejection, anger or manipulation.</p>
+     <h4>What can you do?</h4><ul><li>Allow reasonable time before assuming intent.</li><li>Ask calmly if something needs to be discussed.</li><li>Look at the broader pattern and how the relationship affects you.</li><li>Seek support if exclusion becomes persistent harassment or isolation.</li></ul>
+     <h4>Words you can use</h4><div class="script">“I have felt left out recently. Is there something we should talk about?”</div>
+     <h4>Remember</h4><p>Your feelings matter, even when the other person's intention is not yet clear.</p>
+    </div>
+   </article>
+
+   <article class="guide" id="guide-relationship" data-search="relationship discomfort respect fear pressure consent emotional abuse">
+    <div class="guide-top"><span class="guide-tag">Relationships & respect</span><h3>When a relationship makes you feel uncomfortable or afraid</h3><p>You can care about someone and still recognise behaviour that harms you.</p></div>
+    <div class="guide-visual"><div class="bubble">“Maybe I am overreacting.”</div><div class="bubble teal">“My feelings deserve attention.”</div></div>
+    <div class="guide-body">
+     <h4>What might be happening?</h4><p>Repeated disrespect, fear, pressure, humiliation, unwanted contact or control can make a relationship unsafe or unhealthy.</p>
+     <h4>What might you notice?</h4><ul><li>You feel anxious about the person's reactions.</li><li>You change ordinary behaviour to avoid anger or punishment.</li><li>Your needs and boundaries are repeatedly dismissed.</li><li>You are pressured into decisions or intimacy you do not want.</li></ul>
+     <h4>What else could explain it?</h4><p>All relationships can involve disagreement. The important questions are whether both people can express themselves safely, respect a refusal and take responsibility for their actions.</p>
+     <h4>What can you do?</h4><ul><li>Take your discomfort seriously without forcing yourself to make an immediate decision.</li><li>Talk privately with someone you trust.</li><li>Consider professional support if it is accessible and safe.</li><li>If you fear harm, prioritise safety planning over confrontation.</li></ul>
+     <h4>Words you can use</h4><div class="script">“I want a relationship where we can disagree without fear or disrespect.”</div>
+     <h4>Remember</h4><p>Respect is not something you should have to earn by accepting mistreatment.</p>
+    </div>
+   </article>
+
+   <article class="guide" id="guide-support" data-search="help someone victim support listen believe respect support">
+    <div class="guide-top"><span class="guide-tag">Supporting others</span><h3>How to support someone who is being mistreated</h3><p>Being heard without judgement can make a meaningful difference.</p></div>
+    <div class="guide-visual"><div class="bubble">“You can talk to me.”</div><div class="bubble teal">“I will listen.”</div></div>
+    <div class="guide-body">
+     <h4>What can you do?</h4><ul><li>Listen patiently and let the person explain in their own words.</li><li>Take their concerns seriously without demanding proof immediately.</li><li>Ask what kind of support they want.</li><li>Respect their choices and avoid pressuring them to confront or leave.</li><li>Help them explore safe, appropriate support options.</li></ul>
+     <h4>What should you avoid?</h4><ul><li>“Why did you let this happen?”</li><li>“You should have known better.”</li><li>Making decisions on their behalf without considering their safety.</li><li>Sharing their story without permission, except where an immediate safeguarding duty applies.</li></ul>
+     <h4>Words you can use</h4><div class="script">“I am glad you told me. I am listening. What would help you feel safer right now?”</div>
+     <h4>Remember</h4><p>Support means respecting the person's dignity, choices and safety—not taking control away from them.</p>
+    </div>
+   </article>
+  </div>
+  <div class="empty" id="noResults">No matching guide found. Try a different word or browse the situations above.</div>
+ </div>
+</section>
+
+<section class="rights" id="rights">
+ <div class="container">
+  <div class="section-head">
+   <div class="kicker">Your dignity matters</div>
+   <h2>Know the rights and boundaries every person deserves.</h2>
+   <p>These principles are a starting point for understanding respectful treatment. Specific legal protections differ by country and situation.</p>
+  </div>
+  <div class="rights-grid">
+   <div class="right-card"><div class="right-icon">✋</div><h3>Consent</h3><p>People should be free to make voluntary choices without threats, force or pressure. Consent can be withdrawn.</p></div>
+   <div class="right-card"><div class="right-icon">🧭</div><h3>Personal autonomy</h3><p>Your choices, opinions and independence matter. Another person should not control your life through fear.</p></div>
+   <div class="right-card"><div class="right-icon">🔐</div><h3>Privacy</h3><p>Your personal information, communications and private space deserve appropriate respect and protection.</p></div>
+   <div class="right-card"><div class="right-icon">🌱</div><h3>Dignity</h3><p>You deserve to be treated as a person of equal worth, without humiliation, degradation or dehumanisation.</p></div>
+   <div class="right-card"><div class="right-icon">🗣️</div><h3>Freedom to express yourself</h3><p>You should be able to communicate concerns and disagree without intimidation or retaliation.</p></div>
+   <div class="right-card"><div class="right-icon">🛡️</div><h3>Safety and protection</h3><p>Everyone deserves protection from violence, harassment, exploitation and other forms of harm.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="response" id="response">
+ <div class="container">
+  <div class="section-head">
+   <div class="kicker">A practical way forward</div>
+   <h2>Pause. Understand. Choose a safer response.</h2>
+   <p>You do not need to solve everything at once. Use this simple framework to think clearly about a difficult interaction.</p>
+  </div>
+  <div class="steps">
+   <div class="step"><div class="step-number">1</div><h3>Observe</h3><p>What exactly happened? Separate what you saw or heard from what you think it meant.</p></div>
+   <div class="step"><div class="step-number">2</div><h3>Understand</h3><p>Consider context, impact and whether the behaviour is repeated. Avoid assuming intent from one gesture or phrase.</p></div>
+   <div class="step"><div class="step-number">3</div><h3>Verify</h3><p>Where safe, clarify what happened. Notice whether the person listens, respects boundaries and changes behaviour.</p></div>
+   <div class="step"><div class="step-number">4</div><h3>Respond safely</h3><p>Choose a response that protects your wellbeing. Seek support or distance when direct discussion is unsafe.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="safety" id="safety">
+ <div class="container">
+  <div class="section-head">
+   <div class="kicker" style="color:#b9d9cf">Your safety comes first</div>
+   <h2>When you need protection or support.</h2>
+   <p>If you are experiencing threats, violence, coercion or serious harassment, you do not have to handle it alone.</p>
+  </div>
+  <div class="safety-grid">
+   <div class="safety-card">
+    <h3>If you may be in immediate danger</h3>
+    <ul><li>Move to a safer place if you can.</li><li>Contact your local emergency service.</li><li>Reach someone you trust who can help you.</li><li>Avoid confronting the person if this could increase danger.</li></ul>
+   </div>
+   <div class="safety-card">
+    <h3>If the situation is ongoing</h3>
+    <ul><li>Consider a trusted friend, family member, teacher, workplace contact or qualified support professional.</li><li>Keep a record of incidents if safe to do so.</li><li>Consider a safety plan for communication, travel and important documents.</li><li>Seek local specialist, legal or protection services where appropriate.</li></ul>
+   </div>
+  </div>
+  <div class="safety-alert"><strong>Important:</strong> If someone monitors your phone, browsing or accounts, using this website may leave a trace. Consider a safer device or private support channel if you are concerned. Do not change settings or delete history if doing so could alert someone and increase your risk.</div>
+ </div>
+</section>
+
+<section class="help" id="help">
+ <div class="container help-inner">
+  <div class="help-art">
+   <svg viewBox="0 0 420 300" role="img" aria-label="Illustration of two people having a supportive conversation">
+    <rect x="15" y="15" width="390" height="270" rx="22" fill="#DCECE4"/>
+    <circle cx="130" cy="105" r="35" fill="#D5A783"/>
+    <path d="M70 255c5-65 24-99 60-99s55 34 60 99" fill="#287C78"/>
+    <circle cx="285" cy="105" r="35" fill="#B77C5B"/>
+    <path d="M225 255c5-65 24-99 60-99s55 34 60 99" fill="#193D47"/>
+    <path d="M165 57h112c18 0 30 12 30 28v13c0 17-12 29-30 29h-35l-22 19v-19h-55c-17 0-29-12-29-29V85c0-16 12-28 29-28z" fill="#fff"/>
+    <path d="M179 85h92M179 101h63" stroke="#287C78" stroke-width="5" stroke-linecap="round"/>
+    <path d="M175 188c18 12 37 18 57 18" stroke="#D5B777" stroke-width="7" stroke-linecap="round" fill="none"/>
+   </svg>
+  </div>
   <div>
-   <div class="eyebrow">Who we are</div>
-   <h2 class="section-heading">Communication is more than language.</h2>
-   <p class="section-intro">
-    The World Without Words is an educational and research initiative
-    dedicated to understanding how people communicate through words,
-    gestures, expressions, silence and behaviour.
-   </p>
-   <p>
-    Human interaction is shaped by language, culture, context, emotion,
-    social relationships and power. Understanding these dimensions can
-    help people communicate more respectfully, recognise potentially
-    harmful patterns and make informed decisions.
-   </p>
-   <p style="margin-top:15px">
-    We bring together linguistics, psychology, sociology, communication
-    studies, media literacy and human rights education.
-   </p>
-  </div>
-  <div class="about-panel">
-   <span class="pill">Our institutional direction</span>
-   <h3>Research. Education. Human Protection.</h3>
-   <p>
-    Our mission is to make reliable knowledge about communication,
-    human behaviour, consent, boundaries and human dignity accessible
-    to everyone.
-   </p>
-   <div class="principles">
-    <div class="principle"><strong>Our Mission</strong><span>Make knowledge understandable and accessible.</span></div>
-    <div class="principle"><strong>Our Vision</strong><span>A world with greater awareness, dignity and respect.</span></div>
-    <div class="principle"><strong>Our Approach</strong><span>Evidence, context and critical thinking.</span></div>
-    <div class="principle"><strong>Our Commitment</strong><span>Human dignity, autonomy and responsible education.</span></div>
+   <div class="kicker">Humanity begins with listening</div>
+   <h2>Helping someone can begin with believing they deserve respect.</h2>
+   <p style="color:var(--muted)">You do not need to have every answer to support another person. Listening without judgement, respecting their choices and helping them find safe options can matter greatly.</p>
+   <div class="help-list">
+    <div class="help-item"><span>✓</span><div><b>Listen without blame</b><p>Give them time to explain what they are experiencing.</p></div></div>
+    <div class="help-item"><span>✓</span><div><b>Respect their decisions</b><p>Do not pressure them to take actions they are not ready or safe to take.</p></div></div>
+    <div class="help-item"><span>✓</span><div><b>Help them find support</b><p>Explore trusted people and qualified services together.</p></div></div>
    </div>
   </div>
  </div>
 </section>
 
-<section class="section" id="research">
+<section class="evidence" id="knowledge">
  <div class="container">
-  <div class="eyebrow">Interdisciplinary knowledge</div>
-  <h2 class="section-heading">Our Research Centre</h2>
-  <p class="section-intro">
-   Six interconnected fields provide the academic foundation for our
-   educational resources. Each field will be developed through
-   introductory learning, key concepts, research summaries and
-   carefully selected references.
-  </p>
-  <div class="grid">
-   <article class="card">
-    <div class="card-icon">⌁</div><span class="pill">Field 01</span>
-    <h3>Linguistics and Communication</h3>
-    <p>Pragmatics, speech acts, discourse, framing, meaning, verbal interaction and the relationship between language and context.</p>
-    <a class="learn" href="https://www.linguisticsociety.org/" target="_blank" rel="noopener">Explore the Linguistic Society of America ↗</a>
-   </article>
-   <article class="card">
-    <div class="card-icon">◎</div><span class="pill">Field 02</span>
-    <h3>Psychology and Human Behaviour</h3>
-    <p>Emotion, social influence, decision-making, interpersonal relationships, psychological pressure and behavioural patterns.</p>
-    <a class="learn" href="https://www.apa.org/" target="_blank" rel="noopener">Explore the American Psychological Association ↗</a>
-   </article>
-   <article class="card">
-    <div class="card-icon">◉</div><span class="pill">Field 03</span>
-    <h3>Nonverbal Communication</h3>
-    <p>Facial activity, gestures, posture, gaze, touch, personal space, silence and vocal features in social interaction.</p>
-    <a class="learn" href="https://pubmed.ncbi.nlm.nih.gov/30256720/" target="_blank" rel="noopener">Read a scholarly review on nonverbal communication ↗</a>
-   </article>
-   <article class="card">
-    <div class="card-icon">⌂</div><span class="pill">Field 04</span>
-    <h3>Sociology, Power and Society</h3>
-    <p>Social norms, identity, inequality, authority, stereotypes, gender, institutions and the relationship between language and power.</p>
-    <a class="learn" href="https://www.britsoc.co.uk/" target="_blank" rel="noopener">Explore the British Sociological Association ↗</a>
-   </article>
-   <article class="card">
-    <div class="card-icon">⚖</div><span class="pill">Field 05</span>
-    <h3>Human Rights and Protection</h3>
-    <p>Consent, autonomy, privacy, personal boundaries, freedom, protection from violence and respect for human dignity.</p>
-    <a class="learn" href="https://www.un.org/en/about-us/universal-declaration-of-human-rights" target="_blank" rel="noopener">Read the Universal Declaration of Human Rights ↗</a>
-   </article>
-   <article class="card">
-    <div class="card-icon">▤</div><span class="pill">Field 06</span>
-    <h3>Media and Digital Literacy</h3>
-    <p>Media influence, misinformation, digital citizenship, online communication, information evaluation and responsible technology use.</p>
-    <a class="learn" href="https://www.unesco.org/mil4teachers/en/curriculum" target="_blank" rel="noopener">Explore UNESCO's Media Literacy Curriculum ↗</a>
-   </article>
+  <div class="section-head">
+   <div class="kicker">Knowledge and evidence</div>
+   <h2>Guidance should be compassionate—and responsible.</h2>
+   <p>Our educational approach draws on established human-rights principles and research. We do not claim that a single expression, gesture or behaviour can reveal someone's intentions.</p>
   </div>
- </div>
-</section>
-
-<section class="section section-white" id="decoder">
- <div class="container">
-  <div class="eyebrow">Our signature educational feature</div>
-  <h2 class="section-heading">The Human Communication Decoder</h2>
-  <p class="section-intro">
-   Explore how words, body language, facial expressions, silence and
-   behaviour may contribute to communication. This learning tool
-   encourages reflection rather than automatic judgement.
-  </p>
-
-  <div class="decoder-wrap">
-   <div class="decoder-top">
-    <span class="pill">Interactive learning laboratory</span>
-    <h3>Explore communication in context.</h3>
-    <p>Select a communication area, describe what you observed and
-    receive a guided framework for thinking about it.</p>
-   </div>
-   <div class="decoder-body">
-    <div class="decoder-controls">
-     <div class="field">
-      <label for="decoderType">Choose a decoder module</label>
-      <select id="decoderType">
-       <option value="words">Word Decoder</option>
-       <option value="body">Body Language Decoder</option>
-       <option value="expression">Expression Decoder</option>
-       <option value="silence">Silence Decoder</option>
-       <option value="behaviour">Behaviour Decoder</option>
-      </select>
-     </div>
-     <div class="field">
-      <label for="decoderCategory">Choose a learning topic</label>
-      <select id="decoderCategory">
-       <option>Emotional pressure</option>
-       <option>Manipulation and gaslighting</option>
-       <option>Threats and intimidation</option>
-       <option>Persuasion and influence</option>
-       <option>Healthy communication</option>
-      </select>
-     </div>
-     <div class="field field-full">
-      <label for="observation">Describe the words, action or situation you observed</label>
-      <textarea id="observation" placeholder="Example: Someone says, 'If you cared about me, you would do this.' Describe the context in your own words."></textarea>
-      <div class="example-row">
-       <button class="example" type="button" data-example="Someone says: If you cared about me, you would agree.">Example: emotional pressure</button>
-       <button class="example" type="button" data-example="A person repeatedly denies something they previously said, despite clear records.">Example: conflicting accounts</button>
-       <button class="example" type="button" data-example="Someone becomes quiet during a disagreement and asks to continue later.">Example: silence</button>
-      </div>
-     </div>
-    </div>
-    <button class="btn btn-primary" type="button" id="decodeBtn">Explore this communication pattern</button>
-    <div class="decoder-result" id="decoderResult" aria-live="polite">
-     <h4>Your guided reflection</h4>
-     <p id="resultIntro"></p>
-     <div class="result-grid">
-      <div class="result-item"><strong>1. OBSERVE</strong><p id="resultObserve"></p></div>
-      <div class="result-item"><strong>2. INTERPRET</strong><p id="resultInterpret"></p></div>
-      <div class="result-item"><strong>3. VERIFY</strong><p id="resultVerify"></p></div>
-      <div class="result-item"><strong>4. RESPOND</strong><p id="resultRespond"></p></div>
-     </div>
-     <div class="notice" id="resultNotice">
-      Educational guidance only. A single statement or behaviour cannot establish someone's intentions.
-     </div>
-    </div>
-    <div class="notice">
-     <strong>Important:</strong> Your description is processed in this browser
-     demonstration only. It is not sent to a server. Do not enter names,
-     contact details or private personal information.
-    </div>
-   </div>
+  <div class="resource-grid">
+   <div class="resource"><h3>United Nations — Human Rights</h3><p>Explore international human-rights principles, dignity and fundamental freedoms.</p><a href="https://www.ohchr.org/en/what-are-human-rights" target="_blank" rel="noopener noreferrer">Explore human rights ↗</a></div>
+   <div class="resource"><h3>World Health Organization</h3><p>Public-health information and resources concerning violence and prevention.</p><a href="https://www.who.int/health-topics/violence" target="_blank" rel="noopener noreferrer">Explore violence prevention ↗</a></div>
+   <div class="resource"><h3>UNICEF — Child Protection</h3><p>Information about children's safety, protection and wellbeing.</p><a href="https://www.unicef.org/protection" target="_blank" rel="noopener noreferrer">Explore child protection ↗</a></div>
   </div>
- </div>
-</section>
-
-<section class="section section-dark">
- <div class="container">
-  <div class="eyebrow">Our learning framework</div>
-  <h2 class="section-heading">From observation to understanding.</h2>
-  <p class="section-intro">The Decoder follows four steps designed to reduce assumptions and encourage thoughtful, context-sensitive interpretation.</p>
-  <div class="method-grid">
-   <div class="method-step"><b>01</b><h3>Observe</h3><p>Describe what happened without adding assumptions about motives.</p></div>
-   <div class="method-step"><b>02</b><h3>Interpret</h3><p>Consider more than one possible explanation for the communication.</p></div>
-   <div class="method-step"><b>03</b><h3>Verify</h3><p>Look for context, patterns, consistency and relevant evidence.</p></div>
-   <div class="method-step"><b>04</b><h3>Respond</h3><p>Choose a safe, respectful and informed next step.</p></div>
-  </div>
- </div>
-</section>
-
-<section class="section" id="learning">
- <div class="container">
-  <div class="eyebrow">Learn through situations</div>
-  <h2 class="section-heading">Scenario-Based Learning</h2>
-  <p class="section-intro">
-   Fictional situations help learners practise critical thinking.
-   Select the most thoughtful response. The aim is not to label a
-   person but to understand communication and context.
-  </p>
-  <div class="scenario-box">
-   <span class="pill">Learning scenario 01</span>
-   <div class="scenario-question">
-    A friend says, "If you were really my friend, you would cancel your plans and do what I ask."
-   </div>
-   <p>Which response best supports healthy boundaries and thoughtful communication?</p>
-   <div class="answer-list" id="answerList">
-    <button class="answer" data-correct="false">A. Agree immediately to avoid upsetting the friend.</button>
-    <button class="answer" data-correct="true">B. Recognise the pressure, consider your own needs and communicate your decision respectfully.</button>
-    <button class="answer" data-correct="false">C. Assume the friend is always manipulative and end the friendship immediately.</button>
-   </div>
-   <div class="feedback" id="scenarioFeedback" aria-live="polite"></div>
-  </div>
- </div>
-</section>
-
-<section class="section section-white" id="library">
- <div class="container">
-  <div class="eyebrow">Evidence and further reading</div>
-  <h2 class="section-heading">Knowledge Library</h2>
-  <p class="section-intro">
-   A starting collection of institutional and scholarly resources.
-   These external materials are provided to support further learning;
-   they are not all written or endorsed by this initiative.
-  </p>
-  <div class="resource-list">
-   <article class="resource">
-    <small>Human rights · United Nations</small>
-    <h3>Universal Declaration of Human Rights</h3>
-    <p>Foundational international declaration concerning freedom, equality, dignity and rights.</p>
-    <a href="https://www.un.org/en/about-us/universal-declaration-of-human-rights" target="_blank" rel="noopener">Read the declaration ↗</a>
-   </article>
-   <article class="resource">
-    <small>Psychology · APA</small>
-    <h3>Gaslighting: Psychology Dictionary</h3>
-    <p>A definition of a form of manipulation that can lead a person to doubt their perceptions or experiences.</p>
-    <a href="https://dictionary.apa.org/gaslight" target="_blank" rel="noopener">Read the APA definition ↗</a>
-   </article>
-   <article class="resource">
-    <small>Psychology · Scholarly review</small>
-    <h3>Nonverbal Communication</h3>
-    <p>A peer-reviewed overview of nonverbal cues, social interaction and the interpretation of behaviour.</p>
-    <a href="https://pubmed.ncbi.nlm.nih.gov/30256720/" target="_blank" rel="noopener">Read the research record ↗</a>
-   </article>
-   <article class="resource">
-    <small>Public health · WHO</small>
-    <h3>Violence Against Women</h3>
-    <p>World Health Organization information on violence, health, psychological harm and human rights.</p>
-    <a href="https://www.who.int/news-room/fact-sheets/detail/violence-against-women" target="_blank" rel="noopener">Read the WHO fact sheet ↗</a>
-   </article>
-   <article class="resource">
-    <small>Education · UNESCO</small>
-    <h3>Media and Information Literacy Curriculum</h3>
-    <p>Learning resources on information, technology, media literacy and critical evaluation.</p>
-    <a href="https://www.unesco.org/mil4teachers/en/curriculum" target="_blank" rel="noopener">Explore the curriculum ↗</a>
-   </article>
-   <article class="resource">
-    <small>Psychology · APA</small>
-    <h3>Understanding Harmful Relationship Patterns</h3>
-    <p>An APA dictionary entry describing patterns that may occur in harmful relationships.</p>
-    <a href="https://dictionary.apa.org/toxic-relationship" target="_blank" rel="noopener">Read the APA entry ↗</a>
-   </article>
-  </div>
-  <p class="small-note" style="margin-top:18px">
-   Research references will be expanded with books, peer-reviewed articles,
-   institutional reports and properly attributed educational material.
-   Access to some academic publications may require a subscription.
-  </p>
- </div>
-</section>
-
-<section class="section section-dark" id="rights">
- <div class="container">
-  <div class="eyebrow">Human dignity and protection</div>
-  <h2 class="section-heading">Knowledge should support human dignity.</h2>
-  <p class="section-intro">
-   Education about communication should also help people understand
-   autonomy, consent, boundaries, safety and the importance of respectful
-   relationships.
-  </p>
-  <div class="ethics-grid">
-   <div class="ethics-card"><h3>Consent</h3><p>Consent should be freely given, informed and respected. Pressure, threats or coercion undermine meaningful choice.</p></div>
-   <div class="ethics-card"><h3>Personal boundaries</h3><p>People have the right to communicate limits and make decisions about their bodies, time, privacy and personal space.</p></div>
-   <div class="ethics-card"><h3>Digital safety</h3><p>Protect personal information, consider privacy settings and seek trusted support when online interactions become harmful.</p></div>
-   <div class="ethics-card"><h3>Freedom and autonomy</h3><p>Healthy communication allows people to express disagreement and make choices without intimidation.</p></div>
-   <div class="ethics-card"><h3>Help-seeking</h3><p>When someone feels unsafe, they can seek support from a trusted person or an appropriate professional or local service.</p></div>
-   <div class="ethics-card"><h3>Respect and dignity</h3><p>Differences in culture, communication style, ability and personality must be treated with respect.</p></div>
-  </div>
-  <div style="margin-top:25px">
-   <a class="btn btn-primary" href="https://www.un.org/en/about-us/universal-declaration-of-human-rights" target="_blank" rel="noopener">Explore International Human Rights ↗</a>
-   <a class="btn btn-outline" href="https://www.who.int/news-room/fact-sheets/detail/violence-against-women" target="_blank" rel="noopener">Explore WHO Information ↗</a>
-  </div>
- </div>
-</section>
-
-<section class="section section-white" id="ethics">
- <div class="container">
-  <div class="eyebrow">Responsible research</div>
-  <h2 class="section-heading">Our Research and Ethics Principles</h2>
-  <p class="section-intro">
-   Trust requires responsible methods. The initiative will use these
-   principles when developing educational content and future research.
-  </p>
-  <div class="grid">
-   <article class="card"><h3>Evidence over assumptions</h3><p>Distinguish established research, emerging evidence, interpretation and opinion.</p></article>
-   <article class="card"><h3>Context matters</h3><p>Communication varies across cultures, individuals, relationships and situations.</p></article>
-   <article class="card"><h3>Privacy and consent</h3><p>Research involving people requires informed consent, privacy safeguards and appropriate ethical review.</p></article>
-   <article class="card"><h3>No victim blaming</h3><p>Responsibility for harmful conduct belongs to the person who chooses to engage in it.</p></article>
-   <article class="card"><h3>No diagnostic claims</h3><p>Educational content and quizzes are not psychological assessments, legal advice or lie detectors.</p></article>
-   <article class="card"><h3>Professional review</h3><p>Sensitive content should be reviewed by qualified subject specialists before formal publication.</p></article>
-  </div>
- </div>
-</section>
-
-<section class="section" id="contact">
- <div class="container">
-  <div class="contact-panel">
-   <div class="eyebrow">Connect with the initiative</div>
-   <h2 class="section-heading">Building awareness through knowledge.</h2>
-   <p class="section-intro" style="margin-bottom:16px">
-    The World Without Words is being developed as an educational and
-    research initiative. Future development will include a reviewed
-    contact channel, academic collaborations and opportunities for
-    responsible participation.
-   </p>
-   <p class="small-note">
-    A contact form and submission system are not active in this version.
-    Please do not submit sensitive personal stories or private information
-    through this demonstration website.
-   </p>
-  </div>
+  <p style="font-size:12px;color:var(--muted);margin-top:18px">These are starting points for further learning, not a substitute for qualified local support or legal advice. More reviewed educational resources can be added as the initiative develops.</p>
  </div>
 </section>
 </main>
 
+<div class="disclaimer">
+ <div class="container"><p><strong>Important:</strong> The World Without Words is an educational initiative. It is not an emergency response service, counselling service, medical provider or law firm. Information on this website is general and cannot replace advice from qualified professionals familiar with your circumstances and local laws.</p></div>
+</div>
+
 <footer>
- <div class="container">
-  <div class="footer-grid">
-   <div>
-    <h3>The World Without Words</h3>
-    <p>Understanding What Words Cannot Always Say.</p>
-    <p style="margin-top:10px">Decode Communication. Recognise Manipulation. Understand Your Rights.</p>
-   </div>
-   <div>
-    <h3>Explore</h3>
-    <a href="#about">About the Initiative</a>
-    <a href="#research">Research Centre</a>
-    <a href="#decoder">Communication Decoder</a>
-    <a href="#learning">Scenario-Based Learning</a>
-   </div>
-   <div>
-    <h3>Knowledge and Rights</h3>
-    <a href="#library">Knowledge Library</a>
-    <a href="#rights">Human Rights and Protection</a>
-    <a href="#ethics">Research Ethics</a>
-   </div>
-  </div>
-  <div class="copyright">
-   © 2026 The World Without Words. Educational initiative.
-   Content is for general educational purposes and is not a substitute
-   for professional psychological, medical or legal advice.
-  </div>
+ <div class="container footer-inner">
+  <div><div class="footer-brand">The World Without Words</div><p>Understanding What Words Cannot Always Say.</p><p>Research · Education · Human Protection</p></div>
+  <div class="footer-links"><a href="#situations">Find guidance</a><a href="#rights">Your rights</a><a href="#safety">Safety</a><a href="#knowledge">Knowledge</a></div>
+  <p>© 2026 The World Without Words. Educational initiative.</p>
  </div>
 </footer>
+<a class="back-top" href="#home" aria-label="Back to top">↑</a>
 
 <script>
-const moduleGuidance = {
- words: {
-  title:"Word Decoder",
-  topics:[
-   "Emotional pressure","Manipulation and gaslighting",
-   "Threats and intimidation","Persuasion and influence",
-   "Healthy communication"
-  ],
-  placeholder:"Describe the words or statement, and explain the situation in which it was said.",
-  observe:"Record the exact words if possible. Notice repetition, tone, timing and what was being requested. Separate the statement from your interpretation.",
-  interpret:"Words can express needs, persuade, reassure, pressure or intimidate. Consider whether the statement leaves room for disagreement or uses guilt, fear or personal obligation.",
-  verify:"Consider the wider conversation, relationship, frequency, actions and available evidence. One sentence alone cannot establish manipulation or intent.",
-  respond:"You may ask for clarification, state your boundary, take time before deciding or seek support if you feel threatened or unsafe."
- },
- body: {
-  title:"Body Language Decoder",
-  topics:[
-   "Posture and movement","Gestures and personal space",
-   "Eye contact and gaze","Touch and physical boundaries",
-   "Context and cultural variation"
-  ],
-  placeholder:"Describe the visible action without guessing what the person was thinking.",
-  observe:"Describe posture, movement, distance, gesture or touch as specifically as possible. Avoid labels such as dishonest, aggressive or nervous unless supported by other evidence.",
-  interpret:"A movement may have several explanations, including comfort, habit, environment, culture, accessibility or emotion. The same gesture can mean different things in different contexts.",
-  verify:"Consider the person's usual behaviour, situation, culture, health, environment and other communication. Look for repeated patterns rather than isolated cues.",
-  respond:"If appropriate, ask a respectful question, communicate your own comfort level and respect personal space. Do not treat body language as proof of deception."
- },
- expression: {
-  title:"Expression Decoder",
-  topics:[
-   "Facial expression","Vocal tone and emotion",
-   "Emotional ambiguity","Cultural differences",
-   "Expression and context"
-  ],
-  placeholder:"Describe the expression or vocal feature you noticed and the surrounding situation.",
-  observe:"Describe visible facial movement or vocal features without assigning an emotion as a fact.",
-  interpret:"Expressions and tone may communicate emotion, but they are not universal or perfectly reliable indicators of someone's inner state.",
-  verify:"Consider the conversation, culture, individual differences, accessibility and the person's own explanation. Ask rather than assume when appropriate.",
-  respond:"Use open questions such as 'How are you feeling about this?' Listen without forcing an answer or demanding emotional disclosure."
- },
- silence: {
-  title:"Silence Decoder",
-  topics:[
-   "Pauses and reflection","Silence during disagreement",
-   "Withdrawal and boundaries","Power and exclusion",
-   "Contextual meaning"
-  ],
-  placeholder:"Describe when the silence occurred, how long it lasted and what happened before and after.",
-  observe:"Notice the timing, setting, surrounding interaction and whether the person communicated a need for space.",
-  interpret:"Silence can reflect thought, fatigue, discomfort, cultural norms, emotional regulation, a boundary or exclusion. It does not have one fixed meaning.",
-  verify:"Look at the broader pattern. Is space being requested respectfully? Is communication later resumed? Is silence repeatedly used alongside threats or punishment?",
-  respond:"Allow reasonable space, ask whether the person would prefer to continue later and state your own needs calmly. Seek support if silence forms part of a wider harmful pattern."
- },
- behaviour: {
-  title:"Behaviour Decoder",
-  topics:[
-   "Repeated behaviour patterns","Control and influence",
-   "Boundaries and respect","Consistency between words and actions",
-   "Healthy interaction"
-  ],
-  placeholder:"Describe what happened, how often it happens and how it affects the people involved.",
-  observe:"Record specific actions, frequency, context and consequences. Separate what you witnessed from what you suspect.",
-  interpret:"Repeated behaviour may reveal interaction patterns, but explanations can differ. Focus on impact, boundaries and choices rather than trying to diagnose a person.",
-  verify:"Compare words with actions over time. Consider context, power differences, repeated boundary violations and whether concerns are acknowledged and addressed.",
-  respond:"Communicate boundaries when safe, document important incidents if appropriate and seek trusted or professional support when behaviour creates fear or harm."
- }
-};
+const menuBtn = document.getElementById('menuBtn');
+const navlinks = document.getElementById('navlinks');
 
-const typeSelect=document.getElementById("decoderType");
-const categorySelect=document.getElementById("decoderCategory");
-const observation=document.getElementById("observation");
-const result=document.getElementById("decoderResult");
-
-function updateDecoderOptions(){
- const data=moduleGuidance[typeSelect.value];
- categorySelect.innerHTML="";
- data.topics.forEach(topic=>{
-  const option=document.createElement("option");
-  option.textContent=topic;
-  categorySelect.appendChild(option);
- });
- observation.placeholder=data.placeholder;
- result.style.display="none";
-}
-typeSelect.addEventListener("change",updateDecoderOptions);
-
-document.querySelectorAll(".example").forEach(button=>{
- button.addEventListener("click",()=>{
-  observation.value=button.dataset.example;
-  observation.focus();
- });
+menuBtn.addEventListener('click', () => {
+  const isOpen = navlinks.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', String(isOpen));
 });
 
-document.getElementById("decodeBtn").addEventListener("click",()=>{
- const data=moduleGuidance[typeSelect.value];
- const text=observation.value.trim();
- const category=categorySelect.value;
- if(!text){
-  observation.focus();
-  alert("Please describe an observation or situation first.");
-  return;
- }
- document.getElementById("resultIntro").textContent=
-  "Module: "+data.title+" | Topic: "+category+
-  ". Your description is a starting point for reflection, not a verified conclusion.";
- document.getElementById("resultObserve").textContent=data.observe;
- document.getElementById("resultInterpret").textContent=data.interpret;
- document.getElementById("resultVerify").textContent=data.verify;
- document.getElementById("resultRespond").textContent=data.respond;
- result.style.display="block";
- result.scrollIntoView({behavior:"smooth",block:"nearest"});
-});
-updateDecoderOptions();
-
-document.querySelectorAll(".answer").forEach(button=>{
- button.addEventListener("click",()=>{
-  const buttons=document.querySelectorAll(".answer");
-  buttons.forEach(item=>{
-   item.disabled=true;
-   if(item.dataset.correct==="true")item.classList.add("correct");
+navlinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navlinks.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
   });
-  const feedback=document.getElementById("scenarioFeedback");
-  if(button.dataset.correct==="true"){
-   feedback.textContent="Correct. Healthy boundaries allow people to make choices without guilt or pressure.";
-  }else{
-   button.classList.add("incorrect");
-   feedback.textContent="Consider again: a thoughtful response recognises pressure without making an unsupported judgement about the other person.";
-  }
- });
 });
 
-const menuBtn=document.getElementById("menuBtn");
-const navLinks=document.getElementById("navLinks");
-menuBtn.addEventListener("click",()=>{
- const open=navLinks.classList.toggle("open");
- menuBtn.setAttribute("aria-expanded",String(open));
+const search = document.getElementById('guideSearch');
+const guides = Array.from(document.querySelectorAll('.guide'));
+const noResults = document.getElementById('noResults');
+
+search.addEventListener('input', () => {
+  const term = search.value.trim().toLowerCase();
+  let visible = 0;
+  guides.forEach(guide => {
+    const searchable = (guide.innerText + ' ' + guide.dataset.search).toLowerCase();
+    const match = searchable.includes(term);
+    guide.hidden = !match;
+    if (match) visible++;
+  });
+  noResults.style.display = visible === 0 ? 'block' : 'none';
 });
-navLinks.querySelectorAll("a").forEach(link=>{
- link.addEventListener("click",()=>{
-  navLinks.classList.remove("open");
-  menuBtn.setAttribute("aria-expanded","false");
- });
+
+document.querySelectorAll('.situation').forEach(link => {
+  link.addEventListener('click', () => {
+    search.value = '';
+    guides.forEach(guide => guide.hidden = false);
+    noResults.style.display = 'none';
+  });
 });
 </script>
 </body>
