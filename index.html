@@ -4,528 +4,1632 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#102b35">
-<meta name="description" content="The World Without Words helps people recognise mistreatment, understand harmful behaviour, know their rights and find safer ways to respond.">
-<title>The World Without Words | You Deserve to Be Heard</title>
+<meta name="description" content="The World Without Words explores psychological manipulation, dark personality patterns, manipulative language, coercive behaviour and practical self-protection.">
+<meta name="theme-color" content="#101014">
+<title>The World Without Words | Understanding Manipulation</title>
+
 <style>
-:root {
-  --navy:#102b35;
-  --navy2:#193d47;
-  --teal:#287c78;
-  --teal-light:#e5f1ed;
-  --gold:#c39b59;
-  --cream:#faf8f2;
-  --white:#ffffff;
-  --ink:#26383d;
-  --muted:#647579;
-  --line:#e5e9e4;
-  --soft:#f1f5f1;
-  --shadow:0 12px 35px rgba(16,43,53,.08);
+:root{
+  --bg:#101014;
+  --surface:#19191f;
+  --surface2:#202027;
+  --surface3:#292932;
+  --text:#f0eee9;
+  --muted:#b4b0b0;
+  --red:#a94350;
+  --red2:#d16b73;
+  --gold:#c3a878;
+  --line:#38343b;
+  --green:#8eb5a2;
+  --max:1160px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.7}
-a{color:inherit}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.75;
+}
+a{color:#e0b5a9;text-decoration:none}
+a:hover{color:#fff;text-decoration:underline}
 button,input{font:inherit}
 button{cursor:pointer}
-.container{width:min(1120px,90%);margin:auto}
-header{background:rgba(250,248,242,.97);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;backdrop-filter:blur(12px)}
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy);font-weight:800;letter-spacing:-.4px}
-.brand-mark{width:43px;height:43px;border-radius:14px;background:var(--navy);display:grid;place-items:center;color:#fff}
-.brand-mark svg{width:27px;height:27px}
-.brand small{display:block;color:var(--teal);font-size:9px;letter-spacing:2px;font-weight:700;margin-top:1px}
-.navlinks{display:flex;gap:23px;align-items:center}
-.navlinks a{text-decoration:none;color:#41545a;font-size:13px;font-weight:700}
-.navlinks a:hover{color:var(--teal)}
-.nav-cta,.primary-btn{background:var(--teal);color:#fff!important;border:0;border-radius:9px;padding:12px 18px;text-decoration:none;font-weight:700}
-.menu-btn{display:none;background:transparent;border:1px solid var(--line);border-radius:8px;padding:8px 12px;color:var(--navy)}
-.hero{background:var(--navy);color:#fff;overflow:hidden;position:relative}
-.hero:after{content:"";position:absolute;width:460px;height:460px;border:1px solid rgba(255,255,255,.1);border-radius:50%;right:-130px;top:-180px;box-shadow:0 0 0 55px rgba(255,255,255,.025),0 0 0 110px rgba(255,255,255,.02)}
-.hero-inner{padding:86px 0 78px;display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center;position:relative;z-index:1}
-.eyebrow{color:#c6d9d1;text-transform:uppercase;letter-spacing:2.4px;font-size:11px;font-weight:800}
-.hero h1{font-family:Georgia,serif;font-size:clamp(38px,5vw,62px);line-height:1.1;letter-spacing:-1.5px;margin:17px 0 20px;max-width:650px}
-.hero h1 span{color:#b9d9cf}
-.hero p{color:#d3dfdc;font-size:17px;max-width:590px}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.hero-actions a{display:inline-block;padding:14px 19px;border-radius:9px;text-decoration:none;font-weight:700;font-size:14px}
-.hero-actions .light{background:#fff;color:var(--navy)}
-.hero-actions .outline{border:1px solid rgba(255,255,255,.35);color:#fff}
-.hero-art{max-width:450px;width:100%;margin:auto}
-.hero-note{margin-top:25px;color:#b9d0ca;font-size:12px}
-section{padding:76px 0}
-.section-head{max-width:720px;margin-bottom:32px}
-.kicker{color:var(--teal);font-weight:800;font-size:11px;letter-spacing:2px;text-transform:uppercase}
-h2{font-family:Georgia,serif;color:var(--navy);font-size:clamp(29px,4vw,42px);line-height:1.18;margin:10px 0 14px;letter-spacing:-.7px}
-.section-head p{color:var(--muted);margin:0;font-size:16px}
-.situations{background:#fff}
-.situation-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.situation{background:var(--cream);border:1px solid var(--line);border-radius:13px;padding:21px;text-decoration:none;display:flex;align-items:center;gap:14px;min-height:100px;transition:.2s}
-.situation:hover{transform:translateY(-3px);border-color:#9abeb3;box-shadow:var(--shadow)}
-.situation-icon{width:43px;height:43px;border-radius:12px;background:var(--teal-light);display:grid;place-items:center;font-size:21px;flex-shrink:0}
-.situation strong{display:block;color:var(--navy);font-size:14px}
-.situation small{display:block;color:var(--muted);font-size:12px;margin-top:3px}
-.search-wrap{margin:0 0 24px;max-width:560px}
-.search-wrap label{display:block;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:8px}
-.search-box{display:flex;align-items:center;background:#fff;border:1px solid #dce5df;border-radius:10px;padding:0 14px}
-.search-box span{font-size:18px;color:var(--teal)}
-.search-box input{width:100%;border:0;outline:0;padding:15px 10px;background:transparent;color:var(--ink)}
-.guides{background:var(--soft)}
-.guide-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.guide{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden;box-shadow:0 4px 16px rgba(16,43,53,.035)}
-.guide-top{padding:22px 23px 15px}
-.guide-tag{display:inline-block;color:var(--teal);background:var(--teal-light);padding:5px 9px;border-radius:20px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.8px}
-.guide h3{font-family:Georgia,serif;color:var(--navy);font-size:22px;line-height:1.25;margin:13px 0 8px}
-.guide-top p{color:var(--muted);font-size:14px;margin:0}
-.guide-visual{height:120px;background:linear-gradient(110deg,#edf4ef,#f7f3e8);display:flex;align-items:center;justify-content:center;gap:22px}
-.guide-visual .bubble{background:#fff;border:1px solid #dce8df;border-radius:14px;padding:12px 15px;color:var(--navy);font-size:12px;box-shadow:0 5px 15px rgba(16,43,53,.06)}
-.guide-visual .bubble.teal{background:var(--teal);color:#fff;border-color:var(--teal)}
-.guide-body{padding:20px 23px 23px}
-.guide-body h4{font-size:13px;color:var(--navy);margin:17px 0 5px}
-.guide-body p,.guide-body li{font-size:13px;color:#596b6e}
-.guide-body ul{padding-left:19px;margin:7px 0}
-.guide-body .script{background:#f3f6f1;border-left:3px solid var(--gold);padding:13px 15px;border-radius:0 8px 8px 0;color:var(--navy);font-weight:700;font-size:13px}
-.guide details{border-top:1px solid var(--line)}
-.guide summary{list-style:none;padding:14px 23px;color:var(--teal);font-weight:800;font-size:13px;cursor:pointer}
-.guide summary::-webkit-details-marker{display:none}
-.guide summary:after{content:"＋";float:right}
-.guide details[open] summary:after{content:"−"}
-.guide[hidden]{display:none}
-.empty{display:none;padding:22px;background:#fff;border-radius:10px;color:var(--muted)}
-.rights{background:#fff}
-.rights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
-.right-card{padding:24px;border-radius:14px;background:var(--cream);border:1px solid var(--line)}
-.right-icon{font-size:25px}
-.right-card h3{color:var(--navy);font-size:17px;margin:12px 0 7px}
-.right-card p{color:var(--muted);font-size:13px;margin:0}
-.response{background:#edf3ee}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px}
-.step{background:#fff;border-radius:13px;padding:20px;border:1px solid #e1e9e2}
-.step-number{width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800;font-size:13px}
-.step h3{color:var(--navy);font-size:16px;margin:14px 0 5px}
-.step p{color:var(--muted);font-size:12px;margin:0}
-.safety{background:var(--navy);color:#fff}
-.safety h2{color:#fff}
-.safety .section-head p{color:#c6d6d1}
-.safety-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.safety-card{padding:25px;border:1px solid rgba(255,255,255,.16);border-radius:14px;background:rgba(255,255,255,.055)}
-.safety-card h3{margin:0 0 10px;font-size:18px;color:#d7ebe2}
-.safety-card p,.safety-card li{color:#d1ddda;font-size:13px}
-.safety-card ul{padding-left:19px}
-.safety-alert{background:#f6edda;color:#473b28;padding:17px 19px;border-radius:10px;margin-top:20px;font-size:13px}
-.help{background:#fff}
-.help-inner{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px;align-items:center}
-.help-art{background:var(--teal-light);border-radius:18px;padding:22px}
-.help-list{display:grid;gap:13px}
-.help-item{display:flex;gap:13px;align-items:flex-start}
-.help-item b{color:var(--navy);font-size:14px}
-.help-item p{color:var(--muted);font-size:13px;margin:3px 0 0}
-.evidence{background:var(--cream)}
-.resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.resource{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px}
-.resource h3{font-size:15px;color:var(--navy);margin:0 0 7px}
-.resource p{font-size:12px;color:var(--muted);margin:0 0 12px}
-.resource a{font-size:12px;color:var(--teal);font-weight:800;text-decoration:none}
-.disclaimer{background:#f1f4ef;border-top:1px solid var(--line);padding:24px 0}
-.disclaimer p{font-size:12px;color:#647579;margin:0}
-footer{background:#0b2028;color:#c6d4d0;padding:35px 0}
-.footer-inner{display:flex;justify-content:space-between;gap:25px;align-items:center;flex-wrap:wrap}
-.footer-brand{font-family:Georgia,serif;color:#fff;font-size:20px}
-footer p{font-size:11px;color:#a9bcb6;margin:5px 0}
-.footer-links{display:flex;gap:18px;flex-wrap:wrap}
-.footer-links a{font-size:12px;color:#d3e0da;text-decoration:none}
-.back-top{position:fixed;right:18px;bottom:18px;background:var(--teal);color:#fff;text-decoration:none;padding:11px 14px;border-radius:50%;box-shadow:var(--shadow);font-weight:800}
-@media(max-width:800px){
- .hero-inner{grid-template-columns:1fr;padding:65px 0 55px;gap:25px}
- .hero-art{max-width:330px}
- .situation-grid{grid-template-columns:repeat(2,1fr)}
- .rights-grid,.resource-grid{grid-template-columns:repeat(2,1fr)}
- .steps{grid-template-columns:repeat(2,1fr)}
- .help-inner{grid-template-columns:1fr}
- .help-art{max-width:480px}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+.eyebrow{
+  color:var(--red2);font-size:.75rem;letter-spacing:.19em;
+  text-transform:uppercase;font-weight:700
 }
-@media(max-width:620px){
- .nav{height:67px}
- .menu-btn{display:block}
- .navlinks{display:none;position:absolute;top:67px;left:0;right:0;background:var(--cream);padding:18px 5%;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:16px}
- .navlinks.open{display:flex}
- .navlinks a{padding:5px}
- .brand{font-size:13px}
- .brand-mark{width:38px;height:38px}
- section{padding:57px 0}
- .hero-inner{padding:55px 0 48px}
- .hero h1{font-size:42px}
- .hero p{font-size:15px}
- .situation-grid,.guide-grid,.rights-grid,.resource-grid,.safety-grid{grid-template-columns:1fr}
- .situation{min-height:83px;padding:15px}
- .steps{grid-template-columns:1fr 1fr}
- .step{padding:15px}
- .guide-top,.guide-body{padding-left:18px;padding-right:18px}
- .footer-inner{align-items:flex-start;flex-direction:column}
+h1,h2,h3,h4{
+  font-family:Georgia,"Times New Roman",serif;
+  line-height:1.2;font-weight:500
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+h1{font-size:clamp(2.7rem,7vw,5.8rem);margin:18px 0}
+h2{font-size:clamp(2rem,4vw,3.3rem);margin:0 0 18px}
+h3{font-size:1.55rem;margin:0 0 12px}
+h4{font-size:1.2rem;margin:0 0 8px}
+p{color:#d0ccca;margin:0 0 16px}
+.small{font-size:.88rem;color:var(--muted)}
+header{
+  position:sticky;top:0;z-index:20;
+  background:rgba(16,16,20,.96);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(12px)
+}
+.nav{
+  min-height:76px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px
+}
+.brand{display:flex;align-items:center;gap:12px;color:var(--text)}
+.brand-mark{
+  width:42px;height:42px;border:1px solid var(--red);
+  display:grid;place-items:center;color:var(--red2);
+  font-family:Georgia,serif;font-size:1.35rem
+}
+.brand-name{font-family:Georgia,serif;font-size:1.02rem;line-height:1.25}
+.brand-name small{display:block;font: .62rem Arial,sans-serif;color:var(--muted);letter-spacing:.14em;margin-top:4px}
+.nav-links{display:flex;gap:21px;align-items:center}
+.nav-links a{font-size:.83rem;color:#d5d0ce}
+.nav-links a:hover{color:var(--red2)}
+.menu-btn{
+  display:none;background:transparent;border:1px solid var(--line);
+  color:var(--text);padding:8px 12px
+}
+.hero{
+  position:relative;overflow:hidden;padding:105px 0 90px;
+  background:
+  radial-gradient(ellipse at 80% 30%,rgba(143,42,56,.22),transparent 42%),
+  linear-gradient(130deg,#17151a,#101014 70%)
+}
+.hero:after{
+  content:"";position:absolute;width:390px;height:390px;
+  border:1px solid rgba(193,119,119,.15);border-radius:50%;
+  right:-90px;top:60px;box-shadow:0 0 0 35px rgba(193,119,119,.025),0 0 0 75px rgba(193,119,119,.02)
+}
+.hero-content{position:relative;z-index:1;max-width:790px}
+.hero h1 span{color:var(--red2)}
+.hero-lead{font-size:1.15rem;max-width:690px;color:#d4cece}
+.hero-note{border-left:3px solid var(--red);padding:12px 18px;margin:28px 0;color:#ddd5d3;max-width:650px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{
+  display:inline-block;padding:12px 20px;border:1px solid var(--red);
+  background:var(--red);color:white;font-weight:700;font-size:.9rem
+}
+.btn:hover{background:#873640;color:white;text-decoration:none}
+.btn.secondary{background:transparent;border-color:#68616a;color:var(--text)}
+.btn.secondary:hover{border-color:var(--red2)}
+section{padding:78px 0;border-bottom:1px solid #28262c}
+.section-intro{max-width:780px;margin-bottom:34px}
+.section-intro p{font-size:1.02rem}
+.kicker{color:var(--gold);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.card{
+  background:var(--surface);border:1px solid var(--line);
+  padding:24px;min-width:0
+}
+.card:hover{border-color:#79505a}
+.card-number{color:var(--red2);font:1.4rem Georgia,serif;margin-bottom:13px}
+.card p{font-size:.93rem}
+.card a{font-weight:700}
+.card-icon{font-size:1.5rem;margin-bottom:12px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.panel{background:var(--surface);border:1px solid var(--line);padding:26px}
+.panel.red{border-top:3px solid var(--red)}
+.panel.gold{border-top:3px solid var(--gold)}
+.guide{
+  background:#17171d;border:1px solid var(--line);
+  margin:22px 0;padding:30px
+}
+.guide h3{color:#f1e7e2}
+.guide p{max-width:900px}
+.example{
+  background:#242128;border-left:3px solid var(--red);
+  padding:19px 22px;margin:20px 0
+}
+.example .quote{font-family:Georgia,serif;font-size:1.12rem;color:#f0d8d5}
+.analysis{
+  background:#202522;border-left:3px solid var(--green);
+  padding:18px 22px;margin:18px 0
+}
+.analysis strong{color:#b5d0c2}
+.response{
+  background:#29251f;border-left:3px solid var(--gold);
+  padding:18px 22px;margin:18px 0
+}
+.response strong{color:#e1c99d}
+.label{
+  display:inline-block;text-transform:uppercase;letter-spacing:.12em;
+  font-size:.7rem;font-weight:700;color:var(--red2);margin-bottom:8px
+}
+.tag{
+  display:inline-block;padding:4px 9px;margin:3px;
+  background:#30252b;color:#e4b9b5;font-size:.76rem
+}
+.callout{
+  padding:20px 23px;background:#211e24;border:1px solid #4b343b;
+  margin:22px 0
+}
+.callout strong{color:#e4b2ad}
+.steps{counter-reset:step}
+.step{
+  position:relative;padding:0 0 25px 55px;margin:0 0 18px;
+  border-bottom:1px solid var(--line)
+}
+.step:before{
+  counter-increment:step;content:counter(step);
+  position:absolute;left:0;top:0;width:36px;height:36px;
+  display:grid;place-items:center;background:#39252b;color:#efb6b2;
+  border:1px solid #70434a;font-family:Georgia,serif
+}
+.search-wrap{display:flex;gap:10px;margin:24px 0}
+.search-wrap input{
+  width:100%;padding:14px 16px;background:var(--surface);
+  border:1px solid var(--line);color:var(--text);outline:none
+}
+.search-wrap input:focus{border-color:var(--red2)}
+.filter-row{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 25px}
+.filter{
+  padding:8px 13px;border:1px solid var(--line);
+  background:transparent;color:#d9d2d0;font-size:.82rem
+}
+.filter.active,.filter:hover{background:#48272f;border-color:var(--red);color:white}
+.guide-card{display:flex;flex-direction:column;gap:8px}
+.guide-card.hidden{display:none}
+.guide-card .read{margin-top:auto;padding-top:10px}
+.article{display:none}
+.article.open{display:block}
+.article-nav{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0}
+.article-nav a{padding:7px 11px;border:1px solid var(--line);font-size:.8rem}
+.article-nav a:hover{background:#30252b;text-decoration:none}
+details{
+  background:var(--surface);border:1px solid var(--line);
+  padding:17px 20px;margin:12px 0
+}
+summary{cursor:pointer;color:#eee1dd;font-weight:700}
+details p{margin:14px 0 0}
+footer{padding:45px 0;background:#0b0b0e}
+.footer-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+hr{border:0;border-top:1px solid var(--line);margin:25px 0}
+ul{color:#d0ccca;padding-left:22px}
+li{margin:7px 0}
+.note{font-size:.83rem;color:#aaa3a5}
+.backtop{display:inline-block;margin-top:20px;font-size:.85rem}
+[hidden]{display:none!important}
+@media(max-width:850px){
+  .nav-links{
+    display:none;position:absolute;top:76px;left:0;right:0;
+    background:#141419;padding:20px;flex-direction:column;align-items:flex-start;
+    border-bottom:1px solid var(--line)
+  }
+  .nav-links.show{display:flex}
+  .menu-btn{display:block}
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .container{width:min(100% - 28px,var(--max))}
+  .hero{padding:75px 0 65px}
+  section{padding:58px 0}
+  .grid,.two-col{grid-template-columns:1fr}
+  .guide{padding:21px}
+  .panel{padding:21px}
+  .search-wrap{flex-direction:column}
+}
 </style>
 </head>
+
 <body>
 <header>
- <div class="container nav">
-  <a class="brand" href="#home" aria-label="The World Without Words home">
-   <span class="brand-mark">
-    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M7 10.5C7 7.5 9.5 5 12.5 5h15C30.5 5 33 7.5 33 10.5v11C33 24.5 30.5 27 27.5 27H19l-8 7v-7h-1.5C6.5 27 4 24.5 4 21.5v-11" stroke="#B9D9CF" stroke-width="2.4" stroke-linejoin="round"/><path d="M13 14h14M13 19h9" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
-   </span>
-   <span>The World Without Words<small>UNDERSTANDING WHAT WORDS CANNOT ALWAYS SAY</small></span>
-  </a>
-  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navlinks">Menu ☰</button>
-  <nav class="navlinks" id="navlinks">
-   <a href="#situations">Find Your Situation</a>
-   <a href="#guides">Practical Guides</a>
-   <a href="#rights">Your Rights</a>
-   <a href="#safety">Safety & Support</a>
-   <a href="#knowledge">Knowledge</a>
-  </nav>
- </div>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="The World Without Words home">
+      <span class="brand-mark">W</span>
+      <span class="brand-name">THE WORLD WITHOUT WORDS
+        <small>PSYCHOLOGY · LANGUAGE · HUMAN BEHAVIOUR</small>
+      </span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">MENU ☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#begin">Start here</a>
+      <a href="#psychology">Psychology</a>
+      <a href="#language">Language</a>
+      <a href="#boundaries">Boundaries</a>
+      <a href="#response">Self-protection</a>
+      <a href="#library">Research</a>
+    </nav>
+  </div>
 </header>
 
-<main id="home">
-<section class="hero">
- <div class="container hero-inner">
-  <div>
-   <div class="eyebrow">A human-centred educational initiative</div>
-   <h1>You deserve to be heard. <span>You deserve respect.</span></h1>
-   <p>If someone is mistreating you, pressuring you, bullying you or making you feel unsafe, you deserve clear information and support. You are not invisible. Your experience matters.</p>
-   <div class="hero-actions">
-    <a class="light" href="#situations">Understand My Situation</a>
-    <a class="outline" href="#safety">I Need Safety Guidance</a>
-   </div>
-   <div class="hero-note">Understand what may be happening. Recognise the signs. Know your rights. Explore safer ways to respond.</div>
+<main>
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <div class="eyebrow">An educational initiative · Human behaviour and psychological influence</div>
+    <h1>Understand the <span>hidden mechanics</span> of manipulation.</h1>
+    <p class="hero-lead">
+      Some forms of control do not begin with force. They can begin with words,
+      emotional pressure, carefully chosen silence, guilt, confusion or small
+      violations of personal boundaries. Understanding these patterns can help
+      people recognise what is happening and make more informed decisions.
+    </p>
+    <div class="hero-note">
+      Learn how manipulation works, how language can influence decisions,
+      why certain tactics affect people, and how to respond without surrendering
+      your dignity or becoming manipulative yourself.
+    </div>
+    <div class="actions">
+      <a class="btn" href="#begin">Begin the learning journey</a>
+      <a class="btn secondary" href="#language">Explore manipulative language</a>
+    </div>
   </div>
-  <div class="hero-art">
-   <svg viewBox="0 0 480 350" role="img" aria-label="Illustration of a person being listened to and supported">
-    <circle cx="250" cy="168" r="145" fill="#244650"/>
-    <circle cx="250" cy="168" r="112" fill="#315862"/>
-    <path d="M123 283c13-64 53-96 111-96s98 32 111 96" fill="#B8D8CD"/>
-    <circle cx="234" cy="129" r="43" fill="#E7BFA1"/>
-    <path d="M193 126c-4-37 17-60 48-60 31 0 49 21 43 55-10-9-19-22-23-31-13 17-38 28-68 30" fill="#263B40"/>
-    <path d="M201 146c10 10 22 15 34 15 13 0 25-5 34-15" stroke="#8A594A" stroke-width="3" fill="none" stroke-linecap="round"/>
-    <path d="M287 105c0-25 20-43 44-43h47c23 0 41 18 41 41v12c0 23-18 41-41 41h-17l-23 20v-20h-7c-24 0-44-18-44-41z" fill="#F8F5EA"/>
-    <path d="M314 103h73M314 121h49" stroke="#287C78" stroke-width="5" stroke-linecap="round"/>
-    <path d="M53 118c0-21 17-38 38-38h35c21 0 38 17 38 38v9c0 21-17 38-38 38h-9l-20 18v-18h-6c-21 0-38-17-38-38z" fill="#D5B777"/>
-    <path d="M78 119h59M78 136h38" stroke="#102B35" stroke-width="4" stroke-linecap="round"/>
-    <path d="M75 280c-4-23 7-42 27-49" stroke="#D5B777" stroke-width="9" stroke-linecap="round"/>
-    <circle cx="102" cy="227" r="12" fill="#D5B777"/>
-    <path d="M355 260l18 18 37-42" stroke="#B8D8CD" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <circle cx="375" cy="254" r="35" stroke="#B8D8CD" stroke-width="3" fill="none"/>
-   </svg>
-  </div>
- </div>
 </section>
 
-<section class="situations" id="situations">
- <div class="container">
-  <div class="section-head">
-   <div class="kicker">Start with what you are experiencing</div>
-   <h2>You do not have to know the right words to find guidance.</h2>
-   <p>Choose the situation that feels closest to yours. Every experience is different. These guides can help you explore what may be happening without jumping to conclusions.</p>
+<section id="begin">
+  <div class="container">
+    <div class="section-intro">
+      <div class="kicker">Your learning journey</div>
+      <h2>Start by understanding the person, then the tactics.</h2>
+      <p>
+        It is difficult to recognise manipulation if we do not first understand
+        what it means. This learning journey begins with the people and behavioural
+        patterns involved. It then explores psychological mechanisms, language,
+        boundary violations and practical ways to respond.
+      </p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="card-number">01</div>
+        <h3>Who Are Manipulators?</h3>
+        <p>Understand manipulation, why it happens and how it differs from ordinary persuasion or disagreement.</p>
+        <a href="#who">Explore this topic →</a>
+      </article>
+      <article class="card">
+        <div class="card-number">02</div>
+        <h3>Types and Personality Patterns</h3>
+        <p>Explore recurring patterns such as calculated exploitation, entitlement, intimidation and deception.</p>
+        <a href="#types">Explore this topic →</a>
+      </article>
+      <article class="card">
+        <div class="card-number">03</div>
+        <h3>Who Gets Targeted?</h3>
+        <p>Learn how trust, dependency, isolation and unequal power can create opportunities for exploitation.</p>
+        <a href="#targets">Explore this topic →</a>
+      </article>
+      <article class="card">
+        <div class="card-number">04</div>
+        <h3>The Psychology Behind It</h3>
+        <p>Understand guilt, fear, conditioning, confusion, emotional dependency and social influence.</p>
+        <a href="#psychology">Explore this topic →</a>
+      </article>
+      <article class="card">
+        <div class="card-number">05</div>
+        <h3>The Language of Manipulation</h3>
+        <p>Examine phrases, hidden meanings, conversational strategies and linguistic pressure.</p>
+        <a href="#language">Explore this topic →</a>
+      </article>
+      <article class="card">
+        <div class="card-number">06</div>
+        <h3>Crossing Boundaries</h3>
+        <p>Understand how small intrusions can develop into repeated pressure, control or coercion.</p>
+        <a href="#boundaries">Explore this topic →</a>
+      </article>
+      <article class="card">
+        <div class="card-number">07</div>
+        <h3>Non-Verbal Manipulation</h3>
+        <p>Explore silence, gestures, posture, tone and personal space without pretending to read minds.</p>
+        <a href="#nonverbal">Explore this topic →</a>
+      </article>
+      <article class="card">
+        <div class="card-number">08</div>
+        <h3>Respond and Protect Yourself</h3>
+        <p>Learn practical ways to recognise tactics, resist pressure, establish boundaries and seek support.</p>
+        <a href="#response">Explore this topic →</a>
+      </article>
+      <article class="card">
+        <div class="card-number">09</div>
+        <h3>Real-Life Case Studies</h3>
+        <p>Study realistic conversations and examine the language, behaviour and possible responses.</p>
+        <a href="#cases">Explore this topic →</a>
+      </article>
+    </div>
   </div>
-  <div class="situation-grid">
-   <a class="situation" href="#guide-manipulation"><span class="situation-icon">🧩</span><span><strong>Someone is manipulating me</strong><small>Pressure, guilt, confusion or control</small></span></a>
-   <a class="situation" href="#guide-bullying"><span class="situation-icon">🛡️</span><span><strong>I am being bullied</strong><small>Repeated humiliation or intimidation</small></span></a>
-   <a class="situation" href="#guide-boundaries"><span class="situation-icon">✋</span><span><strong>My boundaries are ignored</strong><small>Someone will not respect my no</small></span></a>
-   <a class="situation" href="#guide-control"><span class="situation-icon">🔒</span><span><strong>Someone is controlling me</strong><small>Restrictions, monitoring or isolation</small></span></a>
-   <a class="situation" href="#guide-threats"><span class="situation-icon">⚠️</span><span><strong>I am being threatened</strong><small>Fear, blackmail or intimidation</small></span></a>
-   <a class="situation" href="#guide-online"><span class="situation-icon">📱</span><span><strong>I feel unsafe online</strong><small>Harassment, pressure or private images</small></span></a>
-   <a class="situation" href="#guide-exclusion"><span class="situation-icon">💬</span><span><strong>I feel excluded or ignored</strong><small>Silence, rejection or isolation</small></span></a>
-   <a class="situation" href="#guide-relationship"><span class="situation-icon">🤝</span><span><strong>I feel uncomfortable in a relationship</strong><small>Pressure, disrespect or fear</small></span></a>
-   <a class="situation" href="#guide-support"><span class="situation-icon">❤️</span><span><strong>I want to help someone</strong><small>Support someone experiencing harm</small></span></a>
-  </div>
- </div>
 </section>
 
-<section class="guides" id="guides">
- <div class="container">
-  <div class="section-head">
-   <div class="kicker">Practical guidance</div>
-   <h2>Understand the behaviour. Decide what is safe for you.</h2>
-   <p>Clear explanations, recognisable examples and practical steps. A single incident may have different explanations; repeated patterns, context and impact matter.</p>
+<section id="who">
+  <div class="container">
+    <div class="section-intro">
+      <div class="kicker">Chapter 01 · Foundations</div>
+      <h2>Who are manipulators?</h2>
+      <p>
+        Before exploring individual tactics, we need a clear understanding of
+        manipulation itself. The word is often used casually, but psychological
+        manipulation describes something more specific than simply trying to
+        persuade another person.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>What is psychological manipulation?</h3>
+      <p>
+        Psychological manipulation happens when a person tries to influence
+        another person's thoughts, feelings or decisions through unfair,
+        deceptive or pressuring methods. Instead of allowing the other person
+        to make a free and informed choice, the manipulator may use guilt,
+        fear, confusion, false information, emotional pressure or an imbalance
+        of power to move the situation in their favour.
+      </p>
+      <p>
+        Imagine that a friend asks you for a favour. Asking is not manipulation.
+        You are free to say yes or no. But suppose the friend repeatedly reminds
+        you of past favours, calls you selfish when you refuse and makes you feel
+        responsible for their happiness. The situation has changed. The person
+        is no longer simply making a request; they are using emotional pressure
+        to influence your freedom to decide.
+      </p>
+      <p>
+        Manipulation is best understood by looking at the behaviour, its context,
+        its repetition and its effect. One awkward sentence does not prove that
+        someone is a manipulator. A repeated pattern of deception, pressure,
+        exploitation or disregard for another person's choices deserves closer
+        attention.
+      </p>
+    </div>
+
+    <div class="two-col">
+      <div class="panel gold">
+        <h3>Persuasion is not automatically manipulation</h3>
+        <p>
+          Persuasion can involve explaining reasons, presenting evidence or
+          expressing a preference. A person may strongly disagree with you and
+          still respect your right to decide. Healthy persuasion leaves room
+          for questions, disagreement and refusal.
+        </p>
+      </div>
+      <div class="panel red">
+        <h3>Manipulation reduces free choice</h3>
+        <p>
+          Manipulative pressure may make refusal feel unsafe, shameful or
+          impossible. Information may be hidden, facts distorted or affection
+          made conditional. The important issue is not simply that someone
+          wants something, but how they attempt to obtain it.
+        </p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>A useful distinction:</strong>
+      Someone can be persuasive, confident, emotional or difficult without
+      necessarily being manipulative. Look for repeated behaviour, unfair
+      pressure, deception and disregard for another person's autonomy.
+    </div>
   </div>
-  <div class="search-wrap">
-   <label for="guideSearch">Find a topic or situation</label>
-   <div class="search-box"><span>⌕</span><input id="guideSearch" type="search" placeholder="Try: guilt, bullying, threats, boundaries..." aria-label="Search practical guides"></div>
-  </div>
-  <div class="guide-grid" id="guideGrid">
-
-   <article class="guide" id="guide-manipulation" data-search="manipulation guilt emotional pressure gaslighting blame control">
-    <div class="guide-top"><span class="guide-tag">Manipulation & pressure</span><h3>When someone makes you feel guilty for saying no</h3><p>Pressure can be difficult to recognise when it comes from someone you care about.</p></div>
-    <div class="guide-visual"><div class="bubble">“If you cared, you would…”</div><div class="bubble teal">“I still have a choice.”</div></div>
-    <div class="guide-body">
-     <h4>What might be happening?</h4><p>Someone may be using guilt to influence your decision instead of respecting your choice. Disappointment is normal; repeatedly using guilt to control another person's choices is concerning.</p>
-     <h4>What might you notice?</h4><ul><li>“After everything I have done for you…”</li><li>“You never do anything for me.”</li><li>They keep pressuring you after you have clearly refused.</li></ul>
-     <h4>What else could explain it?</h4><p>A person may genuinely feel disappointed or may communicate poorly. Look at whether they accept your decision or repeatedly punish and pressure you for it.</p>
-     <h4>What can you do?</h4><ul><li>Give yourself time before agreeing.</li><li>Remember that you are allowed to refuse.</li><li>You do not have to keep defending your decision endlessly.</li><li>If pressure becomes threatening, prioritise safety and seek support.</li></ul>
-     <h4>Words you can use</h4><div class="script">“I understand that you are disappointed, but my decision remains the same.”</div>
-     <h4>Remember</h4><p>Caring about someone does not mean surrendering your choices.</p>
-    </div>
-    <details><summary>When should I seek help?</summary><div class="guide-body"><p>Seek support if pressure becomes persistent, affects your freedom, isolates you from others, involves threats, or makes you afraid to make ordinary decisions.</p></div></details>
-   </article>
-
-   <article class="guide" id="guide-bullying" data-search="bullying harassment humiliation school workplace intimidation">
-    <div class="guide-top"><span class="guide-tag">Bullying & harassment</span><h3>When someone repeatedly humiliates or targets you</h3><p>Bullying can happen at school, at work, in relationships, in public or online.</p></div>
-    <div class="guide-visual"><div class="bubble">“It was only a joke.”</div><div class="bubble teal">“I asked you to stop.”</div></div>
-    <div class="guide-body">
-     <h4>What might be happening?</h4><p>Repeated insults, humiliation, intimidation, exclusion or targeting can become bullying. A joke is not harmless simply because someone calls it a joke.</p>
-     <h4>What might you notice?</h4><ul><li>Repeated comments about your appearance, identity or abilities.</li><li>Someone deliberately embarrassing you in front of others.</li><li>Threats, unwanted messages or attempts to isolate you.</li></ul>
-     <h4>What else could explain it?</h4><p>One insensitive remark may be a mistake. Notice whether the behaviour continues after the person understands its impact, and whether there is a pattern of targeting or intimidation.</p>
-     <h4>What can you do?</h4><ul><li>If safe, clearly state that the behaviour is unwelcome.</li><li>Keep a record of repeated incidents, dates and witnesses.</li><li>Consider a trusted teacher, manager, family member or appropriate support service.</li><li>Avoid confronting someone alone if you fear retaliation.</li></ul>
-     <h4>Words you can use</h4><div class="script">“Those comments are not acceptable to me. Please stop.”</div>
-     <h4>Remember</h4><p>You do not have to accept humiliation to keep the peace.</p>
-    </div>
-    <details><summary>What if nobody believes me?</summary><div class="guide-body"><p>Try speaking with another trusted person or an appropriate reporting service. A clear written record may help explain what has happened. Your safety matters more than persuading someone who refuses to listen.</p></div></details>
-   </article>
-
-   <article class="guide" id="guide-boundaries" data-search="boundaries consent personal space no refusal privacy">
-    <div class="guide-top"><span class="guide-tag">Boundaries & consent</span><h3>When someone does not respect your boundaries</h3><p>Your personal space, choices, privacy and consent deserve respect.</p></div>
-    <div class="guide-visual"><div class="bubble">“I said no.”</div><div class="bubble teal">“Your answer matters.”</div></div>
-    <div class="guide-body">
-     <h4>What might be happening?</h4><p>A boundary communicates what you are comfortable with and what you do not accept. Repeatedly ignoring a clear boundary is a warning sign.</p>
-     <h4>What might you notice?</h4><ul><li>Someone continues touching you after you ask them to stop.</li><li>Someone reads your private messages without permission.</li><li>Someone keeps asking after you have refused.</li><li>Your personal space or time is repeatedly disregarded.</li></ul>
-     <h4>What else could explain it?</h4><p>People may misunderstand an unspoken expectation. Communicating a boundary can clarify it, but you are not required to keep explaining a refusal to someone who is deliberately ignoring it.</p>
-     <h4>What can you do?</h4><ul><li>State your boundary clearly if it is safe.</li><li>Move away from unwanted contact where possible.</li><li>Limit access to private information and personal accounts.</li><li>Seek trusted support if your boundary is repeatedly violated.</li></ul>
-     <h4>Words you can use</h4><div class="script">“I am not comfortable with this. Please respect my boundary.”</div>
-     <h4>Remember</h4><p>Consent must be freely given. Silence, fear or pressure should not be treated as agreement.</p>
-    </div>
-    <details><summary>Do I need to explain why I said no?</summary><div class="guide-body"><p>You may choose to explain, but you do not need to prove that your boundary is reasonable before it deserves respect.</p></div></details>
-   </article>
-
-   <article class="guide" id="guide-control" data-search="controlling behaviour isolation monitoring jealousy coercive control">
-    <div class="guide-top"><span class="guide-tag">Control & autonomy</span><h3>When someone tries to control your everyday life</h3><p>Control may develop gradually and affect your freedom to make ordinary choices.</p></div>
-    <div class="guide-visual"><div class="bubble">“You cannot meet them.”</div><div class="bubble teal">“I have a right to relationships.”</div></div>
-    <div class="guide-body">
-     <h4>What might be happening?</h4><p>Controlling behaviour can involve restricting who you see, where you go, what you wear, how you spend money or how you communicate.</p>
-     <h4>What might you notice?</h4><ul><li>Someone demands constant updates or access to your phone.</li><li>They discourage or prevent contact with friends and family.</li><li>They monitor your movements or finances.</li><li>You feel afraid of their reaction to ordinary decisions.</li></ul>
-     <h4>What else could explain it?</h4><p>Concern, insecurity or disagreement alone does not prove coercive control. Repeated restrictions, monitoring, intimidation and loss of freedom are more concerning.</p>
-     <h4>What can you do?</h4><ul><li>Notice whether your freedom and independence are shrinking.</li><li>Speak privately with someone you trust if it is safe.</li><li>Consider a safety plan before making major changes.</li><li>Do not announce plans to leave or confront someone if doing so could put you at risk.</li></ul>
-     <h4>Words you can use</h4><div class="script">“I value our relationship, but I also have the right to make my own decisions.”</div>
-     <h4>Remember</h4><p>Care and love should not require you to give up your freedom or live in fear.</p>
-    </div>
-    <details><summary>What if I depend on this person?</summary><div class="guide-body"><p>You are not at fault for needing practical support. Consider confidential advice and gradual safety planning with a trusted person or specialist service. Do not take steps that could increase danger without considering your circumstances.</p></div></details>
-   </article>
-
-   <article class="guide" id="guide-threats" data-search="threats blackmail intimidation extortion private photos safety">
-    <div class="guide-top"><span class="guide-tag">Threats & intimidation</span><h3>When someone threatens or blackmails you</h3><p>Threats should be taken seriously, even when the person says they are joking.</p></div>
-    <div class="guide-visual"><div class="bubble">“Do what I say or else.”</div><div class="bubble teal">“I deserve safety.”</div></div>
-    <div class="guide-body">
-     <h4>What might be happening?</h4><p>Threats use fear to pressure someone into doing something. Blackmail may involve threatening to reveal private information, images or messages unless demands are met.</p>
-     <h4>What might you notice?</h4><ul><li>Threats of physical harm or retaliation.</li><li>Demands for money, access, images or contact.</li><li>Threats to expose private information.</li><li>Someone says they will harm you or another person if you refuse.</li></ul>
-     <h4>What can you do?</h4><ul><li>If danger is immediate, move to a safer place and contact local emergency services.</li><li>Do not meet the person alone or escalate the situation.</li><li>Preserve messages and other evidence if it is safe to do so.</li><li>Seek help from a trusted person and appropriate local authorities or specialist services.</li><li>If your device or account may be monitored, use a safer device to seek help.</li></ul>
-     <h4>Words you can use</h4><div class="script">You do not have to respond directly to a threat. Your priority is safety and support, not winning an argument.</div>
-     <h4>Remember</h4><p>Being threatened or blackmailed is not your fault. You deserve help without judgement.</p>
-    </div>
-    <details><summary>Should I delete the messages?</summary><div class="guide-body"><p>If safe, preserve the original messages, account details, dates and screenshots. Do not put yourself at risk to collect evidence. A qualified local service can advise on safe reporting and evidence preservation.</p></div></details>
-   </article>
-
-   <article class="guide" id="guide-online" data-search="online harassment cyberbullying privacy blackmail digital safety">
-    <div class="guide-top"><span class="guide-tag">Online protection</span><h3>When someone pressures or harasses you online</h3><p>Digital harassment can affect your privacy, confidence and sense of safety.</p></div>
-    <div class="guide-visual"><div class="bubble">Repeated unwanted messages</div><div class="bubble teal">Privacy. Safety. Support.</div></div>
-    <div class="guide-body">
-     <h4>What might be happening?</h4><p>Online harassment can include repeated unwanted contact, threats, impersonation, stalking, blackmail or sharing private material without consent.</p>
-     <h4>What might you notice?</h4><ul><li>Someone creates new accounts to contact you after being blocked.</li><li>Threats to publish private images or conversations.</li><li>Attempts to obtain passwords or personal details.</li><li>Someone shares your information without permission.</li></ul>
-     <h4>What can you do?</h4><ul><li>Do not share passwords or verification codes.</li><li>Review account privacy and security settings from a safe device.</li><li>Save relevant evidence if safe, then report and block the account where appropriate.</li><li>Tell a trusted person. Seek specialist or official help for threats and image-based abuse.</li></ul>
-     <h4>Words you can use</h4><div class="script">“Do not contact me again.” Only send a message like this if doing so is safe and will not increase the risk.</div>
-     <h4>Remember</h4><p>You are not responsible for another person's decision to harass, threaten or exploit you.</p>
-    </div>
-    <details><summary>What if private images are involved?</summary><div class="guide-body"><p>Do not blame yourself. Avoid forwarding or reposting the material. Preserve evidence safely and seek confidential support and appropriate local reporting options. If you are under 18, involve a safe, trusted adult or specialist child-protection service.</p></div></details>
-   </article>
-
-   <article class="guide" id="guide-exclusion" data-search="ignored excluded silence friendship rejection social isolation">
-    <div class="guide-top"><span class="guide-tag">Silence & exclusion</span><h3>When you feel ignored, excluded or unheard</h3><p>Being left out can hurt. Understanding the context can help you decide what it means.</p></div>
-    <div class="guide-visual"><div class="bubble">No reply yet…</div><div class="bubble teal">There may be more than one reason.</div></div>
-    <div class="guide-body">
-     <h4>What might be happening?</h4><p>Someone may be unavailable, distracted, avoiding a difficult conversation or deliberately excluding you. Silence alone does not tell you which explanation is correct.</p>
-     <h4>What should you notice?</h4><ul><li>Is it a one-time event or a repeated pattern?</li><li>Are you consistently excluded while others are included?</li><li>Does the person explain or discuss the issue when asked?</li><li>Is silence being used to punish, frighten or control you?</li></ul>
-     <h4>What else could explain it?</h4><p>People may be busy, overwhelmed or need space. A delayed reply or a quiet expression does not prove rejection, anger or manipulation.</p>
-     <h4>What can you do?</h4><ul><li>Allow reasonable time before assuming intent.</li><li>Ask calmly if something needs to be discussed.</li><li>Look at the broader pattern and how the relationship affects you.</li><li>Seek support if exclusion becomes persistent harassment or isolation.</li></ul>
-     <h4>Words you can use</h4><div class="script">“I have felt left out recently. Is there something we should talk about?”</div>
-     <h4>Remember</h4><p>Your feelings matter, even when the other person's intention is not yet clear.</p>
-    </div>
-   </article>
-
-   <article class="guide" id="guide-relationship" data-search="relationship discomfort respect fear pressure consent emotional abuse">
-    <div class="guide-top"><span class="guide-tag">Relationships & respect</span><h3>When a relationship makes you feel uncomfortable or afraid</h3><p>You can care about someone and still recognise behaviour that harms you.</p></div>
-    <div class="guide-visual"><div class="bubble">“Maybe I am overreacting.”</div><div class="bubble teal">“My feelings deserve attention.”</div></div>
-    <div class="guide-body">
-     <h4>What might be happening?</h4><p>Repeated disrespect, fear, pressure, humiliation, unwanted contact or control can make a relationship unsafe or unhealthy.</p>
-     <h4>What might you notice?</h4><ul><li>You feel anxious about the person's reactions.</li><li>You change ordinary behaviour to avoid anger or punishment.</li><li>Your needs and boundaries are repeatedly dismissed.</li><li>You are pressured into decisions or intimacy you do not want.</li></ul>
-     <h4>What else could explain it?</h4><p>All relationships can involve disagreement. The important questions are whether both people can express themselves safely, respect a refusal and take responsibility for their actions.</p>
-     <h4>What can you do?</h4><ul><li>Take your discomfort seriously without forcing yourself to make an immediate decision.</li><li>Talk privately with someone you trust.</li><li>Consider professional support if it is accessible and safe.</li><li>If you fear harm, prioritise safety planning over confrontation.</li></ul>
-     <h4>Words you can use</h4><div class="script">“I want a relationship where we can disagree without fear or disrespect.”</div>
-     <h4>Remember</h4><p>Respect is not something you should have to earn by accepting mistreatment.</p>
-    </div>
-   </article>
-
-   <article class="guide" id="guide-support" data-search="help someone victim support listen believe respect support">
-    <div class="guide-top"><span class="guide-tag">Supporting others</span><h3>How to support someone who is being mistreated</h3><p>Being heard without judgement can make a meaningful difference.</p></div>
-    <div class="guide-visual"><div class="bubble">“You can talk to me.”</div><div class="bubble teal">“I will listen.”</div></div>
-    <div class="guide-body">
-     <h4>What can you do?</h4><ul><li>Listen patiently and let the person explain in their own words.</li><li>Take their concerns seriously without demanding proof immediately.</li><li>Ask what kind of support they want.</li><li>Respect their choices and avoid pressuring them to confront or leave.</li><li>Help them explore safe, appropriate support options.</li></ul>
-     <h4>What should you avoid?</h4><ul><li>“Why did you let this happen?”</li><li>“You should have known better.”</li><li>Making decisions on their behalf without considering their safety.</li><li>Sharing their story without permission, except where an immediate safeguarding duty applies.</li></ul>
-     <h4>Words you can use</h4><div class="script">“I am glad you told me. I am listening. What would help you feel safer right now?”</div>
-     <h4>Remember</h4><p>Support means respecting the person's dignity, choices and safety—not taking control away from them.</p>
-    </div>
-   </article>
-  </div>
-  <div class="empty" id="noResults">No matching guide found. Try a different word or browse the situations above.</div>
- </div>
 </section>
 
-<section class="rights" id="rights">
- <div class="container">
-  <div class="section-head">
-   <div class="kicker">Your dignity matters</div>
-   <h2>Know the rights and boundaries every person deserves.</h2>
-   <p>These principles are a starting point for understanding respectful treatment. Specific legal protections differ by country and situation.</p>
+<section id="types">
+  <div class="container">
+    <div class="section-intro">
+      <div class="kicker">Chapter 02 · Personality and behaviour</div>
+      <h2>Types of manipulators and recurring patterns</h2>
+      <p>
+        Manipulation does not come from one single personality type. Different
+        people may use different methods, and the same person may use more than
+        one tactic. The descriptions below are behavioural patterns for learning,
+        not diagnoses or permanent labels.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>The calculated manipulator</h3>
+      <p>
+        A calculated manipulator may carefully consider what to say, when to say
+        it and how another person is likely to react. They may present different
+        versions of a situation to different people, hide important information
+        or create an impression that benefits them. Their behaviour may appear
+        calm and reasonable because the pressure is not always openly aggressive.
+      </p>
+      <p>
+        For example, someone may privately promise one thing and later deny
+        making that promise. If challenged, they might say that the other person
+        misunderstood. The important question is whether there is a repeated
+        pattern of changing accounts and avoiding responsibility.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>The entitlement-driven pattern</h3>
+      <p>
+        Some people behave as though their needs, opinions and preferences
+        should matter more than everyone else's. They may expect special
+        treatment, react badly to criticism or struggle to accept that another
+        person has independent needs. In relationships, this can become
+        controlling when they expect constant attention, obedience or access
+        to another person's private life.
+      </p>
+      <p>
+        Confidence or self-interest alone does not establish a personality
+        disorder. What matters for practical purposes is whether the behaviour
+        repeatedly dismisses other people's rights and boundaries.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>The victim-playing pattern</h3>
+      <p>
+        A person may sometimes genuinely be a victim of unfair treatment.
+        There is nothing wrong with explaining that you have been hurt.
+        However, a person may also repeatedly use their own suffering to avoid
+        discussing the harm they have caused. Whenever someone raises a concern,
+        the conversation may immediately turn into how unfairly the speaker is
+        being treated.
+      </p>
+      <p>
+        This can leave the other person feeling guilty for raising a reasonable
+        concern. A useful response is to acknowledge feelings without allowing
+        the original issue to disappear.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>The intimidating pattern</h3>
+      <p>
+        Intimidation uses fear to influence another person's behaviour. It may
+        involve threats, aggressive language, shouting, hostile gestures,
+        deliberate invasion of personal space or reminders of someone's power.
+        Some intimidation is direct. Other forms are indirect, such as suggesting
+        that refusing a request will have unpleasant consequences.
+      </p>
+      <p>
+        When intimidation is present, the priority is safety. A person does not
+        have to confront someone who may become violent in order to prove that
+        they are strong.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>The charming and persuasive pattern</h3>
+      <p>
+        Charm, compliments and warmth are normal parts of human relationships.
+        They become concerning when they are used to create trust quickly,
+        obtain access or favours, and then apply pressure. A person may offer
+        intense attention at first and become cold or demanding when the other
+        person does not meet their expectations.
+      </p>
+      <p>
+        The lesson is not to distrust every charming person. It is to give
+        relationships time, notice whether actions match promises and retain
+        the freedom to say no.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>Understanding the Dark Triad</h3>
+      <p>
+        Psychology research uses the term <em>Dark Triad</em> for three studied
+        personality traits: Machiavellianism, narcissism and psychopathy.
+        Machiavellianism generally describes a tendency towards strategic,
+        cynical and exploitative social behaviour. Narcissism involves features
+        such as grandiosity, entitlement or a strong need for admiration.
+        Psychopathy research examines traits such as callousness, low remorse
+        and impulsive or antisocial tendencies, depending on the measure used.
+      </p>
+      <p>
+        These are research concepts, not labels that a visitor should apply to
+        a friend, colleague or partner after reading a webpage. A person cannot
+        reliably diagnose another person's personality from a few conversations.
+        Our focus is on recognising harmful behaviour and protecting autonomy,
+        rather than assigning clinical labels.
+      </p>
+    </div>
+
+    <div class="callout">
+      <strong>Remember:</strong> Personality labels do not tell the whole story.
+      A person's repeated actions, the context and the impact on others are more
+      useful for deciding how to respond.
+    </div>
   </div>
-  <div class="rights-grid">
-   <div class="right-card"><div class="right-icon">✋</div><h3>Consent</h3><p>People should be free to make voluntary choices without threats, force or pressure. Consent can be withdrawn.</p></div>
-   <div class="right-card"><div class="right-icon">🧭</div><h3>Personal autonomy</h3><p>Your choices, opinions and independence matter. Another person should not control your life through fear.</p></div>
-   <div class="right-card"><div class="right-icon">🔐</div><h3>Privacy</h3><p>Your personal information, communications and private space deserve appropriate respect and protection.</p></div>
-   <div class="right-card"><div class="right-icon">🌱</div><h3>Dignity</h3><p>You deserve to be treated as a person of equal worth, without humiliation, degradation or dehumanisation.</p></div>
-   <div class="right-card"><div class="right-icon">🗣️</div><h3>Freedom to express yourself</h3><p>You should be able to communicate concerns and disagree without intimidation or retaliation.</p></div>
-   <div class="right-card"><div class="right-icon">🛡️</div><h3>Safety and protection</h3><p>Everyone deserves protection from violence, harassment, exploitation and other forms of harm.</p></div>
-  </div>
- </div>
 </section>
 
-<section class="response" id="response">
- <div class="container">
-  <div class="section-head">
-   <div class="kicker">A practical way forward</div>
-   <h2>Pause. Understand. Choose a safer response.</h2>
-   <p>You do not need to solve everything at once. Use this simple framework to think clearly about a difficult interaction.</p>
+<section id="targets">
+  <div class="container">
+    <div class="section-intro">
+      <div class="kicker">Chapter 03 · Vulnerability and power</div>
+      <h2>Who may be targeted, and why?</h2>
+      <p>
+        Manipulation can affect people from every background. It is not limited
+        to people who are weak, inexperienced or unable to think critically.
+        Sometimes the situation itself makes it harder to recognise pressure
+        or to leave it.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>Trust and empathy</h3>
+      <p>
+        People who care deeply about others may try hard to understand someone's
+        behaviour, forgive mistakes and preserve relationships. These qualities
+        are valuable. However, a person who repeatedly exploits trust may use
+        apologies, emotional stories or promises to obtain another opportunity
+        without changing their behaviour.
+      </p>
+      <p>
+        The answer is not to stop caring. It is to combine empathy with
+        boundaries. You can understand someone's difficulties without accepting
+        repeated mistreatment.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>Isolation and dependency</h3>
+      <p>
+        A person who has little social support may find it harder to check
+        whether a situation is reasonable. Someone who depends on another person
+        for money, housing, employment, education or emotional support may also
+        feel that refusing a demand could put something important at risk.
+      </p>
+      <p>
+        This is why isolation and dependency matter. They can create an imbalance
+        of power. Rebuilding safe connections and seeking independent advice can
+        help restore a person's choices.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>Stress and difficult life circumstances</h3>
+      <p>
+        Grief, illness, financial pressure, loneliness, a new job or a major
+        life change can make anyone more dependent on others or less able to
+        assess a complicated situation. This does not mean that a person is
+        responsible for being exploited. Responsibility belongs to the person
+        choosing to deceive, pressure or harm them.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>Power differences</h3>
+      <p>
+        Manipulation can be especially difficult to challenge when one person
+        has authority over another. A manager may control someone's work
+        opportunities. A teacher may influence a student's academic experience.
+        A family member may control access to money or housing. In such
+        situations, even a seemingly ordinary request may carry pressure because
+        the person making it has power over something important.
+      </p>
+    </div>
+
+    <div class="callout">
+      <strong>Important:</strong> Being trusting, kind, young, isolated or
+      dependent does not make someone responsible for manipulation. The
+      responsibility for exploitation lies with the person using it.
+    </div>
   </div>
-  <div class="steps">
-   <div class="step"><div class="step-number">1</div><h3>Observe</h3><p>What exactly happened? Separate what you saw or heard from what you think it meant.</p></div>
-   <div class="step"><div class="step-number">2</div><h3>Understand</h3><p>Consider context, impact and whether the behaviour is repeated. Avoid assuming intent from one gesture or phrase.</p></div>
-   <div class="step"><div class="step-number">3</div><h3>Verify</h3><p>Where safe, clarify what happened. Notice whether the person listens, respects boundaries and changes behaviour.</p></div>
-   <div class="step"><div class="step-number">4</div><h3>Respond safely</h3><p>Choose a response that protects your wellbeing. Seek support or distance when direct discussion is unsafe.</p></div>
-  </div>
- </div>
 </section>
 
-<section class="safety" id="safety">
- <div class="container">
-  <div class="section-head">
-   <div class="kicker" style="color:#b9d9cf">Your safety comes first</div>
-   <h2>When you need protection or support.</h2>
-   <p>If you are experiencing threats, violence, coercion or serious harassment, you do not have to handle it alone.</p>
+<section id="psychology">
+  <div class="container">
+    <div class="section-intro">
+      <div class="kicker">Chapter 04 · Psychological mechanisms</div>
+      <h2>How manipulation affects the human mind</h2>
+      <p>
+        Manipulation is not magic and it does not give someone complete control
+        over another person's mind. It can, however, take advantage of ordinary
+        human emotions and mental processes. Understanding these processes
+        helps explain why certain forms of pressure can be so difficult to resist.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>1. Guilt and the need to be a good person</h3>
+      <p>
+        Many people want to be fair, helpful and considerate. They do not want
+        to hurt people they care about. A manipulative person may use this desire
+        by presenting refusal as proof of selfishness. The target then faces
+        two problems: the original request and the fear of being judged as a
+        bad person.
+      </p>
+      <p>
+        For example, someone says, "I thought you cared about me. I would never
+        refuse you." The statement turns a practical decision into a test of
+        loyalty. The person may agree simply to escape the guilt.
+      </p>
+      <p>
+        A healthier way to think is that kindness and unlimited availability
+        are not the same thing. You can care about someone and still refuse
+        a request.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>2. Fear and anticipation of consequences</h3>
+      <p>
+        Fear can narrow attention. When a person believes that disagreement may
+        lead to anger, punishment, humiliation or loss, they may focus on
+        preventing the immediate consequence rather than considering what they
+        actually want. This is one reason threats can be powerful even when
+        they are indirect.
+      </p>
+      <p>
+        A statement such as "You will regret embarrassing me" may not explain
+        exactly what will happen. Its uncertainty can itself create anxiety.
+        If a threat seems credible, take it seriously and prioritise safety
+        rather than trying to win the argument.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>3. Intermittent reinforcement: unpredictable affection</h3>
+      <p>
+        Imagine a relationship in which someone alternates between intense
+        affection and cold withdrawal. After a period of distance, they become
+        warm again. The other person may begin waiting for the positive moments
+        and working harder to restore the closeness.
+      </p>
+      <p>
+        In learning psychology, reinforcement that occurs unpredictably can
+        sometimes make a behaviour persistent. In relationships, inconsistent
+        attention can contribute to uncertainty and repeated efforts to regain
+        connection. This does not prove that every inconsistent person is
+        deliberately using a tactic, but a repeated pattern can be emotionally
+        exhausting.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>4. Cognitive dissonance: when actions and beliefs conflict</h3>
+      <p>
+        Cognitive dissonance is the discomfort that can arise when a person's
+        beliefs, values or actions conflict. Someone may believe that a partner
+        is caring, yet repeatedly experience disrespect. Holding both ideas
+        together can be difficult. They may try to explain away the behaviour
+        because accepting the contradiction could mean reconsidering an
+        important relationship.
+      </p>
+      <p>
+        It can help to look at repeated actions rather than relying only on
+        promises or the best moments in a relationship. Ask whether the
+        behaviour is changing, not simply whether an apology has been made.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>5. Confusion and information overload</h3>
+      <p>
+        A conversation can become difficult when the subject changes constantly.
+        A person raises one concern, but the other person introduces several
+        unrelated complaints, disputes minor details or demands explanations
+        for everything at once. The original issue gets lost.
+      </p>
+      <p>
+        Confusion does not automatically prove deliberate manipulation. But
+        when conversations repeatedly leave one person unable to discuss the
+        original concern, it is useful to slow down, return to one issue and
+        put important points in writing where safe.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>6. Social pressure and authority</h3>
+      <p>
+        People often look to others when deciding what is normal, especially
+        when a situation is uncertain. A manipulator may use group opinion,
+        status or authority to make a demand seem unquestionable. For example,
+        "Everyone agrees with me" may be used to silence disagreement, even
+        when the speaker has not actually checked what everyone thinks.
+      </p>
+      <p>
+        A useful response is to separate popularity from evidence. The fact
+        that several people support an opinion does not automatically make it
+        fair or correct.
+      </p>
+    </div>
   </div>
-  <div class="safety-grid">
-   <div class="safety-card">
-    <h3>If you may be in immediate danger</h3>
-    <ul><li>Move to a safer place if you can.</li><li>Contact your local emergency service.</li><li>Reach someone you trust who can help you.</li><li>Avoid confronting the person if this could increase danger.</li></ul>
-   </div>
-   <div class="safety-card">
-    <h3>If the situation is ongoing</h3>
-    <ul><li>Consider a trusted friend, family member, teacher, workplace contact or qualified support professional.</li><li>Keep a record of incidents if safe to do so.</li><li>Consider a safety plan for communication, travel and important documents.</li><li>Seek local specialist, legal or protection services where appropriate.</li></ul>
-   </div>
-  </div>
-  <div class="safety-alert"><strong>Important:</strong> If someone monitors your phone, browsing or accounts, using this website may leave a trace. Consider a safer device or private support channel if you are concerned. Do not change settings or delete history if doing so could alert someone and increase your risk.</div>
- </div>
 </section>
 
-<section class="help" id="help">
- <div class="container help-inner">
-  <div class="help-art">
-   <svg viewBox="0 0 420 300" role="img" aria-label="Illustration of two people having a supportive conversation">
-    <rect x="15" y="15" width="390" height="270" rx="22" fill="#DCECE4"/>
-    <circle cx="130" cy="105" r="35" fill="#D5A783"/>
-    <path d="M70 255c5-65 24-99 60-99s55 34 60 99" fill="#287C78"/>
-    <circle cx="285" cy="105" r="35" fill="#B77C5B"/>
-    <path d="M225 255c5-65 24-99 60-99s55 34 60 99" fill="#193D47"/>
-    <path d="M165 57h112c18 0 30 12 30 28v13c0 17-12 29-30 29h-35l-22 19v-19h-55c-17 0-29-12-29-29V85c0-16 12-28 29-28z" fill="#fff"/>
-    <path d="M179 85h92M179 101h63" stroke="#287C78" stroke-width="5" stroke-linecap="round"/>
-    <path d="M175 188c18 12 37 18 57 18" stroke="#D5B777" stroke-width="7" stroke-linecap="round" fill="none"/>
-   </svg>
+<section id="language">
+  <div class="container">
+    <div class="section-intro">
+      <div class="kicker">Chapter 05 · Linguistics and discourse</div>
+      <h2>The language of manipulation</h2>
+      <p>
+        Words do more than communicate information. They can also create
+        obligations, suggest blame, threaten consequences, shape someone's
+        understanding of an event or make one choice appear unacceptable.
+        This section examines how language works in real conversations.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>Guilt-tripping: turning refusal into selfishness</h3>
+      <p>
+        Guilt-tripping happens when someone uses guilt to pressure another
+        person into doing something. The person may not directly say, "You must
+        agree." Instead, they make refusal sound like a moral failure. This can
+        be especially effective when the listener values the relationship and
+        wants to be considerate.
+      </p>
+      <div class="example">
+        <div class="label">Example conversation</div>
+        <p class="quote">"After everything I've done for you, you cannot even do this one thing for me?"</p>
+        <p>
+          The sentence connects a present request with past favours. It suggests
+          that previous help has created a debt that must now be repaid. The
+          listener may feel that saying no makes them ungrateful.
+        </p>
+      </div>
+      <div class="analysis">
+        <strong>What is happening linguistically?</strong>
+        The phrase "after everything I've done" invokes shared history as
+        pressure. "You cannot even" presents refusal as unreasonable before
+        the listener has explained their circumstances.
+      </div>
+      <div class="response">
+        <strong>A possible response:</strong>
+        "I appreciate what you have done. But I still need to make this
+        decision based on what I can manage."
+      </div>
+    </div>
+
+    <div class="guide">
+      <h3>Gaslighting language: making someone doubt their experience</h3>
+      <p>
+        Gaslighting refers to a pattern of behaviour in which someone repeatedly
+        undermines another person's confidence in their own perception, memory
+        or understanding of events. It is more than a simple disagreement about
+        what happened. The repeated denial, distortion or dismissal can make
+        someone increasingly unsure of their own judgement.
+      </p>
+      <div class="example">
+        <div class="label">Example conversation</div>
+        <p class="quote">"That never happened. You always imagine things. You are too sensitive."</p>
+        <p>
+          One disagreement about memory does not establish gaslighting. The
+          concern becomes stronger when denial and personal attacks repeatedly
+          replace honest discussion of what happened.
+        </p>
+      </div>
+      <div class="analysis">
+        <strong>What is happening linguistically?</strong>
+        "That never happened" is an absolute denial. "You always imagine things"
+        shifts attention from the event to the listener's credibility.
+        "Too sensitive" dismisses the emotional response instead of addressing
+        the concern.
+      </div>
+      <div class="response">
+        <strong>A possible response:</strong>
+        "We remember this differently. I am not going to debate my feelings.
+        I want to discuss the specific behaviour and what needs to change."
+      </div>
+    </div>
+
+    <div class="guide">
+      <h3>Blame-shifting: making the other person responsible</h3>
+      <p>
+        Blame-shifting occurs when someone avoids responsibility by moving
+        attention towards another person's actions. Instead of addressing
+        what they did, they make the discussion about how the other person
+        reacted, spoke or behaved.
+      </p>
+      <div class="example">
+        <div class="label">Example conversation</div>
+        <p class="quote">"I only shouted because you made me angry."</p>
+        <p>
+          The speaker describes their own behaviour as something caused by
+          another person. Although disagreements can involve both people's
+          actions, each person remains responsible for their own choices.
+        </p>
+      </div>
+      <div class="analysis">
+        <strong>What is happening linguistically?</strong>
+        The word "because" creates a causal explanation that places
+        responsibility on the listener. The sentence avoids directly
+        acknowledging the speaker's decision to shout.
+      </div>
+      <div class="response">
+        <strong>A possible response:</strong>
+        "We can discuss what upset you, but you are responsible for how you
+        speak to me."
+      </div>
+    </div>
+
+    <div class="guide">
+      <h3>False dilemmas: making two choices look like the only choices</h3>
+      <p>
+        A false dilemma presents a situation as though only two options exist,
+        even when other possibilities are available. This can pressure someone
+        into accepting the option preferred by the speaker.
+      </p>
+      <div class="example">
+        <div class="label">Example conversation</div>
+        <p class="quote">"Either you trust me completely or you do not love me."</p>
+        <p>
+          The sentence treats trust and love as if they require complete
+          agreement. It leaves no room for privacy, questions or reasonable
+          disagreement.
+        </p>
+      </div>
+      <div class="analysis">
+        <strong>What is happening linguistically?</strong>
+        The construction "either...or" creates a forced choice. The speaker
+        links two separate ideas—trust and love—and makes one seem dependent
+        on unquestioning compliance.
+      </div>
+      <div class="response">
+        <strong>A possible response:</strong>
+        "Love and trust do not mean agreeing with everything. We can care
+        about each other and still have different views."
+      </div>
+    </div>
+
+    <div class="guide">
+      <h3>Conditional affection: making care depend on obedience</h3>
+      <p>
+        Affection becomes concerning when it is repeatedly offered or withdrawn
+        to control another person's choices. A person may suggest that love,
+        friendship or approval will disappear unless the listener does what
+        they want.
+      </p>
+      <div class="example">
+        <div class="label">Example conversation</div>
+        <p class="quote">"If you really cared about me, you would do this."</p>
+        <p>
+          The sentence turns a request into a test of affection. Instead of
+          discussing whether the request is reasonable, the listener is pushed
+          to prove that they care.
+        </p>
+      </div>
+      <div class="response">
+        <strong>A possible response:</strong>
+        "I can care about you and still decide what I am comfortable doing."
+      </div>
+    </div>
+
+    <div class="guide">
+      <h3>Minimisation: making harmful behaviour seem insignificant</h3>
+      <p>
+        Minimisation happens when someone describes a serious concern as
+        unimportant. They may say that it was only a joke, that everyone does
+        it or that the listener is making too much of it. Sometimes a person
+        genuinely sees an event differently. The concern is repeated dismissal
+        that prevents a reasonable discussion or change in behaviour.
+      </p>
+      <div class="example">
+        <div class="label">Example conversation</div>
+        <p class="quote">"It was just a joke. Why are you making such a big deal out of it?"</p>
+      </div>
+      <div class="response">
+        <strong>A possible response:</strong>
+        "You may have intended it as a joke, but I have asked you not to make
+        comments like that. Please stop."
+      </div>
+    </div>
+
+    <div class="guide">
+      <h3>Threats disguised as concern</h3>
+      <p>
+        A threat does not always sound openly aggressive. Sometimes a person
+        presents a warning as though they are simply explaining what will
+        happen if the listener refuses. The difference between a genuine
+        warning and intimidation depends on the context, the power relationship
+        and whether the statement is being used to control someone's choice.
+      </p>
+      <div class="example">
+        <div class="label">Example conversation</div>
+        <p class="quote">"I am only telling you this for your own good. You do not want to find out what happens if you refuse."</p>
+      </div>
+      <div class="analysis">
+        <strong>What is happening linguistically?</strong>
+        The phrase "for your own good" presents the speaker as protective.
+        The second sentence introduces an implied consequence without
+        explaining it. This ambiguity may create fear.
+      </div>
+      <div class="response">
+        <strong>A possible response:</strong>
+        If safe, ask for clear information and avoid making decisions under
+        threat. If the statement suggests danger, leave the discussion and
+        seek support rather than confronting the person alone.
+      </div>
+    </div>
+
+    <div class="guide">
+      <h3>Loaded questions and hidden assumptions</h3>
+      <p>
+        A loaded question contains an assumption that has not been established.
+        For example, "Why are you always trying to embarrass me?" assumes that
+        the listener is deliberately trying to cause embarrassment. Answering
+        the question directly may accidentally accept that assumption.
+      </p>
+      <div class="response">
+        <strong>A possible response:</strong>
+        "I do not agree with that assumption. What specific action are you
+        referring to?"
+      </div>
+    </div>
+
+    <div class="guide">
+      <h3>Changing the subject and moving the goalposts</h3>
+      <p>
+        Sometimes a person raises a new complaint whenever the original issue
+        is addressed. They may also change what they require before they are
+        willing to accept an answer. The discussion then becomes endless.
+        This can make the listener feel that no explanation is ever enough.
+      </p>
+      <div class="response">
+        <strong>A possible response:</strong>
+        "Let's finish discussing the original issue first. We can talk about
+        the other matter separately."
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Linguistic principle:</strong> A phrase cannot always be judged
+      in isolation. Tone, context, relationship, repetition and the response
+      to boundaries all matter. The purpose of analysis is to understand
+      communication, not to assume hidden intentions from one sentence.
+    </div>
   </div>
-  <div>
-   <div class="kicker">Humanity begins with listening</div>
-   <h2>Helping someone can begin with believing they deserve respect.</h2>
-   <p style="color:var(--muted)">You do not need to have every answer to support another person. Listening without judgement, respecting their choices and helping them find safe options can matter greatly.</p>
-   <div class="help-list">
-    <div class="help-item"><span>✓</span><div><b>Listen without blame</b><p>Give them time to explain what they are experiencing.</p></div></div>
-    <div class="help-item"><span>✓</span><div><b>Respect their decisions</b><p>Do not pressure them to take actions they are not ready or safe to take.</p></div></div>
-    <div class="help-item"><span>✓</span><div><b>Help them find support</b><p>Explore trusted people and qualified services together.</p></div></div>
-   </div>
-  </div>
- </div>
 </section>
 
-<section class="evidence" id="knowledge">
- <div class="container">
-  <div class="section-head">
-   <div class="kicker">Knowledge and evidence</div>
-   <h2>Guidance should be compassionate—and responsible.</h2>
-   <p>Our educational approach draws on established human-rights principles and research. We do not claim that a single expression, gesture or behaviour can reveal someone's intentions.</p>
+<section id="boundaries">
+  <div class="container">
+    <div class="section-intro">
+      <div class="kicker">Chapter 06 · Personal autonomy</div>
+      <h2>How manipulators cross boundaries</h2>
+      <p>
+        A boundary is a limit that protects a person's privacy, time, body,
+        choices, emotions and personal space. It communicates what someone
+        is comfortable with and what they are not willing to accept. A boundary
+        is not an attempt to control everyone else; it is a way to define what
+        you will participate in and how you will protect yourself.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>Testing small boundaries</h3>
+      <p>
+        Sometimes boundary violations begin with small requests or comments.
+        A person may repeatedly interrupt, make unwanted jokes, ask private
+        questions or ignore a small refusal. If the behaviour is challenged,
+        they may dismiss it as harmless. The important question is whether
+        they listen and adjust when someone clearly communicates discomfort.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>Gradually normalising unacceptable behaviour</h3>
+      <p>
+        A behaviour that once seemed unacceptable can start to feel ordinary
+        when it happens repeatedly. For example, someone may first ask to know
+        where their partner is, then expect constant updates, then demand
+        access to private messages. Each new demand may be presented as a
+        small extension of the previous one.
+      </p>
+      <p>
+        This gradual change can make it harder to notice how much freedom has
+        been lost. It can help to compare the current situation with what you
+        originally agreed to and whether you still feel free to make independent
+        choices.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>Ignoring the word no</h3>
+      <p>
+        A person may treat refusal as the beginning of negotiation rather than
+        an answer. They may keep asking, demand explanations, become angry or
+        offer emotional rewards for changing the decision. Repeated pressure
+        after a clear refusal can undermine consent and autonomy.
+      </p>
+      <div class="response">
+        <strong>A possible response:</strong>
+        "I have already answered. I am not changing my decision."
+      </div>
+    </div>
+
+    <div class="guide">
+      <h3>Controlling privacy and relationships</h3>
+      <p>
+        A person may demand passwords, inspect messages, monitor location,
+        decide who someone can meet or make them feel guilty for spending
+        time with friends and family. A single request to share information
+        is not automatically controlling. The concern is pressure, entitlement,
+        monitoring and punishment when privacy is maintained.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>Coercion, blackmail and threats</h3>
+      <p>
+        Coercion involves pressure that undermines a person's ability to make
+        a free choice. Threatening to expose private information, damage
+        someone's reputation, harm them or take something important away
+        unless they comply is serious. It should not be treated as an ordinary
+        disagreement.
+      </p>
+      <p>
+        If someone threatens you, do not assume that confronting them will
+        make the situation safer. Keep relevant evidence if it is safe to do
+        so, avoid sending more private material, seek help from a trusted
+        person and consider appropriate local support or authorities.
+      </p>
+    </div>
   </div>
-  <div class="resource-grid">
-   <div class="resource"><h3>United Nations — Human Rights</h3><p>Explore international human-rights principles, dignity and fundamental freedoms.</p><a href="https://www.ohchr.org/en/what-are-human-rights" target="_blank" rel="noopener noreferrer">Explore human rights ↗</a></div>
-   <div class="resource"><h3>World Health Organization</h3><p>Public-health information and resources concerning violence and prevention.</p><a href="https://www.who.int/health-topics/violence" target="_blank" rel="noopener noreferrer">Explore violence prevention ↗</a></div>
-   <div class="resource"><h3>UNICEF — Child Protection</h3><p>Information about children's safety, protection and wellbeing.</p><a href="https://www.unicef.org/protection" target="_blank" rel="noopener noreferrer">Explore child protection ↗</a></div>
-  </div>
-  <p style="font-size:12px;color:var(--muted);margin-top:18px">These are starting points for further learning, not a substitute for qualified local support or legal advice. More reviewed educational resources can be added as the initiative develops.</p>
- </div>
 </section>
+
+<section id="nonverbal">
+  <div class="container">
+    <div class="section-intro">
+      <div class="kicker">Chapter 07 · Communication beyond words</div>
+      <h2>Non-verbal behaviour and psychological pressure</h2>
+      <p>
+        People communicate through facial expressions, posture, gestures,
+        eye contact, tone, silence and the distance they maintain from others.
+        These signals can affect how a conversation feels. However, no single
+        gesture provides a reliable explanation of someone's thoughts or
+        personality.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>Eye contact and staring</h3>
+      <p>
+        Eye contact can communicate attention, confidence, interest or
+        confrontation, depending on the context and culture. A prolonged
+        stare may feel intimidating, particularly when combined with a
+        threatening tone, physical closeness or a history of aggressive
+        behaviour. But looking away or maintaining eye contact does not
+        independently prove dishonesty or manipulation.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>Silence and withdrawal</h3>
+      <p>
+        Silence can have many meanings. Someone may be thinking, tired,
+        overwhelmed or choosing not to argue. Silence becomes more concerning
+        when it is repeatedly used as punishment, when communication is
+        withheld to force compliance or when the person returns only after
+        the other person gives in.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>Personal space and physical positioning</h3>
+      <p>
+        Standing too close, blocking a doorway, following someone who is
+        trying to leave or using physical size to dominate a conversation
+        can create pressure. Cultural expectations about personal space vary,
+        so the clearest warning signs are often whether someone respects a
+        request for distance and whether the behaviour makes it difficult
+        to leave freely.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>Tone, interruptions and facial expressions</h3>
+      <p>
+        A person may use a mocking tone, repeated interruptions, exaggerated
+        sighs or dismissive expressions to discourage another person from
+        speaking. These behaviours can make a conversation unequal. Yet they
+        may also arise from poor communication habits, stress or misunderstanding.
+        Look at repeated patterns and whether the person is willing to change
+        when the impact is explained.
+      </p>
+    </div>
+
+    <div class="callout">
+      <strong>Do not treat body language as mind-reading.</strong>
+      Observe the behaviour, consider different explanations, check the
+      context and respect what the person actually communicates.
+    </div>
+  </div>
+</section>
+
+<section id="response">
+  <div class="container">
+    <div class="section-intro">
+      <div class="kicker">Chapter 08 · Practical self-protection</div>
+      <h2>How to respond, resist and counter manipulation</h2>
+      <p>
+        The aim is not to outsmart someone through cruelty, humiliation or
+        psychological games. It is to recognise the pressure, protect your
+        ability to choose and avoid being pulled into a situation that harms
+        you. The safest response depends on the person's behaviour and the
+        level of risk.
+      </p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <h3>Pause before responding</h3>
+        <p>
+          Manipulative pressure often creates urgency. Someone may demand an
+          immediate answer or make you feel that you must decide before you
+          have time to think. When possible, slow the conversation down.
+          You can say, "I need time to think about this. I will respond later."
+        </p>
+      </div>
+      <div class="step">
+        <h3>Identify the actual request</h3>
+        <p>
+          Move away from the emotional noise and ask what the person is
+          actually asking you to do. Are they asking for money, access to
+          private information, agreement, an apology or a change in your
+          plans? Understanding the concrete request makes it easier to
+          decide whether it is reasonable.
+        </p>
+      </div>
+      <div class="step">
+        <h3>Separate facts from accusations</h3>
+        <p>
+          If someone says you are selfish, disloyal or ungrateful, remember
+          that these are judgements, not proof. Return to the facts:
+          what happened, what was requested, what you agreed to and what
+          you are comfortable with.
+        </p>
+      </div>
+      <div class="step">
+        <h3>Do not accept a false choice</h3>
+        <p>
+          If someone says that you must choose between obeying them and
+          proving that you care, remember that other options may exist.
+          You can care about a person without accepting every demand.
+        </p>
+      </div>
+      <div class="step">
+        <h3>Use short, clear boundaries</h3>
+        <p>
+          You do not have to give a long explanation every time you refuse.
+          A short statement can be easier to maintain: "I am not comfortable
+          with that." "Do not speak to me that way." "I am not sharing my
+          password." The goal is clarity, not winning an argument.
+        </p>
+      </div>
+      <div class="step">
+        <h3>Return to the original issue</h3>
+        <p>
+          If the conversation keeps moving to unrelated accusations, calmly
+          bring it back to the matter you raised. If the discussion becomes
+          circular or hostile, you can end it and continue later, if safe.
+        </p>
+      </div>
+      <div class="step">
+        <h3>Keep records when appropriate</h3>
+        <p>
+          If there is repeated harassment, threats or coercion, keep relevant
+          messages, dates and details when it is safe and lawful to do so.
+          Store them somewhere the other person cannot access. Do not put
+          yourself at greater risk to collect evidence.
+        </p>
+      </div>
+      <div class="step">
+        <h3>Seek support and make a safety plan</h3>
+        <p>
+          Speak to someone trustworthy who is not controlled by the person
+          causing harm. Depending on the situation, this may be a family
+          member, counsellor, workplace contact, legal adviser or specialist
+          support organisation. If you are in immediate danger, move to a
+          safer place and contact local emergency services.
+        </p>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="panel gold">
+        <h3>Responses that protect your boundaries</h3>
+        <p>"I have already answered that."</p>
+        <p>"I do not agree with that description."</p>
+        <p>"I will discuss this when we can speak respectfully."</p>
+        <p>"My private information is not available for inspection."</p>
+        <p>"I am not making this decision under pressure."</p>
+      </div>
+      <div class="panel red">
+        <h3>What to avoid</h3>
+        <p>
+          Avoid trying to humiliate, threaten, blackmail or psychologically
+          punish someone in return. Avoid revealing sensitive information
+          just to prove a point. Do not confront someone alone if you fear
+          retaliation. Protecting yourself is more important than winning
+          the exchange.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cases">
+  <div class="container">
+    <div class="section-intro">
+      <div class="kicker">Chapter 09 · Applied learning</div>
+      <h2>Real-life situations and case studies</h2>
+      <p>
+        Psychological concepts become easier to understand when we apply
+        them to ordinary conversations. These examples are educational
+        scenarios. They are not evidence that a real person has a particular
+        personality or intention.
+      </p>
+    </div>
+
+    <div class="guide">
+      <h3>Case 1: "You are too sensitive"</h3>
+      <p><strong>Situation:</strong> Someone repeatedly makes jokes about your appearance. You ask them to stop. They respond by saying that you cannot take a joke.</p>
+      <p><strong>What may be happening?</strong> The discussion has shifted away from the repeated comments and towards whether your reaction is acceptable. This can minimise the effect of the behaviour and discourage you from raising the issue again.</p>
+      <p><strong>What should you examine?</strong> Did you clearly communicate that the jokes are unwelcome? Does the person respect that request? Do they continue and then blame you for objecting?</p>
+      <div class="response"><strong>Possible response:</strong> "You may consider it a joke, but I have asked you to stop. Please respect that."</div>
+    </div>
+
+    <div class="guide">
+      <h3>Case 2: "If you trust me, give me your password"</h3>
+      <p><strong>Situation:</strong> A partner demands access to your private messages and says that refusing proves you are hiding something.</p>
+      <p><strong>What may be happening?</strong> Privacy is being presented as evidence of dishonesty. The statement creates a false connection between trust and unrestricted access.</p>
+      <p><strong>Why does it matter?</strong> Trust does not require surrendering all privacy. A healthy relationship can include honesty and personal boundaries at the same time.</p>
+      <div class="response"><strong>Possible response:</strong> "I value trust, but I also have a right to privacy. I am not sharing my password."</div>
+    </div>
+
+    <div class="guide">
+      <h3>Case 3: "You made me do it"</h3>
+      <p><strong>Situation:</strong> Someone shouts at you, insults you and later says that your behaviour forced them to react that way.</p>
+      <p><strong>What may be happening?</strong> The speaker is shifting responsibility for their own behaviour. It may be useful to discuss what caused the disagreement, but that does not remove their responsibility for choosing to insult or intimidate you.</p>
+      <div class="response"><strong>Possible response:</strong> "We can discuss the disagreement, but I am not responsible for your decision to insult me."</div>
+    </div>
+
+    <div class="guide">
+      <h3>Case 4: Threatening to expose private photographs</h3>
+      <p><strong>Situation:</strong> Someone threatens to publish private photographs unless you send money or do something they demand.</p>
+      <p><strong>What may be happening?</strong> This is coercive pressure and may constitute a serious offence depending on the jurisdiction. It is not an ordinary relationship disagreement.</p>
+      <p><strong>What can help?</strong> Avoid sending more images or money in an attempt to make the threat disappear. Preserve messages and account details if safe, secure your accounts, tell a trusted person and seek appropriate local legal or specialist support. Do not meet the person alone.</p>
+      <div class="response"><strong>Priority:</strong> Your safety comes first. You do not have to handle threats alone.</div>
+    </div>
+
+    <div class="guide">
+      <h3>Case 5: The conversation that never ends</h3>
+      <p><strong>Situation:</strong> You raise one concern. The other person brings up your old mistakes, changes the subject and demands explanations for unrelated events. Hours pass, but the original concern is never addressed.</p>
+      <p><strong>What may be happening?</strong> The conversation may have become circular. Whether intentional or not, the constant change of subject makes it difficult to resolve the original issue.</p>
+      <div class="response"><strong>Possible response:</strong> "I am willing to discuss the other issues separately. Right now, I want to finish discussing the concern I raised."</div>
+    </div>
+  </div>
+</section>
+
+<section id="decoder">
+  <div class="container">
+    <div class="section-intro">
+      <div class="kicker">Interactive learning tool</div>
+      <h2>The Manipulation Language Decoder</h2>
+      <p>
+        Choose a statement to explore how its wording may create pressure.
+        This learning tool provides educational examples, not a diagnosis
+        of the speaker or a definitive judgement about a real conversation.
+      </p>
+    </div>
+
+    <div class="panel">
+      <label for="phraseSelect" class="label">Select a statement</label>
+      <select id="phraseSelect" style="width:100%;padding:13px;background:#202027;color:#f0eee9;border:1px solid #51444b;margin:8px 0 20px">
+        <option value="guilt">"After everything I've done for you..."</option>
+        <option value="love">"If you really loved me, you would..."</option>
+        <option value="sensitive">"You are too sensitive."</option>
+        <option value="trust">"If you have nothing to hide, show me your phone."</option>
+        <option value="blame">"I only did it because you made me."</option>
+        <option value="choice">"Either you are with me or against me."</option>
+        <option value="memory">"That never happened. You imagined it."</option>
+        <option value="threat">"You will regret saying no."</option>
+      </select>
+      <button class="btn" id="decodeBtn">Analyse this statement</button>
+      <div id="decoderResult" class="guide" aria-live="polite" hidden>
+        <div class="label">Educational analysis</div>
+        <h3 id="decodeTitle"></h3>
+        <p id="decodeMeaning"></p>
+        <div class="analysis"><strong>Possible mechanism</strong><p id="decodeMechanism" style="margin:8px 0 0"></p></div>
+        <div class="response"><strong>Possible response</strong><p id="decodeResponse" style="margin:8px 0 0"></p></div>
+        <p class="note" id="decodeCaution"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="library">
+  <div class="container">
+    <div class="section-intro">
+      <div class="kicker">Knowledge library</div>
+      <h2>Explore the subject in greater depth</h2>
+      <p>
+        Use the search below to find a topic. The library will grow through
+        carefully researched explanations from psychology, linguistics,
+        communication studies and human rights.
+      </p>
+    </div>
+
+    <div class="search-wrap">
+      <input id="topicSearch" type="search" placeholder="Search topics: gaslighting, guilt, boundaries, language..." aria-label="Search learning topics">
+    </div>
+    <div class="filter-row" aria-label="Topic filters">
+      <button class="filter active" data-filter="all">All topics</button>
+      <button class="filter" data-filter="psychology">Psychology</button>
+      <button class="filter" data-filter="language">Language</button>
+      <button class="filter" data-filter="boundaries">Boundaries</button>
+      <button class="filter" data-filter="protection">Protection</button>
+    </div>
+    <div class="grid" id="libraryGrid">
+      <article class="card guide-card" data-category="psychology">
+        <span class="tag">Psychology</span>
+        <h3>Emotional blackmail</h3>
+        <p>How fear, obligation and guilt can be used to pressure someone into compliance.</p>
+        <a class="read" href="#psychology">Read the psychology chapter →</a>
+      </article>
+      <article class="card guide-card" data-category="language">
+        <span class="tag">Language</span>
+        <h3>Gaslighting language</h3>
+        <p>How repeated denial and distortion can undermine confidence in one's own experience.</p>
+        <a class="read" href="#language">Read the language chapter →</a>
+      </article>
+      <article class="card guide-card" data-category="language">
+        <span class="tag">Language</span>
+        <h3>Blame-shifting</h3>
+        <p>How responsibility can be moved away from the person whose behaviour is being discussed.</p>
+        <a class="read" href="#language">Read the language chapter →</a>
+      </article>
+      <article class="card guide-card" data-category="boundaries">
+        <span class="tag">Boundaries</span>
+        <h3>Consent and refusal</h3>
+        <p>Why a person's right to say no matters in relationships and everyday interactions.</p>
+        <a class="read" href="#boundaries">Read the boundaries chapter →</a>
+      </article>
+      <article class="card guide-card" data-category="psychology">
+        <span class="tag">Psychology</span>
+        <h3>Intermittent reinforcement</h3>
+        <p>How unpredictable rewards can sometimes strengthen repeated behaviour.</p>
+        <a class="read" href="#psychology">Read the psychology chapter →</a>
+      </article>
+      <article class="card guide-card" data-category="protection">
+        <span class="tag">Protection</span>
+        <h3>Responding to threats</h3>
+        <p>Practical safety considerations when someone uses threats or coercion.</p>
+        <a class="read" href="#response">Read the protection chapter →</a>
+      </article>
+      <article class="card guide-card" data-category="psychology">
+        <span class="tag">Psychology</span>
+        <h3>Dark Triad traits</h3>
+        <p>Understand the research concepts without turning them into casual diagnoses.</p>
+        <a class="read" href="#types">Read the personality chapter →</a>
+      </article>
+      <article class="card guide-card" data-category="language">
+        <span class="tag">Language</span>
+        <h3>False dilemmas</h3>
+        <p>How language can make two options appear to be the only possible choices.</p>
+        <a class="read" href="#language">Read the language chapter →</a>
+      </article>
+      <article class="card guide-card" data-category="protection">
+        <span class="tag">Protection</span>
+        <h3>Assertive communication</h3>
+        <p>How to communicate limits clearly without aggression or unnecessary explanation.</p>
+        <a class="read" href="#response">Read the protection chapter →</a>
+      </article>
+    </div>
+    <p id="noResults" class="small" hidden>No matching topics found. Try another search term.</p>
+  </div>
+</section>
+
+<section id="research">
+  <div class="container">
+    <div class="section-intro">
+      <div class="kicker">Research and academic foundations</div>
+      <h2>Built on psychology and linguistic knowledge</h2>
+      <p>
+        The initiative should distinguish established research from popular
+        claims and personal opinions. Its educational material should be
+        expanded using credible academic literature and updated when better
+        evidence becomes available.
+      </p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3>Psychology</h3>
+        <p>Personality research, social influence, emotional processes,
+        cognitive dissonance, reinforcement and interpersonal behaviour.</p>
+      </div>
+      <div class="card">
+        <h3>Linguistics</h3>
+        <p>Pragmatics, semantics, speech acts, discourse analysis,
+        conversational patterns and the relationship between language and power.</p>
+      </div>
+      <div class="card">
+        <h3>Human protection</h3>
+        <p>Consent, autonomy, dignity, privacy, personal boundaries,
+        safety and access to support.</p>
+      </div>
+    </div>
+    <div class="guide">
+      <h3>Suggested research starting points</h3>
+      <p>
+        The following organisations and research resources can help readers
+        explore psychology, human behaviour and human protection in greater depth.
+        Individual topics should be supported with specific academic references
+        as the library develops.
+      </p>
+      <ul>
+        <li><a href="https://www.apa.org/" target="_blank" rel="noopener">American Psychological Association</a> — psychology information and research resources.</li>
+        <li><a href="https://www.who.int/" target="_blank" rel="noopener">World Health Organization</a> — health, well-being and violence prevention resources.</li>
+        <li><a href="https://www.ohchr.org/" target="_blank" rel="noopener">United Nations Human Rights Office</a> — human rights standards and resources.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed</a> — biomedical and behavioural research literature.</li>
+        <li><a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a> — academic literature across psychology and linguistics.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="principles">
+  <div class="container">
+    <div class="section-intro">
+      <div class="kicker">Our educational principles</div>
+      <h2>Understanding without mislabelling</h2>
+      <p>
+        This initiative examines harmful patterns, but it must also be careful
+        and responsible. Not every disagreement is manipulation. Not every
+        person who behaves badly has a personality disorder. Not every silence,
+        expression or gesture has a hidden meaning.
+      </p>
+    </div>
+    <div class="two-col">
+      <div class="panel">
+        <h3>What we aim to teach</h3>
+        <p>Recognise repeated patterns, understand language and behaviour,
+        identify boundary violations, evaluate context and make informed
+        decisions about personal safety.</p>
+      </div>
+      <div class="panel">
+        <h3>What we will not claim</h3>
+        <p>We will not diagnose strangers, promise to read minds, teach
+        psychological exploitation or present unsupported internet myths
+        as scientific facts.</p>
+      </div>
+    </div>
+    <div class="callout">
+      <strong>Educational notice:</strong> This website provides general
+      educational information. It is not a substitute for professional
+      psychological, medical or legal advice. If you are in immediate danger,
+      seek emergency assistance in your location.
+    </div>
+  </div>
+</section>
+
 </main>
 
-<div class="disclaimer">
- <div class="container"><p><strong>Important:</strong> The World Without Words is an educational initiative. It is not an emergency response service, counselling service, medical provider or law firm. Information on this website is general and cannot replace advice from qualified professionals familiar with your circumstances and local laws.</p></div>
-</div>
-
 <footer>
- <div class="container footer-inner">
-  <div><div class="footer-brand">The World Without Words</div><p>Understanding What Words Cannot Always Say.</p><p>Research · Education · Human Protection</p></div>
-  <div class="footer-links"><a href="#situations">Find guidance</a><a href="#rights">Your rights</a><a href="#safety">Safety</a><a href="#knowledge">Knowledge</a></div>
-  <p>© 2026 The World Without Words. Educational initiative.</p>
- </div>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand">
+          <span class="brand-mark">W</span>
+          <span class="brand-name">THE WORLD WITHOUT WORDS
+            <small>PSYCHOLOGY · LANGUAGE · HUMAN BEHAVIOUR</small>
+          </span>
+        </div>
+        <p class="small" style="max-width:520px;margin-top:18px">
+          An educational initiative exploring psychological manipulation,
+          language, human behaviour and practical self-protection.
+        </p>
+      </div>
+      <div>
+        <p><a href="#begin">Learning journey</a></p>
+        <p><a href="#language">Manipulative language</a></p>
+        <p><a href="#response">Self-protection</a></p>
+        <p><a href="#research">Research foundations</a></p>
+      </div>
+    </div>
+    <hr>
+    <p class="note">The World Without Words · Educational project · Version 3.0</p>
+    <p class="note">Understanding the tactics. Protecting human dignity.</p>
+  </div>
 </footer>
-<a class="back-top" href="#home" aria-label="Back to top">↑</a>
 
 <script>
-const menuBtn = document.getElementById('menuBtn');
-const navlinks = document.getElementById('navlinks');
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
 
-menuBtn.addEventListener('click', () => {
-  const isOpen = navlinks.classList.toggle('open');
-  menuBtn.setAttribute('aria-expanded', String(isOpen));
+menuBtn.addEventListener("click", () => {
+  const isOpen = navLinks.classList.toggle("show");
+  menuBtn.setAttribute("aria-expanded", String(isOpen));
 });
 
-navlinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navlinks.classList.remove('open');
-    menuBtn.setAttribute('aria-expanded', 'false');
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+    menuBtn.setAttribute("aria-expanded", "false");
   });
 });
 
-const search = document.getElementById('guideSearch');
-const guides = Array.from(document.querySelectorAll('.guide'));
-const noResults = document.getElementById('noResults');
+const decoderData = {
+  guilt:{
+    title:"Guilt-tripping",
+    meaning:"The speaker connects your decision with your moral character or your past relationship. The aim may be to make refusal feel selfish or ungrateful.",
+    mechanism:"Guilt, obligation and the desire to preserve a relationship can make a person feel pressure to agree.",
+    response:"I appreciate what you have done, but I still need to make my own decision.",
+    caution:"One emotional statement does not prove manipulation. Look at whether guilt is repeatedly used to override your choices."
+  },
+  love:{
+    title:"Conditional affection",
+    meaning:"The statement makes love or care sound dependent on doing what the speaker wants. It turns a request into a test of loyalty.",
+    mechanism:"Fear of rejection or losing a relationship can make refusal emotionally difficult.",
+    response:"I can care about you and still have my own limits and decisions.",
+    caution:"People can express disappointment. The concern is repeated pressure or punishment for maintaining a reasonable boundary."
+  },
+  sensitive:{
+    title:"Minimisation and dismissal",
+    meaning:"The statement shifts attention from the behaviour being discussed to whether your emotional reaction is acceptable.",
+    mechanism:"The listener may begin defending their feelings instead of discussing the original behaviour.",
+    response:"We do not have to agree about my reaction. I am asking you to stop the behaviour.",
+    caution:"A disagreement about feelings is not automatically gaslighting. Repeated dismissal and distortion deserve closer attention."
+  },
+  trust:{
+    title:"Privacy pressure and false connection",
+    meaning:"The sentence suggests that privacy is proof of dishonesty. It links trust with giving up access to personal information.",
+    mechanism:"The listener may feel forced to surrender privacy to prove loyalty or innocence.",
+    response:"Privacy is not proof of dishonesty. I am allowed to keep personal information private.",
+    caution:"Sharing information can be a mutual choice. Pressure, monitoring and punishment for refusal are the concerns."
+  },
+  blame:{
+    title:"Blame-shifting",
+    meaning:"The speaker explains their own action as something caused by the listener, rather than acknowledging their own responsibility.",
+    mechanism:"The discussion moves away from the speaker's behaviour and towards the listener's alleged fault.",
+    response:"We can discuss what upset you, but you are responsible for your own actions.",
+    caution:"Both people may contribute to a disagreement, but each remains responsible for their own behaviour."
+  },
+  choice:{
+    title:"False dilemma",
+    meaning:"The speaker presents two extreme choices as though no other options exist. It can make disagreement appear like betrayal.",
+    mechanism:"The listener may feel forced to choose between compliance and losing the relationship.",
+    response:"Those are not the only two possibilities. We can disagree without becoming enemies.",
+    caution:"Some situations really do have limited choices. Examine whether the options have been unfairly narrowed."
+  },
+  memory:{
+    title:"Repeated denial and possible gaslighting",
+    meaning:"The sentence denies an event and attacks the listener's reliability. If this happens repeatedly as part of a wider pattern, it may contribute to gaslighting.",
+    mechanism:"Repeated attacks on someone's memory or judgement can create uncertainty and self-doubt.",
+    response:"We remember this differently. I want to focus on the specific event and the information available.",
+    caution:"A single disagreement about memory is not enough to establish gaslighting."
+  },
+  threat:{
+    title:"Intimidation and implied threat",
+    meaning:"The speaker suggests that refusal will bring an unpleasant consequence but leaves that consequence unclear.",
+    mechanism:"Uncertainty and fear may pressure the listener to comply.",
+    response:"If it is safe, do not make a decision under threat. End the exchange and seek support if you feel at risk.",
+    caution:"Take credible threats seriously. Your safety matters more than responding with the perfect sentence."
+  }
+};
 
-search.addEventListener('input', () => {
-  const term = search.value.trim().toLowerCase();
+document.getElementById("decodeBtn").addEventListener("click", () => {
+  const key = document.getElementById("phraseSelect").value;
+  const item = decoderData[key];
+  document.getElementById("decodeTitle").textContent = item.title;
+  document.getElementById("decodeMeaning").textContent = item.meaning;
+  document.getElementById("decodeMechanism").textContent = item.mechanism;
+  document.getElementById("decodeResponse").textContent = item.response;
+  document.getElementById("decodeCaution").textContent = item.caution;
+  document.getElementById("decoderResult").hidden = false;
+});
+
+const searchInput = document.getElementById("topicSearch");
+const filterButtons = document.querySelectorAll(".filter");
+const guideCards = document.querySelectorAll(".guide-card");
+const noResults = document.getElementById("noResults");
+let currentFilter = "all";
+
+function filterLibrary(){
+  const term = searchInput.value.trim().toLowerCase();
   let visible = 0;
-  guides.forEach(guide => {
-    const searchable = (guide.innerText + ' ' + guide.dataset.search).toLowerCase();
-    const match = searchable.includes(term);
-    guide.hidden = !match;
-    if (match) visible++;
+  guideCards.forEach(card => {
+    const matchesText = card.textContent.toLowerCase().includes(term);
+    const matchesCategory = currentFilter === "all" || card.dataset.category === currentFilter;
+    const show = matchesText && matchesCategory;
+    card.classList.toggle("hidden", !show);
+    if(show) visible++;
   });
-  noResults.style.display = visible === 0 ? 'block' : 'none';
-});
+  noResults.hidden = visible !== 0;
+}
 
-document.querySelectorAll('.situation').forEach(link => {
-  link.addEventListener('click', () => {
-    search.value = '';
-    guides.forEach(guide => guide.hidden = false);
-    noResults.style.display = 'none';
+searchInput.addEventListener("input", filterLibrary);
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    filterButtons.forEach(item => item.classList.remove("active"));
+    button.classList.add("active");
+    currentFilter = button.dataset.filter;
+    filterLibrary();
   });
 });
 </script>
